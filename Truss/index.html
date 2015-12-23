@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
     <link rel="stylesheet" type="text/css" href="css/truss.css">
+    <link rel="stylesheet" href="glyphicons/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
@@ -13,7 +14,7 @@
         <h1>Truss Styling</h1>
     </header>
     <!-- TYPOGRAPHY STYLING --->
-    <section>
+    <div class="container">
         <!-- Headings -->
         <section>
             <h1>H1 Heading</h1>
@@ -25,10 +26,7 @@
         </section>
         <!-- Paragraph -->
         <section id="paragraph">
-            <p>The base type is 16px over 1.2 line height. Here is an example of CSS transformed
-                <span class="uppercase">Uppercase</span> text. Now an example of text transformed to be
-                <span class="lowercase">Lowercase</span>, and finally some text transformed to be
-                <span class="capitalize">Capitalized</span>.
+            <p>The base type is 16px over 1.2 line height.
             </p>
 
 
@@ -45,23 +43,21 @@
         </section>
         <!-- Code -->
         <section>
-            <code>Code</code>
-            <br>
-            <samp>Sample output from a computer program</samp>
-            <br>
-            <kbd>Keyboard input</kbd>
-            <br>
-            <var>Variable</var>
-            <br>
+            <p><code>Code</code></p>
+
+            <p><kbd>Keyboard input</kbd></p>
+
+            <p><var>Variable</var></p>
         </section>
 
         <!-- Text -->
         <section>
-            <strong>Bolded</strong>
-            <em>Italicized</em>
-            <a>Colored</a>
-            <u>Underlined</u>
-            <mark>Highlighted</mark>
+            <p><strong>Bolded</strong>
+                <em>Italicized</em>
+                <a>Colored</a>
+                <u>Underlined</u>
+                <mark>Highlighted</mark>
+            </p>
             <p class="uppercase">transformed uppercase</p>
             <p class="lowercase">TRANSFORMED LOWERCASE</p>
             <p class="capitalize">capitalized</p>
@@ -81,102 +77,147 @@
         </section>
         <!-- Other -->
         <section>
-            <abbr title="World Wide Web Consortium">An abbreviation of W3C</abbr>
-            <address>
+            <p><abbr title="World Wide Web Consortium">An abbreviation of W3C</abbr></p>
+            <p><address>
             12345 Sample Address
             Some City, USA Zip
-            </address>
+            </address></p>
         </section>
-    </section>
+        <section>
+            <p class="left">Left alignment</p>
+            <br>
+            <p class="center">Center alignment</p>
+            <br>
+            <p class="right">Right alignment</p>
+        </section>
+        </section>
 
 
-    <!-- TABLE STYLING -->
-    <section>
-        <h3>Table Styling</h3>
-    </section>
+        <!-- TABLE STYLING -->
+        <section>
+            <table>
+
+            </table>
+        </section>
 
 
-    <!-- FORM STYLING -->
-    <section>
-        <h3>Example Form</h3>
-        <div class="checkbox block">
-            <em>Checkboxes</em>
-            <input type="checkbox" id="checkbox1">
-            <label for="checkbox1">Option One</label>
-            <input type="checkbox" id="checkbox2">
-            <label for="checkbox2">Option Two</label>
-            <input type="checkbox" id="checkbox3">
-            <label for="checkbox3">Option Three</label>
-            <input type="checkbox" id="checkbox4">
-            <label for="checkbox4">Option Four</label>
-        </div>
-        <div class="radio block">
-            <em>Radio Buttons</em>
-            <form>
-                <input type="radio" id="radio1" name="radio-group">
-                <label for="radio1">Option One</label>
-                <input type="radio" id="radio2" name="radio-group">
-                <label for="radio2">Option Two</label>
-                <input type="radio" id="radio3" name="radio-group">
-                <label for="radio3">Option Three</label>
-                <input type="radio" id="radio4" name="radio-group">
-                <label for="radio4">Option Four</label>
-            </form>
-        </div>
-        <div class="text-input block">
-            <form>
-                <em>Text Inputs</em>
-                <div class="form-group">
-                    <input type="text" id="username" />
-                    <label for="username">Username</label>
+        <!-- FORM STYLING -->
+        <section>
+            <div class="formcontainer">
+                <div class="checkbox block">
+                    <em>Checkboxes</em>
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">Option One</label>
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2">Option Two</label>
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3">Option Three</label>
+                    <input type="checkbox" id="checkbox4">
+                    <label for="checkbox4">Option Four</label>
                 </div>
-                <div class="form-group">
-                    <input type="password" id="password" />
-                    <label for="password">Password</label>
+                <div class="radio block">
+                    <em>Radio Buttons</em>
+                    <form>
+                        <input type="radio" id="radio1" name="radio-group">
+                        <label for="radio1">Option One</label>
+                        <input type="radio" id="radio2" name="radio-group">
+                        <label for="radio2">Option Two</label>
+                        <input type="radio" id="radio3" name="radio-group">
+                        <label for="radio3">Option Three</label>
+                        <input type="radio" id="radio4" name="radio-group">
+                        <label for="radio4">Option Four</label>
+                    </form>
                 </div>
-            </form>
-        </div>
-        <div class="text-input stacked block">
-            <form>
-                <em>Text Inputs (Stacked)</em>
-                <div class="form-group">
-                    <input type="text" id="username2" />
-                    <label for="username2">Username</label>
+                <div class="dropdown block">
+                    <form>
+                        <em>Drop-down</em>
+                        <div class="form-group">
+                            <label for="dropdown">Drop-down</label>
+                            <select>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                            </select>
+
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input type="password" id="password2" />
-                    <label for="password2">Password</label>
+                <div class="text-input block">
+                    <form>
+                        <em>Text Inputs</em>
+                        <div class="form-group">
+                            <input type="text" id="username" />
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" />
+                            <label for="password">Password</label>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </section>
+                <div class="textarea block">
+                    <form>
+                        <em>Text Area</em>
+                        <div class="form-group">
+                            <label for="textarea">Text Area</label>
+                            <textarea></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-input stacked block">
+                    <form>
+                        <em>Text Inputs (Stacked)</em>
+                        <div class="form-group">
+                            <label for="username2">Username</label>
+                            <input type="text" id="username2" />
 
-    <section>
-        <!-- BUTTON STYLING -->
-        <h3>Buttons</h3>
-        <h4>XSmall Buttons</h4>
-        <button class="xsmall">Button</button>
-        <button class="xsmall">Button</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Password</label>
+                            <input type="password" id="password2" />
 
-        <h4>Default Buttons</h4>
-        <button href="#" class="white">button</button>
-        <button href="#" class="transparent">button</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="textarea stacked block">
+                    <form>
+                        <em>Text Area (Stacked)</em>
+                        <div class="form-group">
+                            <label for="textarea">Text Area</label>
+                            <textarea></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- BUTTON STYLING -->
+            <h4>XSmall Buttons</h4>
+            <button class="white xsmall">Button</button>
+            <button class="transparent xsmall">Button</button>
+
+            <h4>Default Buttons</h4>
+            <button href="#" class="white">button</button>
+            <button href="#" class="transparent">button</button>
 
 
-        <h4>Medium Buttons</h4>
-        <button href="#" class="white medium">button</button>
-        <button href="#" class="transparent medium">button</button>
+            <h4>Medium Buttons</h4>
+            <button href="#" class="white medium">button</button>
+            <button href="#" class="transparent medium">button</button>
 
 
-        <h4>Large Buttons</h4>
-        <button href="#" class="white large">button</button>
-        <button class="button transparent large">button</button>
+            <h4>Large Buttons</h4>
+            <button href="#" class="white large">button</button>
+            <button class="transparent large">button</button>
 
-        <h4>Other Buttons</h4>
-        <input type="button" class="white" Value="Button">
-        <input type="submit" class="white" Value="Submit Button">
-        <input type="reset" class="transparent" value="Reset Button">
-    </section>
+            <h4>Other Buttons</h4>
+            <input type="button" class="white" Value="Button">
+            <input type="submit" class="white" Value="Submit Button">
+            <input type="reset" class="transparent" value="Reset Button">
+        </section>
+    </div>
 
 </body>
 

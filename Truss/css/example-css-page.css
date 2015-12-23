@@ -4,8 +4,16 @@ header h1 {
     text-align: center;
 }
 
+code,
+kbd,
+var {
+    margin-bottom: 20px;
+}
+
 section {
-    background-color: rgba(109, 163, 152, .4);
+    background-color: #f2f2f2;
+    border: 2px solid rgba(109, 163, 152, .4);
     padding: 10px 20px;
     margin: 20px;
+    overflow: hidden;
 }
