@@ -1,0 +1,13 @@
+body {
+     
+}
+
+header h1 {
+    text-align: center;
+}
+
+section {
+    background-color: rgba(109, 163, 152, .4);
+    padding: 10px 20px;
+    margin: 20px;
+}
