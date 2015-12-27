@@ -222,17 +222,15 @@ address {}
 
 /*Add general table rules*/
 
-
 /*Add striped table rules*/
 
-
-/*Add bordered table rules*/
+/*Add responsive table rules*/
 
 
 /* FORM STYLING */
 
 
-/*Add drop down list, fieldset*/
+/* Style drop down list more, fieldset*/
 
 .formcontainer {
     box-sizing: border-box;
@@ -373,8 +371,8 @@ address {}
     background: transparent;
     border: 2px solid rgba(0, 0, 0, 0.5);
     -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .dropdown select option {
