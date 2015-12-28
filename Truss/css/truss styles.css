@@ -1,5 +1,8 @@
 /* ------ SCSS ------ */
 /* VARIABLES */
+/*$primary-color: rgba(0, 0, 0, 0.2);*/
+/*$secondary-color: #aeb8d6;*/
+/*$light-secondary: #dde1ee;*/
 /* MIXINS */
 /* ------ TYPOGRAPHY STYLING ------ */
 * {
@@ -19,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 400;
   margin: 0 0 .2em 0; }
 
 h1 {
@@ -57,36 +60,93 @@ p {
 q {
   font-style: italic; }
 
-blockquote {
-  margin: 20px 0; }
-  blockquote p {
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    line-height: 1.6;
+.testimonial-quote {
+  position: relative;
+  margin-top: 30px; }
+  .testimonial-quote blockquote {
+    background: none;
+    color: #0d3155;
+    font-weight: 300;
+    font-size: 1.2em;
     font-style: italic;
-    display: inline; }
-    blockquote p:before {
-      color: #000;
-      content: open-quote;
-      font-size: 3em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.3em; }
-    blockquote p:after {
-      color: #000;
-      content: close-quote;
-      font-size: 3em;
-      line-height: 0.2em;
-      vertical-align: -0.3em; }
-  blockquote footer {
-    padding: 10px; }
-    blockquote footer:before {
-      padding-left: 10%;
-      content: "- "; }
+    line-height: 1.4 !important;
+    padding-left: 160px;
+    position: relative;
+    text-shadow: 0 1px white;
+    z-index: 50;
+    min-height: 150px; }
+    .testimonial-quote blockquote * {
+      box-sizing: border-box; }
+    .testimonial-quote blockquote p {
+      line-height: 1.4 !important; }
+      .testimonial-quote blockquote p:first-child:before {
+        content: '\201C';
+        color: #cfc796;
+        font-size: 7.5em;
+        font-weight: 700;
+        opacity: .4;
+        position: absolute;
+        top: -.4em;
+        left: 140px;
+        text-shadow: none;
+        z-index: -1; }
+  .testimonial-quote img {
+    border: 3px solid #cfc796;
+    background-color: #cfc796;
+    border-radius: 50%;
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -.2em;
+    left: 0; }
+  .testimonial-quote footer {
+    color: #0d3155;
+    display: block;
+    font-size: .8em;
+    margin-top: 1em; }
+    .testimonial-quote footer cite {
+      color: #cfc796;
+      font-size: 1em;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 1px #FFFfff; }
 
+.testimonial-quote.right {
+  display: block;
+  margin-top: 30px; }
+  .testimonial-quote.right blockquote {
+    padding-left: 0;
+    padding-right: 160px; }
+    .testimonial-quote.right blockquote p {
+      line-height: 1.4 !important; }
+      .testimonial-quote.right blockquote p:first-child:before {
+        content: '\201C';
+        color: #cfc796;
+        font-size: 7.5em;
+        font-weight: 700;
+        opacity: .4;
+        position: absolute;
+        top: -.4em;
+        left: -.2em;
+        text-shadow: none;
+        z-index: -1; }
+  .testimonial-quote.right img {
+    left: auto;
+    right: 0;
+    top: -.2em; }
+  .testimonial-quote.right footer {
+    text-align: right; }
+
+/*
 cite {
-  font-weight: 600; }
-
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $text-color;
+}
+*/
 /* Code */
 code {
   background-color: #d9d9d9;
@@ -108,12 +168,15 @@ strong {
 em {
   font-weight: 400; }
 
-a {
-  color: blue; }
-
 mark {
   background-color: #EDEDAB;
   padding: 5px 5px 1px 5px; }
+
+a {
+  color: #cfc796; }
+  a:hover {
+    color: #0d3155;
+    font-weight: 700; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -131,7 +194,11 @@ ol {
 
 ul {
   padding: .5em;
-  margin-left: .5em; }
+  list-style: none; }
+  ul li:before {
+    content: "\002022";
+    color: #cfc796;
+    margin-right: .5em; }
 
 /* Other */
 .left {
@@ -147,36 +214,79 @@ ul {
   float: right; }
 
 /* ------ TABLE STYLING ------ */
+/*Add responsive table rules*/
 table {
   border-collapse: collapse;
   width: 100%; }
+  table caption {
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8); }
 
-thead th {
+.standard thead th {
   font-weight: 400;
-  border-bottom: 2px solid #aeb8d6;
-  border-right: 5px solid #FFFfff;
+  border-bottom: 2px solid #DCD6B2;
   line-height: 1.5;
   padding: 0.75em;
   text-transform: uppercase;
   text-align: center; }
-
-tbody tr {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
-  tbody tr td {
-    border-right: 5px solid #FFFfff;
+.standard tbody tr {
+  border-bottom: 1px solid #cfc796; }
+  .standard tbody tr td {
     line-height: 1.5;
     padding: 0.75em;
     text-align: left; }
-tbody tr:hover {
-  background-color: #aeb8d6;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  border-top: 1px solid rgba(0, 0, 0, 0.3); }
-  tbody tr:hover td {
-    border-right: none; }
+.standard tbody tr:hover {
+  background-color: #DCD6B2;
+  border-bottom: 1px solid #cfc796;
+  border-top: 1px solid #cfc796; }
+  .standard tbody tr:hover td {
+    color: rgba(0, 0, 0, 0.8); }
 
-/*Add general table rules*/
-/*Add striped table rules*/
-/*Add responsive table rules*/
+.striped thead th {
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.75em;
+  text-transform: uppercase;
+  text-align: center; }
+.striped tbody tr:nth-of-type(odd) {
+  background-color: #efecdc; }
+.striped tbody tr td {
+  line-height: 1.5;
+  padding: 0.75em;
+  text-align: left; }
+.striped tbody tr:hover {
+  background-color: #DCD6B2; }
+  .striped tbody tr:hover td {
+    color: rgba(0, 0, 0, 0.8); }
+
+.bordered {
+  border: 1px solid #cfc796; }
+  .bordered thead {
+    border: 1px solid #cfc796; }
+    .bordered thead th {
+      font-weight: 400;
+      border-bottom: 2px solid #DCD6B2;
+      line-height: 1.5;
+      padding: 0.75em;
+      text-transform: uppercase;
+      text-align: center; }
+  .bordered tbody tr {
+    border-bottom: 1px solid #cfc796; }
+    .bordered tbody tr td {
+      border: 1px solid #cfc796;
+      line-height: 1.5;
+      padding: 0.75em;
+      text-align: left; }
+  .bordered tbody tr:hover {
+    background-color: #DCD6B2;
+    border-bottom: 1px solid #cfc796;
+    border-top: 1px solid #cfc796; }
+    .bordered tbody tr:hover td {
+      color: rgba(0, 0, 0, 0.8); }
+
 /* ------ FORM STYLING ------ */
 /* Style drop down list with js */
 .formcontainer {
@@ -199,7 +309,7 @@ tbody tr:hover {
     text-align: center; }
   .formcontainer fieldset {
     padding: 10px;
-    border: 1px solid #aeb8d6;
+    border: 1px solid #DCD6B2;
     margin-top: 6px; }
     .formcontainer fieldset:disabled input,
     .formcontainer fieldset:disabled select {
@@ -212,7 +322,7 @@ tbody tr:hover {
       border-color: rgba(0, 0, 0, 0.1);
       cursor: not-allowed; }
       .formcontainer fieldset:disabled input + label:hover:before {
-        border-color: #aeb8d6; }
+        border-color: #DCD6B2; }
     .formcontainer fieldset legend {
       text-align: right;
       display: block;
@@ -237,11 +347,11 @@ tbody tr:hover {
   position: absolute; }
   .checkbox input:checked + label,
   .radio input:checked + label {
-    color: #aeb8d6; }
+    color: #DCD6B2; }
   .checkbox input:checked + label:before,
   .radio input:checked + label:before {
-    background-color: #aeb8d6;
-    border-color: #aeb8d6; }
+    background-color: #DCD6B2;
+    border-color: #DCD6B2; }
   .checkbox input:checked + label:hover:before,
   .radio input:checked + label:hover:before {
     border-color: #0d3155; }
@@ -266,7 +376,7 @@ tbody tr:hover {
     border-radius: 6px;
     height: 20px;
     width: 20px;
-    border: 2px solid #aeb8d6;
+    border: 2px solid #DCD6B2;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -291,7 +401,7 @@ tbody tr:hover {
   padding: 4px 8px;
   margin-right: 6px;
   background: transparent;
-  border: 2px solid #aeb8d6;
+  border: 2px solid #DCD6B2;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -306,7 +416,7 @@ tbody tr:hover {
     padding: 4px 8px;
     margin-right: 6px;
     background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid #cfc796;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -321,14 +431,14 @@ tbody tr:hover {
   padding: 4px 8px;
   margin-right: 6px;
   background: transparent;
-  border: 2px solid #aeb8d6;
+  border: 2px solid #DCD6B2;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   .textarea textarea:focus,
   .text-input input:focus {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: #0d3155;
     color: rgba(0, 0, 0, 0.8); }
 
 .dropdown label,
@@ -394,8 +504,8 @@ input[type="reset"] {
 
 .transparent {
   color: #FFFfff;
-  border-color: rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.3); }
+  border-color: #cfc796;
+  background-color: #cfc796; }
   .transparent:hover, .transparent:focus {
     background-color: #FFFfff;
     color: #0d3155;
@@ -406,18 +516,18 @@ input[type="reset"] {
     color: #0d3155;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.5s;
-    -webkit-box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0px 1px 3px 2px #cfc796;
+    -moz-box-shadow: inset 0px 1px 3px 2px #cfc796;
+    box-shadow: inset 0px 1px 3px 2px #cfc796;
     cursor: pointer; }
 
 .white {
   color: #0d3155;
   background: #FFFfff; }
   .white:hover, .white:focus {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #cfc796;
     color: #FFFfff;
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: #cfc796;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.5s; }
   .white:active {
@@ -425,9 +535,9 @@ input[type="reset"] {
     color: #0d3155;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.5s;
-    -webkit-box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0px 1px 3px 2px #cfc796;
+    -moz-box-shadow: inset 0px 1px 3px 2px #cfc796;
+    box-shadow: inset 0px 1px 3px 2px #cfc796;
     cursor: pointer; }
 
 .disabled {

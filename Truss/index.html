@@ -36,10 +36,24 @@
         <section>
             <q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q>
             <br>
-            <blockquote>
-                <p>Blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. Leo nunc at massa, vivamus felis donec quisque scelerisque rutrum, convallis vestibulum risus dolor. Iaculis odio vestibulum massa, vestibulum at enim lorem wisi, quia justo, a libero, ac eget sodales pede dui voluptatem. Gravida erat, malesuada libero luctus malesuada nunc pellentesque, risus a amet ante, in magna metus metus. Velit eget sit, vivamus dui neque.</p>
-                <footer>Collaborators of Truss in <cite>Some Book or Something</cite></footer>
-            </blockquote>
+            <div class="testimonial-quote">
+                <img>
+                <div class="">
+                    <blockquote>
+                        <p>Blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam</p>
+                        <footer>Collaborators of Truss in
+                            <br><cite>Some Book or Something</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="testimonial-quote right">
+                <img value="picture">
+                <blockquote>
+                    <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
+                    <footer>Collaborators of Truss in
+                        <br><cite>Another Book or Something</cite></footer>
+                </blockquote>
+            </div>
         </section>
         <!-- Code -->
         <section>
@@ -54,9 +68,9 @@
         <section>
             <p><strong>Bolded</strong>
                 <em>Italicized</em>
-                <a>Colored</a>
                 <u>Underlined</u>
                 <mark>Highlighted</mark>
+                <a>Linked (hover!)</a>
             </p>
             <p class="uppercase">transformed uppercase</p>
             <p class="lowercase">TRANSFORMED LOWERCASE</p>
@@ -97,6 +111,7 @@
         <section>
             <div class="tableContainer">
                 <table class="standard">
+                    <caption>Standard Table</caption>
                     <thead>
                         <th>Heading 1</th>
                         <th>Heading 2</th>
@@ -117,6 +132,61 @@
                             <td>DataCell</td>
                             <td>DataCell</td>
                             <td>DataCell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tableContainer">
+                <table class="striped">
+                    <caption>Striped Table</caption>
+                    <thead>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                        <th>Heading 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tableContainer">
+
+                <table class="bordered">
+                    <caption>Bordered Table</caption>
+                    <thead>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                        <th>Heading 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
                         </tr>
                     </tbody>
                 </table>
