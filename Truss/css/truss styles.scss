@@ -226,15 +226,6 @@ q {
 }
 
 
-/*
-cite {
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $text-color;
-}
-*/
-
-
 /* Code */
 
 code {
@@ -314,9 +305,16 @@ ul {
 
 /* Other */
 
-abbr {}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+    font-variant: none;
+    cursor: help;
+}
 
-address {}
+address {
+    display: block;
+}
 
 .left {
     display: inline-block;
