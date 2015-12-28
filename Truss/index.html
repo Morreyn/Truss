@@ -126,9 +126,9 @@
 
         <!-- FORM STYLING -->
         <section>
-            <div class="formcontainer">
-                <div class="checkbox block">
-                    <em>Checkboxes</em>
+            <form class="formcontainer">
+                <fieldset class="checkbox">
+                    <legend>Checkboxes</legend>
                     <input type="checkbox" id="checkbox1">
                     <label for="checkbox1">Option One</label>
                     <input type="checkbox" id="checkbox2">
@@ -137,82 +137,81 @@
                     <label for="checkbox3">Option Three</label>
                     <input type="checkbox" id="checkbox4">
                     <label for="checkbox4">Option Four</label>
-                </div>
-                <div class="radio block">
-                    <em>Radio Buttons</em>
-                    <form>
-                        <input type="radio" id="radio1" name="radio-group">
-                        <label for="radio1">Option One</label>
-                        <input type="radio" id="radio2" name="radio-group">
-                        <label for="radio2">Option Two</label>
-                        <input type="radio" id="radio3" name="radio-group">
-                        <label for="radio3">Option Three</label>
-                        <input type="radio" id="radio4" name="radio-group">
-                        <label for="radio4">Option Four</label>
-                    </form>
-                </div>
-                <div class="dropdown block">
-                    <form>
-                        <em>Drop-down</em>
-                        <div class="form-group">
-                            <label for="dropdown">Drop-down</label>
-                            <select>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                                <option value="option4">Option 4</option>
-                            </select>
+                </fieldset>
+                <fieldset class="radio">
+                    <legend>Radio Buttons</legend>
+                    <input type="radio" id="radio1" name="radio-group">
+                    <label for="radio1">Option One</label>
+                    <input type="radio" id="radio2" name="radio-group">
+                    <label for="radio2">Option Two</label>
+                    <input type="radio" id="radio3" name="radio-group">
+                    <label for="radio3">Option Three</label>
+                    <input type="radio" id="radio4" name="radio-group">
+                    <label for="radio4">Option Four</label>
 
-                        </div>
-                    </form>
-                </div>
-                <div class="text-input block">
-                    <form>
-                        <em>Text Inputs</em>
-                        <div class="form-group">
-                            <input type="text" id="username" />
-                            <label for="username">Username</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" id="password" />
-                            <label for="password">Password</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="textarea block">
-                    <form>
-                        <em>Text Area</em>
-                        <div class="form-group">
-                            <label for="textarea">Text Area</label>
-                            <textarea></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="text-input stacked block">
-                    <form>
-                        <em>Text Inputs (Stacked)</em>
-                        <div class="form-group">
-                            <label for="username2">Username</label>
-                            <input type="text" id="username2" />
+                </fieldset>
+                <fieldset class="dropdown">
 
-                        </div>
-                        <div class="form-group">
-                            <label for="password2">Password</label>
-                            <input type="password" id="password2" />
+                    <legend>Drop-down</legend>
+                    <div class="form-group">
+                        <label for="dropdown">Drop-down</label>
+                        <select>
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                            <option value="option4">Option 4</option>
+                        </select>
 
-                        </div>
-                    </form>
-                </div>
-                <div class="textarea stacked block">
-                    <form>
-                        <em>Text Area (Stacked)</em>
-                        <div class="form-group">
-                            <label for="textarea">Text Area</label>
-                            <textarea></textarea>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                    </div>
+
+                </fieldset>
+                <fieldset class="text-input">
+
+                    <legend>Text Inputs</legend>
+                    <div class="form-group">
+                        <input type="text" id="username" />
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" />
+                        <label for="password">Password</label>
+                    </div>
+
+                </fieldset>
+                <fieldset class="textarea">
+
+                    <legend>Text Area</legend>
+                    <div class="form-group">
+                        <label for="textarea">Text Area</label>
+                        <textarea></textarea>
+                    </div>
+
+                </fieldset>
+                <fieldset class="text-input stacked">
+
+                    <legend>Text Inputs (Stacked)</legend>
+                    <div class="form-group">
+                        <label for="username2">Username</label>
+                        <input type="text" id="username2" />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Password</label>
+                        <input type="password" id="password2" />
+
+                    </div>
+
+                </fieldset>
+                <fieldset class="textarea stacked">
+
+                    <legend>Text Area (Stacked)</legend>
+                    <div class="form-group">
+                        <label for="textarea">Text Area</label>
+                        <textarea></textarea>
+                    </div>
+
+                </fieldset>
+            </form>
         </section>
 
         <section>
