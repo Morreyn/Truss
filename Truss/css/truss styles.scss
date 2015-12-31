@@ -1,3 +1,5 @@
+@import 'reset.scss';
+
 /* ------ SCSS ------ */
 
 
@@ -52,6 +54,20 @@ $disabled: rgba(0, 0, 0, .1);
     background: -mox-linear-gradient(left bottom, $color1, $color2);
     background: -o-linear-gradient(left bottom, $color1, $color2);
     background: linear-gradient(left bottom, $color1, $color2);
+}
+
+@mixin breakpoints($points...) {
+  @if length($points) == 1 {
+    @media (min-width: nth($points, 1)) {
+      @content;
+    }
+  } 
+  @if length($points) == 2 {
+    @media (min-width: nth($points, 1))
+      and (max-width: nth($points, 2)) {
+      @content;
+    }
+  }
 }
 
 
@@ -736,3 +752,37 @@ input[type="reset"] {
     padding: 10px 30px;
     font-size: 18px;
 }
+
+
+
+
+/* reponsive image */
+
+.responsiveImg {
+    width: 100%;
+}
+
+/* reponsive image with float */
+.leftFloatImage  {
+    float: left;
+    margin: .5em 1em 1em 0;
+    width: 50%;
+    min-width: 200px;
+}
+.rightFloatImage  {
+    float: right;
+    margin: .5em 0 1em 1em;
+    width: 50%;
+    min-width: 200px;
+}
+
+@include breakpoints (0, 480px){
+    .leftFloatImage, .rightFloatImage {
+    float: none;
+    margin: 0 auto 2em;
+    display: block;
+    width: 95%;
+    min-width: 300px;
+}    
+}
+
