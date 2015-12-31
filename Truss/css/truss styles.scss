@@ -557,7 +557,8 @@ table {
     }
 }
 
-.dropdown select {
+
+/*.dropdown select {
     @include border-radius(6px);
     outline: none;
     line-height: 14px;
@@ -570,6 +571,8 @@ table {
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
+    text-overflow: "";
+    text-indent: 0.01px;
     option {
         @include border-radius(6px);
         outline: none;
@@ -580,6 +583,33 @@ table {
         background: transparent;
         border: 2px solid $primary-color;
         @include transition(all 0.25s ease-in-out);
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}*/
+
+.dropdown {
+    @include border-radius(6px);
+    max-width: 30%;
+    outline: none;
+    line-height: 14px;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-right: 6px;
+    background: transparent;
+    border: 2px solid $secondary-color;
+    cursor: pointer;
+    text-indent: 0.01px;
+    &:first-child {}
+    li {
+        text-decoration: none;
+        &:not(nth-of-type(2)) {
+            display: none;
+        }
+        &:before {
+            content: none;
+        }
     }
 }
 
