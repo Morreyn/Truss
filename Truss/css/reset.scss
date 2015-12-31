@@ -1,0 +1,60 @@
+/* Took some help from Eric Meyer's css reset articles. Removed some tags not supported in HTML5, such as, s, acronym, strike, tt, center, menu(works only in firefox), ruby(no thanks) and etc. <a> tag is seperate. */
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, nav, output, section, summary, time, mark, audio, video {
+    padding: 0;
+	margin: 0;
+	border: 0; 
+	outline: 0;
+	vertical-align: baseline;
+    font-style: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+    font-family: inherit;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* This a definite part of any css reset.  */
+
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, nav, section, summary {
+    display: block;
+}
+
+body {
+	line-height: 1; 
+}
+
+ol, ul {
+	list-style: none; 
+}
+
+blockquote, q {
+	quotes: none; 
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+	content: "";
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; 
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+fieldset, img {
+  border: 0;
+}
