@@ -1,19 +1,21 @@
-body {}
-
-header h1 {
-    text-align: center;
+.container {
+    width: 100%;
+    margin: 0 auto;
 }
 
-code,
-kbd,
-var {
-    margin-bottom: 20px;
+hr {
+    margin: 20px 0;
 }
 
 section {
     /*background-color: #f2f2f2;
-border: 2px solid rgba(109, 163, 152, .4);*/
+    border: 2px solid rgba(109, 163, 152, .4);*/
+    border: 1px solid black;
     padding: 10px 20px;
     margin: 20px;
     overflow: hidden;
+}
+
+.tableContainer {
+    margin-bottom: 50px;
 }

@@ -3,15 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
     <link rel="stylesheet" type="text/css" href="css/compiledCSS/truss styles.css">
-    <link rel="stylesheet" href="glyphicons/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
+    <link rel="stylesheet" href="glyphicons/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <header>
-        <h1>Truss Styling</h1>
     </header>
     <!-- TYPOGRAPHY STYLING --->
     <div class="container">
@@ -36,10 +35,24 @@
         <section>
             <q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q>
             <br>
-            <blockquote>
-                <p>Blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. Leo nunc at massa, vivamus felis donec quisque scelerisque rutrum, convallis vestibulum risus dolor. Iaculis odio vestibulum massa, vestibulum at enim lorem wisi, quia justo, a libero, ac eget sodales pede dui voluptatem. Gravida erat, malesuada libero luctus malesuada nunc pellentesque, risus a amet ante, in magna metus metus. Velit eget sit, vivamus dui neque.</p>
-                <footer>Collaborators of Truss in <cite>Some Book or Something</cite></footer>
-            </blockquote>
+            <div class="testimonial-quote">
+                <img>
+                <div class="">
+                    <blockquote>
+                        <p>Blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
+                        <footer>Collaborators of Truss in
+                            <br><cite>Some Book or Something</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="testimonial-quote right">
+                <img value="picture">
+                <blockquote>
+                    <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
+                    <footer>Collaborators of Truss in
+                        <br><cite>Another Book or Something</cite></footer>
+                </blockquote>
+            </div>
         </section>
         <!-- Code -->
         <section>
@@ -54,9 +67,9 @@
         <section>
             <p><strong>Bolded</strong>
                 <em>Italicized</em>
-                <a>Colored</a>
                 <u>Underlined</u>
                 <mark>Highlighted</mark>
+                <a>Linked (hover!)</a>
             </p>
             <p class="uppercase">transformed uppercase</p>
             <p class="lowercase">TRANSFORMED LOWERCASE</p>
@@ -79,7 +92,7 @@
         <section>
             <p><abbr title="World Wide Web Consortium">An abbreviation of W3C</abbr></p>
             <p><address>
-            12345 Sample Address
+            12345 Sample Address<br>
             Some City, USA Zip
             </address></p>
         </section>
@@ -97,6 +110,7 @@
         <section>
             <div class="tableContainer">
                 <table class="standard">
+                    <caption>Standard Table</caption>
                     <thead>
                         <th>Heading 1</th>
                         <th>Heading 2</th>
@@ -117,6 +131,61 @@
                             <td>DataCell</td>
                             <td>DataCell</td>
                             <td>DataCell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tableContainer">
+                <table class="striped">
+                    <caption>Striped Table</caption>
+                    <thead>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                        <th>Heading 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tableContainer">
+
+                <table class="bordered">
+                    <caption>Bordered Table</caption>
+                    <thead>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                        <th>Heading 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                        </tr>
+                        <tr>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
+                            <td>Data Cell</td>
                         </tr>
                     </tbody>
                 </table>
@@ -150,17 +219,18 @@
                     <label for="radio4">Option Four</label>
 
                 </fieldset>
-                <fieldset class="dropdown">
+                <fieldset>
 
                     <legend>Drop-down</legend>
                     <div class="form-group">
-                        <label for="dropdown">Drop-down</label>
-                        <select>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                            <option value="option4">Option 4</option>
-                        </select>
+                        <label for="dropdown" class="dropdown">
+                            <select>
+                                <option value="option1" selected>Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                            </select>
+                        </label>
 
                     </div>
 
@@ -239,47 +309,48 @@
             <input type="submit" class="white" Value="Submit Button">
             <input type="reset" class="transparent" value="Reset Button">
         </section>
-        
+
         <section>
-           <div>
-           <h4>Responsive Image - Full Width</h4>
-            <img src="images/git.jpg" alt="responsiveImage" class="responsiveImg">
-            </div>
-            
             <div>
-           <h4>Responsive Image - Floated Right</h4>
-           <img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage">
-           <p>
-Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-<p>
-Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
-
-<p>
-Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                <h4>Responsive Image - Full Width</h4>
+                <img src="images/git.jpg" alt="responsiveImage" class="responsiveImg">
             </div>
-            
+            <hr>
+
             <div>
-           <h4>Responsive Image - Floated Left</h4>
-           <img src="images/git.jpg" alt="responsiveImage" class="leftFloatImage">
-           <p>
-Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-<p>
-Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
+                <h4>Responsive Image - Floated Right</h4>
+                <img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage">
+                <p>
+                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                <p>
+                    Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
 
-<p>
-Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                <p>
+                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
             </div>
-            
-            
-            
-            
-            
+            <hr>
+            <div>
+                <h4>Responsive Image - Floated Left</h4>
+                <img src="images/git.jpg" alt="responsiveImage" class="leftFloatImage">
+                <p>
+                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                <p>
+                    Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
+
+                <p>
+                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+            </div>
+
+
+
+
+
         </section>
-        
-        
-        
-        
-        
+
+
+
+
+
     </div>
 
 </body>
