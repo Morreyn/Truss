@@ -1,16 +1,10 @@
 .container {
-    max-width: 75%;
+    width: 100%;
     margin: 0 auto;
 }
 
-header h1 {
-    text-align: center;
-}
-
-code,
-kbd,
-var {
-    margin-bottom: 20px;
+hr {
+    margin: 20px 0;
 }
 
 section {

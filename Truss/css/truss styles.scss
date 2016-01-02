@@ -57,17 +57,16 @@ $disabled: rgba(0, 0, 0, .1);
 }
 
 @mixin breakpoints($points...) {
-  @if length($points) == 1 {
-    @media (min-width: nth($points, 1)) {
-      @content;
+    @if length($points)==1 {
+        @media (min-width: nth($points, 1)) {
+            @content;
+        }
     }
-  } 
-  @if length($points) == 2 {
-    @media (min-width: nth($points, 1))
-      and (max-width: nth($points, 2)) {
-      @content;
+    @if length($points)==2 {
+        @media (min-width: nth($points, 1)) and (max-width: nth($points, 2)) {
+            @content;
+        }
     }
-  }
 }
 
 
@@ -147,6 +146,9 @@ q {
     font-style: italic;
 }
 
+
+/*NOTE: when grid arrives change blockquote layout for mobile sizes*/
+
 .testimonial-quote {
     position: relative;
     margin-top: 30px;
@@ -214,6 +216,7 @@ q {
     margin-top: 30px;
     blockquote {
         padding-left: 0;
+        margin-left: 50px;
         padding-right: 160px;
         p {
             line-height: 1.4 !important;
@@ -351,7 +354,7 @@ address {
 /* ------ TABLE STYLING ------ */
 
 
-/*Add responsive table rules*/
+/*NOTE: Add responsive table rules*/
 
 table {
     border-collapse: collapse;
@@ -573,58 +576,39 @@ table {
     }
 }
 
-
-/*.dropdown select {
-    @include border-radius(6px);
-    outline: none;
-    line-height: 14px;
-    font-size: 14px;
-    padding: 4px 8px;
-    margin-right: 6px;
-    background: transparent;
-    border: 2px solid $secondary-color;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    text-overflow: "";
-    text-indent: 0.01px;
-    option {
+.dropdown {
+    position: relative;
+    &:after {
+        content: '>';
+        color: $primary-color;
+        font-weight: 700;
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        right: 15px;
+        top: 7px;
+        width: 20px;
+        height: 20px;
+        background: primary-color;
+        position: absolute;
+    }
+    select {
         @include border-radius(6px);
         outline: none;
         line-height: 14px;
         font-size: 14px;
-        padding: 4px 8px;
+        padding: 4px 25px 4px 5px;
         margin-right: 6px;
         background: transparent;
-        border: 2px solid $primary-color;
-        @include transition(all 0.25s ease-in-out);
-        &:hover {
+        border: 2px solid $secondary-color;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        display: inline-block;
+        option {
             background-color: $primary-color;
-        }
-    }
-}*/
-
-.dropdown {
-    @include border-radius(6px);
-    max-width: 30%;
-    outline: none;
-    line-height: 14px;
-    font-size: 14px;
-    padding: 4px 8px;
-    margin-right: 6px;
-    background: transparent;
-    border: 2px solid $secondary-color;
-    cursor: pointer;
-    text-indent: 0.01px;
-    &:first-child {}
-    li {
-        text-decoration: none;
-        &:not(nth-of-type(2)) {
-            display: none;
-        }
-        &:before {
-            content: none;
+            color: $neutral-background;
         }
     }
 }
@@ -784,35 +768,36 @@ input[type="reset"] {
 }
 
 
-
-
 /* reponsive image */
 
 .responsiveImg {
     width: 100%;
 }
 
+
 /* reponsive image with float */
-.leftFloatImage  {
+
+.leftFloatImage {
     float: left;
     margin: .5em 1em 1em 0;
     width: 50%;
     min-width: 200px;
 }
-.rightFloatImage  {
+
+.rightFloatImage {
     float: right;
     margin: .5em 0 1em 1em;
     width: 50%;
     min-width: 200px;
 }
 
-@include breakpoints (0, 480px){
-    .leftFloatImage, .rightFloatImage {
-    float: none;
-    margin: 0 auto 2em;
-    display: block;
-    width: 95%;
-    min-width: 300px;
-}    
+@include breakpoints (0, 480px) {
+    .leftFloatImage,
+    .rightFloatImage {
+        float: none;
+        margin: 0 auto 2em;
+        display: block;
+        width: 95%;
+        min-width: 300px;
+    }
 }
-
