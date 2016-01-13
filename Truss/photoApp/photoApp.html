@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Photo App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/photoApp.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+
+    </script>
+    <!--    <script src="js/jquery.sortPhoto.js"></script>-->
+    <script src="js/jquery.photoApp.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            'use strict';
+            // $('#dayView').sortPhoto();
+
+            $('.imgCollection').photoApp();
+        });
+
+    </script>
+</head>
+
+<body class="">
+
+    <div class="heading">
+        <h2>Photos</h2>
+
+    </div>
+
+    <div class="imgCollection">
+
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image1" />
+            <time datetime="2011-10-11"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2011-10-05"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2011-10-11"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2011-10-11"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2011-10-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2011-10-11"></time>
+        </div>
+        <div data-src="imgs/image7.jpg"><img src="imgs/image7_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2013-10-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2013-10-05"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2015-10-21"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2015-12-21"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2010-02-05"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2015-12-21"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2015-10-21"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image1" />
+            <time datetime="2013-12-15"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2010-02-15"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2013-10-15"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2015-10-15"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2010-02-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2015-04-11"></time>
+        </div>
+        <div data-src="imgs/image7.jpg"><img src="imgs/image7_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2015-04-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2015-04-05"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2010-02-21"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2015-04-21"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2015-04-26"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2011-04-26"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2011-04-26"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2011-10-26"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2015-04-26"></time>
+        </div>
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image1" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2010-02-11"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2010-02-11"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2010-02-11"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image7.jpg"><img src="imgs/image7_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2010-02-21"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2011-10-21"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2011-10-21"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2011-12-21"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2010-02-21"></time>
+        </div>
+
+
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image1" />
+            <time datetime="2013-10-15"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2015-10-15"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2011-10-05"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2015-12-15"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2013-04-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2010-02-11"></time>
+        </div>
+        <div data-src="imgs/image7.jpg"><img src="imgs/image7_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2015-04-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2015-04-21"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2015-04-05"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2015-04-05"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2015-04-26"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2010-02-26"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2010-02-05"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2011-10-26"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2013-04-26"></time>
+        </div>
+        
+         <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2015-12-05"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2014-10-11"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2013-10-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2014-10-21"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2013-12-21"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2011-10-21"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2013-10-21"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2015-10-05"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2015-10-21"></time>
+        </div>
+
+
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image1" />
+            <time datetime="2015-12-15"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2013-10-15"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2011-10-15"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2013-12-15"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2013-04-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2015-04-11"></time>
+        </div>
+        <div data-src="imgs/image7.jpg"><img src="imgs/image7_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2015-04-11"></time>
+        </div>
+         <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2014-04-21"></time>
+        </div>
+        <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2014-04-05"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2014-04-26"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2014-04-26"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2014-04-26"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2014-10-26"></time>
+        </div>
+        <div data-src="imgs/image15.jpg"><img src="imgs/image15_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2014-04-26"></time>
+        </div>
+         <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2014-10-11"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2014-10-11"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2014-10-11"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2014-10-05"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2013-10-11"></time>
+        </div>
+         <div data-src="imgs/image10.jpg"><img src="imgs/image10_thumb.jpg" title="image1" alt="image10" />
+            <time datetime="2015-04-21"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image11" />
+            <time datetime="2015-04-26"></time>
+        </div>
+        <div data-src="imgs/image12.jpg"><img src="imgs/image12_thumb.jpg" title="image1" alt="image12" />
+            <time datetime="2015-04-26"></time>
+        </div>
+        <div data-src="imgs/image13.jpg"><img src="imgs/image13_thumb.jpg" title="image1" alt="image13" />
+            <time datetime="2011-04-26"></time>
+        </div>
+        <div data-src="imgs/image14.jpg"><img src="imgs/image14_thumb.jpg" title="image1" alt="image14" />
+            <time datetime="2011-10-26"></time>
+        </div>
+        <div data-src="imgs/image1.jpg"><img src="imgs/image1_thumb.jpg" title="image1" alt="image15" />
+            <time datetime="2013-04-26"></time>
+        </div>
+        
+         <div data-src="imgs/image2.jpg"><img src="imgs/image2_thumb.jpg" title="image1" alt="image2" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image3.jpg"><img src="imgs/image3_thumb.jpg" title="image1" alt="image3" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image4.jpg"><img src="imgs/image4_thumb.jpg" title="image1" alt="image4" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image5.jpg"><img src="imgs/image5_thumb.jpg" title="image1" alt="image5" />
+            <time datetime="2015-10-11"></time>
+        </div>
+        <div data-src="imgs/image6.jpg"><img src="imgs/image6_thumb.jpg" title="image1" alt="image6" />
+            <time datetime="2014-10-11"></time>
+        </div>
+        <div data-src="imgs/image11.jpg"><img src="imgs/image11_thumb.jpg" title="image1" alt="image7" />
+            <time datetime="2013-10-11"></time>
+        </div>
+        <div data-src="imgs/image8.jpg"><img src="imgs/image8_thumb.jpg" title="image1" alt="image8" />
+            <time datetime="2014-10-21"></time>
+        </div>
+        <div data-src="imgs/image9.jpg"><img src="imgs/image9_thumb.jpg" title="image1" alt="image9" />
+            <time datetime="2013-10-21"></time>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
