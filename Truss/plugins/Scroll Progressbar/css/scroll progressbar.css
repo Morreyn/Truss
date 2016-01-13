@@ -7,30 +7,60 @@ body {
   padding: 0;
   margin: 0; }
 
-.scroll-area {
+.right-scroll-area {
   position: fixed;
-  height: 500px;
+  height: 530px;
   width: 40px;
   right: 20px;
   top: 10%;
-  visibility: hidden; }
+  /*visibility: hidden;*/ }
+  .right-scroll-area .bar {
+    background-color: rgba(207, 199, 150, 0.5);
+    position: absolute;
+    right: 25%;
+    z-index: -1;
+    height: 500px;
+    width: 20px; }
+  .right-scroll-area .bar + .markers {
+    height: 100%; }
+    .right-scroll-area .bar + .markers li {
+      list-style-type: none;
+      height: 20%;
+      width: 100%;
+      border-top: 1px solid black; }
+      .right-scroll-area .bar + .markers li:nth-of-type(5) {
+        border-bottom: 1px solid black; }
 
-.line {
-  background-color: lightblue;
-  position: absolute;
-  right: 25%;
-  z-index: -1;
-  height: 506px;
-  width: 20px; }
+.top-scroll-area {
+  position: fixed;
+  width: 560px;
+  height: 40px;
+  top: 0%;
+  left: 50%;
+  margin-left: -280px;
+  /*visibility: hidden;*/ }
+  .top-scroll-area .bar {
+    background-color: rgba(207, 199, 150, 0.5);
+    position: absolute;
+    left: 50%;
+    margin-left: -280px;
+    margin-top: 10px;
+    z-index: -1;
+    width: 506px;
+    height: 20px; }
+  .top-scroll-area .bar + .markers {
+    height: 100%; }
+    .top-scroll-area .bar + .markers li {
+      list-style-type: none;
+      float: left;
+      border-left: 1px solid #000;
+      width: 19%;
+      height: 100%; }
+      .top-scroll-area .bar + .markers li:nth-of-type(5) {
+        border-right: 1px solid black; }
 
-.markers {
-  height: 100%; }
-  .markers li {
-    list-style-type: none;
-    height: 20%;
-    width: 100%;
-    border-top: 1px solid black; }
-    .markers li:nth-of-type(5) {
-      border-bottom: 1px solid black; }
+section {
+  margin: 50px auto;
+  width: 960px; }
 
 /*# sourceMappingURL=scroll%20progressbar.css.map */

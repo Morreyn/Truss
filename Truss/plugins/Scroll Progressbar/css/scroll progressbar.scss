@@ -1,3 +1,4 @@
+$scrollbar-color: rgba(207, 199, 150, .5);
 body {
     background-color: white;
     color: black;
@@ -9,33 +10,69 @@ body {
     margin: 0;
 }
 
-.scroll-area {
+.right-scroll-area {
     position: fixed;
-    height: 500px;
+    height: 530px;
     width: 40px;
     right: 20px;
     top: 10%;
-    visibility: hidden;
-}
-
-.line {
-    background-color: lightblue;
-    position: absolute;
-    right: 25%;
-    z-index: -1;
-    height: 506px;
-    width: 20px;
-}
-
-.markers {
-    height: 100%;
-    li {
-        list-style-type: none;
-        height: 20%;
-        width: 100%;
-        border-top: 1px solid black;
-        &:nth-of-type(5) {
-            border-bottom: 1px solid black;
+    /*visibility: hidden;*/
+    .bar {
+        background-color: $scrollbar-color;
+        position: absolute;
+        right: 25%;
+        z-index: -1;
+        height: 500px;
+        width: 20px;
+    }
+    .bar + .markers {
+        height: 100%;
+        li {
+            list-style-type: none;
+            height: 20%;
+            width: 100%;
+            border-top: 1px solid black;
+            &:nth-of-type(5) {
+                border-bottom: 1px solid black;
+            }
         }
     }
+}
+
+.top-scroll-area {
+    position: fixed;
+    width: 560px;
+    height: 40px;
+    top: 0%;
+    left: 50%;
+    margin-left: -280px;
+    /*visibility: hidden;*/
+    .bar {
+        background-color: $scrollbar-color;
+        position: absolute;
+        left: 50%;
+        margin-left: -280px;
+        margin-top: 10px;
+        z-index: -1;
+        width: 506px;
+        height: 20px;
+    }
+    .bar + .markers {
+        height: 100%;
+        li {
+            list-style-type: none;
+            float: left;
+            border-left: 1px solid #000;
+            width: 19%;
+            height: 100%;
+            &:nth-of-type(5) {
+                border-right: 1px solid black;
+            }
+        }
+    }
+}
+
+section {
+    margin: 50px auto;
+    width: 960px;
 }
