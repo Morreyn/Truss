@@ -3,6 +3,59 @@
 /* ------ SCSS ------ */
 
 
+/* FONTS */
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('../../fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-BlackItalic';
+    src: url('../../fonts/Lato-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../../fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-BoldItalic';
+    src: url('../../fonts/Lato-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Hairline';
+    src: url('../../fonts/Lato-Hairline.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-HairlineItalic';
+    src: url('../../fonts/Lato-HairlineItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Italic';
+    src: url('../../fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-LightItalic';
+    src: url('../../fonts/Lato-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../../fonts/Lato-Regular.ttf');
+}
+
+
 /* VARIABLES */
 
 
@@ -19,9 +72,15 @@ $secondary-color: #DCD6B2;
 $light-secondary: #efecdc;
 $text-color: #0d3155;
 $hover-input: #144c85;
-$gray-text: rgba(0, 0, 0, 0.8);
+$gray-text: rgba(0,
+0,
+0,
+0.8);
 $neutral-background: #FFFfff;
-$disabled: rgba(0, 0, 0, .1);
+$disabled: rgba(0,
+0,
+0,
+.1);
 
 /* MIXINS */
 
@@ -38,7 +97,8 @@ $disabled: rgba(0, 0, 0, .1);
     transition: $options;
 }
 
-@mixin transdur($property, $duration) {
+@mixin transdur($property,
+$duration) {
     -webkit-transition-property: $property;
     -webkit-transition-duration: $duration;
 }
@@ -49,7 +109,8 @@ $disabled: rgba(0, 0, 0, .1);
     border-radius: $options;
 }
 
-@mixin linear-gradient($color1, $color2) {
+@mixin linear-gradient($color1,
+$color2) {
     background: $color1;
     background: -webkit-linear-gradient(left bottom, $color1, $color2);
     background: -mox-linear-gradient(left bottom, $color1, $color2);
@@ -82,9 +143,8 @@ $disabled: rgba(0, 0, 0, .1);
 /* General */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-Regular', sans-serif;
     font-size: 1em;
-    font-weight: 400;
 }
 
 
@@ -96,7 +156,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     margin: 0 0 .2em 0;
 }
 
@@ -134,7 +194,7 @@ h6 {
 /* Paragraphs */
 
 p {
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     line-height: 1.2;
     font-size: 1.0em;
     padding: .2em;
@@ -144,21 +204,52 @@ p {
 /* Quoting */
 
 q {
-    font-style: italic;
+    font-family: 'Lato-Italic', sans-serif;
+}
+
+.blockquote-simple {
+    margin: 5%;
+    p {
+        color: $text-color;
+        font-family: 'Lato-Italic', sans-serif;
+        font-size: 1em;
+        line-height: 1.2;
+        &:before,
+        &:after {
+            content: '\201C';
+            color: $text-color;
+            font-size: 1em;
+        }
+        &:after {
+            content: '\201D';
+            color: $text-color;
+            font-size: 1em;
+        }
+    }
+    footer {
+        color: $text-color;
+        &:before {
+            content: '\2010\2008';
+            color: $text-color;
+            margin-left: 50%;
+        }
+        cite {
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
 }
 
 
-/*NOTE: when grid arrives change blockquote layout for mobile sizes*/
+/*NOTE: when grid arrives change alternating blockquote layout for mobile sizes*/
 
 .testimonial-quote {
     position: relative;
     margin-top: 30px;
-    blockquote {
+    .blockquote-fancy {
         background: none;
         color: $text-color;
-        font-weight: 300;
         font-size: 1.2em;
-        font-style: italic;
         line-height: 1.4 !important;
         padding-left: 160px;
         position: relative;
@@ -170,11 +261,12 @@ q {
         }
         p {
             line-height: 1.4 !important;
+            font-family: 'Lato-Italic', sans-serif;
             &:first-child:before {
                 content: '\201C';
                 color: $primary-color;
                 font-size: 7.5em;
-                font-weight: 700;
+                font-family: 'Lato-Bold', sans-serif;
                 opacity: .3;
                 position: absolute;
                 top: -.4em;
@@ -204,7 +296,7 @@ q {
             color: $primary-color;
             font-size: 1em;
             font-style: normal;
-            font-weight: 700;
+            font-family: 'Lato-Bold', sans-serif;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-shadow: 0 1px $neutral-background;
@@ -215,7 +307,7 @@ q {
 .testimonial-quote.right {
     display: block;
     margin-top: 30px;
-    blockquote {
+    .blockquote-fancy {
         padding-left: 0;
         margin-left: 50px;
         padding-right: 160px;
@@ -225,7 +317,7 @@ q {
                 content: '\201C';
                 color: $primary-color;
                 font-size: 7.5em;
-                font-weight: 700;
+                font-family: 'Lato-Bold', sans-serif;
                 opacity: .4;
                 position: absolute;
                 top: -.4em;
@@ -279,11 +371,11 @@ var {
 /* Inline Styles */
 
 strong {
-    font-weight: 700;
+    font-family: 'Lato-Bold', sans-serif;
 }
 
 em {
-    font-weight: 400;
+    font-family: 'Lato-Italic', sans-serif;
 }
 
 u {}
@@ -297,7 +389,7 @@ a {
     color: $primary-color;
     &:hover {
         color: $text-color;
-        font-weight: 700;
+        font-family: 'Lato-Bold', sans-serif;
     }
 }
 
@@ -375,7 +467,7 @@ table {
         font-size: 1.5em;
         line-height: 1.5;
         text-transform: uppercase;
-        font-weight: 400;
+        font-family: 'Lato-Regular', sans-serif;
         color: $gray-text;
     }
 }
@@ -383,7 +475,7 @@ table {
 .standard {
     thead {
         th {
-            font-weight: 400;
+            font-family: 'Lato-Regular', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
@@ -414,7 +506,7 @@ table {
 .striped {
     thead {
         th {
-            font-weight: 400;
+            font-family: 'Lato-Regular', sans-serif;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
@@ -446,7 +538,7 @@ table {
     thead {
         border: 1px solid $primary-color;
         th {
-            font-weight: 400;
+            font-family: 'Lato-Regular', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
@@ -484,7 +576,7 @@ table {
     margin: .05% auto;
     padding: 2%;
     h1 {
-        font-weight: 300;
+        font-family: 'Lato-Light', sans-serif;
         font-size: 36px;
         line-height: 1.2em;
     }
@@ -590,7 +682,7 @@ table {
     &:after {
         content: '>';
         color: $primary-color;
-        font-weight: 700;
+        font-family: 'Lato-Bold', sans-serif;
         -ms-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
@@ -702,9 +794,8 @@ input[type="reset"] {
     text-align: center;
     text-decoration: none;
     font-size: 12px;
-    font-family: 'Lato', sans-serif;
     letter-spacing: .10em;
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     text-transform: uppercase;
     border-radius: 2px;
 }
@@ -717,12 +808,14 @@ input[type="reset"] {
     &:focus {
         background-color: $neutral-background;
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
     }
     &:active {
         background-color: $neutral-background;
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
         @include box-shadow(inset 0px 1px 3px 2px $primary-color);
         cursor: pointer;
     }
@@ -736,12 +829,14 @@ input[type="reset"] {
         background-color: $primary-color;
         color: $neutral-background;
         border-color: $primary-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
     }
     &:active {
         background-color: rgba(0, 0, 0, 0.1);
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
         @include box-shadow(inset 0px 1px 3px 2px $primary-color);
         cursor: pointer;
     }
@@ -758,7 +853,7 @@ input[type="reset"] {
 .medium,
 .large {
     @include border-radius(3px);
-    font-weight: 300;
+    font-family: 'Lato-Light', sans-serif;
 }
 
 .xsmall {
@@ -841,7 +936,7 @@ input[type="reset"] {
             right: 2%;
             color: #fff;
             font-size: 150%;
-            font-weight: bolder;
+            font-family: 'Lato-Bold', sans-serif;
         }
     }
     /* end of .modal__header */
@@ -890,7 +985,8 @@ input[type="reset"] {
     min-width: 200px;
 }
 
-@include breakpoints (0, 480px) {
+@include breakpoints (0,
+480px) {
     .leftFloatImage,
     .rightFloatImage {
         float: none;
