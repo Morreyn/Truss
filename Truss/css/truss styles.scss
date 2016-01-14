@@ -232,6 +232,9 @@ q {
             content: '\2010\2008';
             color: $text-color;
             margin-left: 50%;
+            @media only screen and (max-width: 480px) {
+                margin-left: 10%;
+            }
         }
         cite {
             color: $primary-color;
@@ -256,6 +259,9 @@ q {
         text-shadow: 0 1px white;
         z-index: 50;
         min-height: 150px;
+        @media only screen and (max-width: 480px) {
+            padding-left: 0;
+        }
         * {
             box-sizing: border-box;
         }
@@ -273,6 +279,9 @@ q {
                 left: 140px;
                 text-shadow: none;
                 z-index: -1;
+                @media only screen and (max-width: 480px) {
+                    left: -15px;
+                }
             }
         }
     }
@@ -286,6 +295,11 @@ q {
         position: absolute;
         top: -.2em;
         left: 0;
+        @media only screen and (max-width: 480px) {
+            position: relative;
+            left: 27%;
+            margin-bottom: 30px;
+        }
     }
     footer {
         color: $text-color;
@@ -311,6 +325,13 @@ q {
         padding-left: 0;
         margin-left: 50px;
         padding-right: 160px;
+        @media only screen and (max-width: 600px) {
+            margin-left: 10px;
+        }
+        @media only screen and (max-width: 480px) {
+            padding-right: 0;
+            width: 100%;
+        }
         p {
             line-height: 1.4 !important;
             &:first-child:before {
@@ -324,6 +345,9 @@ q {
                 left: -.2em;
                 text-shadow: none;
                 z-index: -1;
+                @media only screen and (max-width: 480px) {
+                    left: -15px;
+                }
             }
         }
     }
@@ -331,9 +355,17 @@ q {
         left: auto;
         right: 0;
         top: -.2em;
+        @media only screen and (max-width: 480px) {
+            position: relative;
+            left: 27%;
+            margin-bottom: 30px;
+        }
     }
     footer {
         text-align: right;
+        @media only screen and (max-width: 480px) {
+            text-align: left;
+        }
     }
 }
 
@@ -382,7 +414,7 @@ u {}
 
 mark {
     background-color: #EDEDAB;
-    padding: 5px 5px 1px 5px;
+    padding: 0px 5px 1px 5px;
 }
 
 a {
@@ -457,9 +489,6 @@ address {
 
 /* ------ TABLE STYLING ------ */
 
-
-/*NOTE: Add responsive table rules*/
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -475,21 +504,40 @@ table {
 .standard {
     thead {
         th {
-            font-family: 'Lato-Regular', sans-serif;
+            font-family: 'Lato-Bold', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
         tr {
             border-bottom: 1px solid $primary-color;
+            @media only screen and (max-width: 767px) {
+                &:first-child {
+                    border-top: 1px solid $primary-color;
+                }
+            }
             td {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
             }
         }
         tr:hover {
@@ -498,6 +546,11 @@ table {
             border-top: 1px solid $primary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -506,11 +559,16 @@ table {
 .striped {
     thead {
         th {
-            font-family: 'Lato-Regular', sans-serif;
+            font-family: 'Lato-Bold', sans-serif;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
@@ -522,12 +580,31 @@ table {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
+            }
+            @media only screen and (max-width: 767px) {
+                &:first-child {
+                    border-top: 1px solid $primary-color;
+                }
             }
         }
         tr:hover {
             background-color: $secondary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -538,12 +615,17 @@ table {
     thead {
         border: 1px solid $primary-color;
         th {
-            font-family: 'Lato-Regular', sans-serif;
+            font-family: 'Lato-Bold', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
@@ -554,6 +636,19 @@ table {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    border-bottom: 1px dashed $primary-color;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
             }
         }
         tr:hover {
@@ -562,6 +657,11 @@ table {
             border-top: 1px solid $primary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -738,6 +838,8 @@ table {
     float: left;
     top: 6px;
     margin-right: 10px;
+    margin-bottom: .75em;
+    padding-right: 5px;
     color: $gray-text;
     cursor: pointer;
     @include transition(all 0.25s ease-in-out);
@@ -751,6 +853,7 @@ table {
 .textarea .form-group,
 .text-input .form-group {
     display: inline-block;
+    margin-bottom: 1em;
 }
 
 .text-input input:focus + label {
@@ -769,10 +872,10 @@ table {
 .stacked .form-group {
     width: 100%;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 1em;
     label {
-        width: 16%;
-        margin-bottom: 10px;
+        min-width: 16%;
+        margin-bottom: .75em;
     }
     input {
         width: 84%;

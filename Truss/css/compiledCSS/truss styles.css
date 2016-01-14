@@ -159,6 +159,9 @@ q {
       content: '\2010\2008';
       color: #0d3155;
       margin-left: 50%; }
+      @media only screen and (max-width: 480px) {
+        .blockquote-simple footer:before {
+          margin-left: 10%; } }
     .blockquote-simple footer cite {
       color: #cfc796;
       text-transform: uppercase; }
@@ -177,6 +180,9 @@ q {
     text-shadow: 0 1px white;
     z-index: 50;
     min-height: 150px; }
+    @media only screen and (max-width: 480px) {
+      .testimonial-quote .blockquote-fancy {
+        padding-left: 0; } }
     .testimonial-quote .blockquote-fancy * {
       box-sizing: border-box; }
     .testimonial-quote .blockquote-fancy p {
@@ -193,6 +199,9 @@ q {
         left: 140px;
         text-shadow: none;
         z-index: -1; }
+        @media only screen and (max-width: 480px) {
+          .testimonial-quote .blockquote-fancy p:first-child:before {
+            left: -15px; } }
   .testimonial-quote img {
     border: 3px solid #cfc796;
     background-color: #cfc796;
@@ -203,6 +212,11 @@ q {
     position: absolute;
     top: -.2em;
     left: 0; }
+    @media only screen and (max-width: 480px) {
+      .testimonial-quote img {
+        position: relative;
+        left: 27%;
+        margin-bottom: 30px; } }
   .testimonial-quote footer {
     color: #0d3155;
     display: block;
@@ -224,6 +238,13 @@ q {
     padding-left: 0;
     margin-left: 50px;
     padding-right: 160px; }
+    @media only screen and (max-width: 600px) {
+      .testimonial-quote.right .blockquote-fancy {
+        margin-left: 10px; } }
+    @media only screen and (max-width: 480px) {
+      .testimonial-quote.right .blockquote-fancy {
+        padding-right: 0;
+        width: 100%; } }
     .testimonial-quote.right .blockquote-fancy p {
       line-height: 1.4 !important; }
       .testimonial-quote.right .blockquote-fancy p:first-child:before {
@@ -237,12 +258,23 @@ q {
         left: -.2em;
         text-shadow: none;
         z-index: -1; }
+        @media only screen and (max-width: 480px) {
+          .testimonial-quote.right .blockquote-fancy p:first-child:before {
+            left: -15px; } }
   .testimonial-quote.right img {
     left: auto;
     right: 0;
     top: -.2em; }
+    @media only screen and (max-width: 480px) {
+      .testimonial-quote.right img {
+        position: relative;
+        left: 27%;
+        margin-bottom: 30px; } }
   .testimonial-quote.right footer {
     text-align: right; }
+    @media only screen and (max-width: 480px) {
+      .testimonial-quote.right footer {
+        text-align: left; } }
 
 /* Code */
 pre > code {
@@ -277,7 +309,7 @@ em {
 
 mark {
   background-color: #EDEDAB;
-  padding: 5px 5px 1px 5px; }
+  padding: 0px 5px 1px 5px; }
 
 a {
   color: #cfc796; }
@@ -330,7 +362,6 @@ address {
   float: right; }
 
 /* ------ TABLE STYLING ------ */
-/*NOTE: Add responsive table rules*/
 table {
   border-collapse: collapse;
   width: 100%; }
@@ -342,53 +373,96 @@ table {
     color: rgba(0, 0, 0, 0.8); }
 
 .standard thead th {
-  font-family: 'Lato-Regular', sans-serif;
+  font-family: 'Lato-Bold', sans-serif;
   border-bottom: 2px solid #DCD6B2;
   line-height: 1.5;
   padding: 0.75em;
   text-transform: uppercase;
   text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .standard thead th {
+      display: block;
+      text-align: center;
+      display: none; } }
 .standard tbody tr {
   border-bottom: 1px solid #cfc796; }
+  @media only screen and (max-width: 767px) {
+    .standard tbody tr:first-child {
+      border-top: 1px solid #cfc796; } }
   .standard tbody tr td {
     line-height: 1.5;
     padding: 0.75em;
     text-align: left; }
+    @media only screen and (max-width: 767px) {
+      .standard tbody tr td {
+        display: block;
+        text-align: center; }
+        .standard tbody tr td:before {
+          content: attr(data-th) ": ";
+          padding-right: 10px;
+          font-family: 'Lato-Bold', sans-serif; } }
 .standard tbody tr:hover {
   background-color: #DCD6B2;
   border-bottom: 1px solid #cfc796;
   border-top: 1px solid #cfc796; }
   .standard tbody tr:hover td {
     color: rgba(0, 0, 0, 0.8); }
+    @media only screen and (max-width: 767px) {
+      .standard tbody tr:hover td:hover {
+        background-color: #cfc796; } }
 
 .striped thead th {
-  font-family: 'Lato-Regular', sans-serif;
+  font-family: 'Lato-Bold', sans-serif;
   line-height: 1.5;
   padding: 0.75em;
   text-transform: uppercase;
   text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .striped thead th {
+      display: block;
+      text-align: center;
+      display: none; } }
 .striped tbody tr:nth-of-type(odd) {
   background-color: #efecdc; }
 .striped tbody tr td {
   line-height: 1.5;
   padding: 0.75em;
   text-align: left; }
+  @media only screen and (max-width: 767px) {
+    .striped tbody tr td {
+      display: block;
+      text-align: center; }
+      .striped tbody tr td:before {
+        content: attr(data-th) ": ";
+        padding-right: 10px;
+        font-family: 'Lato-Bold', sans-serif; } }
+@media only screen and (max-width: 767px) {
+  .striped tbody tr:first-child {
+    border-top: 1px solid #cfc796; } }
 .striped tbody tr:hover {
   background-color: #DCD6B2; }
   .striped tbody tr:hover td {
     color: rgba(0, 0, 0, 0.8); }
+    @media only screen and (max-width: 767px) {
+      .striped tbody tr:hover td:hover {
+        background-color: #cfc796; } }
 
 .bordered {
   border: 1px solid #cfc796; }
   .bordered thead {
     border: 1px solid #cfc796; }
     .bordered thead th {
-      font-family: 'Lato-Regular', sans-serif;
+      font-family: 'Lato-Bold', sans-serif;
       border-bottom: 2px solid #DCD6B2;
       line-height: 1.5;
       padding: 0.75em;
       text-transform: uppercase;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .bordered thead th {
+          display: block;
+          text-align: center;
+          display: none; } }
   .bordered tbody tr {
     border-bottom: 1px solid #cfc796; }
     .bordered tbody tr td {
@@ -396,12 +470,26 @@ table {
       line-height: 1.5;
       padding: 0.75em;
       text-align: left; }
+      @media only screen and (max-width: 767px) {
+        .bordered tbody tr td {
+          display: block;
+          text-align: center;
+          border-bottom: 1px dashed #cfc796; }
+          .bordered tbody tr td:last-child {
+            border-bottom: none; }
+          .bordered tbody tr td:before {
+            content: attr(data-th) ": ";
+            padding-right: 10px;
+            font-family: 'Lato-Bold', sans-serif; } }
   .bordered tbody tr:hover {
     background-color: #DCD6B2;
     border-bottom: 1px solid #cfc796;
     border-top: 1px solid #cfc796; }
     .bordered tbody tr:hover td {
       color: rgba(0, 0, 0, 0.8); }
+      @media only screen and (max-width: 767px) {
+        .bordered tbody tr:hover td:hover {
+          background-color: #cfc796; } }
 
 /* ------ FORM STYLING ------ */
 .formcontainer {
@@ -567,6 +655,8 @@ table {
   float: left;
   top: 6px;
   margin-right: 10px;
+  margin-bottom: .75em;
+  padding-right: 5px;
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out;
@@ -580,7 +670,8 @@ table {
 
 .textarea .form-group,
 .text-input .form-group {
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 1em; }
 
 .text-input input:focus + label {
   color: rgba(0, 0, 0, 0.8); }
@@ -595,10 +686,10 @@ table {
 .stacked .form-group {
   width: 100%;
   display: block;
-  margin-bottom: 6px; }
+  margin-bottom: 1em; }
   .stacked .form-group label {
-    width: 16%;
-    margin-bottom: 10px; }
+    min-width: 16%;
+    margin-bottom: .75em; }
   .stacked .form-group input {
     width: 84%;
     margin: 0; }
