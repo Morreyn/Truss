@@ -4,69 +4,98 @@ Author: Misty Morreyn
 Description: A stylized progressbar that shows your placement on the page.
 */
 
-/*
-Primary objective: 
-    1. Show user's position in page/article by scroll progressbar. <complete>
-    2. Scroll progressbar is unobtrusive. <complete>
-    3. Scroll progressbar is adapted to tablet and mobile screens.
-    
-Secondary objective: 
-    1. When user selects scrollbar, go to where user selected on scrollbar within document.
-        Detect screen size
-        Create ratio of complete to screen size
-        
-*/
-
-$(document).ready(function () {
-    "use strict";
-
-    var viewWidth = window.innerWidth,
-        viewHeight = window.innerHeight,
-        bodyHeight = $('body').height(), /*Change to identify a scrollProgressbar element*/
-        mbh = bodyHeight - viewHeight,
-        maxlineheight = 500;
-
-    $(window).scroll(function (e) {
-
-        /*scrollTop finds the number of pixels hidden from view above the scrollable area*/
-        var st = $('body').scrollTop();
-
-        // Ratio of % scrolled 
-        var y = ((st * maxlineheight) / mbh);
-
-        var percentHidden = ((mbh - st) / mbh);
-        percentHidden = Math.round(percentHidden * 10) / 10; /*Not quite working*/
-
-        $('.right-scroll-area .bar').css('height', y);
-        $('.top-scroll-area .bar').css('width', y);
-
-        console.log(percentHidden);
-        if (percentHidden = 0) {
-            $('.top-scroll-area').css("visibility", "hidden");
-        } else {
-            $('.top-scroll-area').css("visibility", "visible");
+(function ($) {
+    $.fn.articleScroller = function (opts) {
+        var defaults = {
+            backgroundColor: "rgba(207, 199, 150, .5)",
+            dividerColor: "black"
         }
-    });
 
-    $(window).resize(function (e) {
+        var options = $.extend({}, defaults, opts);
 
-        /*scrollTop finds the number of pixels hidden from view above the scrollable area*/
-        var st = $('body').scrollTop();
+        $(document).ready(function () {
+            "use strict";
 
-        // Ratio of % scrolled 
-        var y = ((st * maxlineheight) / mbh);
+            $('.bar').css('background-color', options.backgroundColor);
+            $('.right-scroll-area .markers li').css('border-top', '1px solid ' + options.dividerColor);
+            $('.right-scroll-area .markers li:nth-of-type(5)').css('border-bottom', '1px solid ' + options.dividerColor);
 
-        var percentHidden = ((mbh - st) / mbh);
-        percentHidden = Math.round(percentHidden * 10) / 10; /*Not quite working*/
+            $('.top-scroll-area .markers li').css('border-left', '1px solid ' + options.dividerColor);
+            $('.top-scroll-area .markers li:nth-of-type(5)').css('border-right', '1px solid ' + options.dividerColor);
 
-        $('.right-scroll-area .bar').css('height', y);
-        $('.top-scroll-area .bar').css('width', y);
+            function scroller(element) {
+                var elementHeight = $('.scroll').height(),
+                    elementBegin = $(window).scrollTop() - $('.scroll').offset().top,
+                    percent = Math.floor((elementBegin * 100) / elementHeight),
+                    windowHeight = Math.ceil($(window).scrollTop() + $(window).height()),
+                    docHeight = $(document).height();
 
-        console.log(percentHidden);
-        if (percentHidden = 0) {
-            $('.top-scroll-area').css("visibility", "hidden");
-        } else {
-            $('.top-scroll-area').css("visibility", "visible");
+                if (percent <= 0) {
+                    $('.right-scroll-area .markers').hide();
+                    $('.top-scroll-area .markers').hide();
+                } else {
+                    $('.right-scroll-area .markers').fadeIn();
+                    $('.top-scroll-area .markers').fadeIn();
+                }
+
+                if (percent <= 100) {
+                    $('.right-scroll-area .bar').css('height', percent + '%');
+                    $('.top-scroll-area .bar').css('width', percent + '%');
+                } else if (percent > 100) {
+                    $('.right-scroll-area .bar').css('height', '100%');
+                    $('.top-scroll-area .bar').css('width', '100%');
+                }
+            }
+
+            scroller($('.scroll'));
+
+            $(window).scroll(function (e) {
+                scroller($('.scroll'));
+            });
+        }); // END MAIN PLUGIN FUNCTIONALITY
+
+        // Detect if user is near end of doc and reduce throttling caused by detection:
+
+        // Courtesy of James Padolsey to work on all browsers:
+        function getDocHeight() {
+            var D = document;
+            return Math.max(
+                D.body.scrollHeight, D.documentElement.scrollHeight,
+                D.body.offsetHeight, D.documentElement.offsetHeight,
+                D.body.clientHeight, D.documentElement.clientHeight
+            );
         }
-    });
-});
+        // end courtesy mention.
+
+        // Courtesy of geo1701 on stackoverflow:
+
+        var _throttleTimer = null;
+        var _throttleDelay = 100;
+        var $window = $(window);
+        var $document = $(document);
+
+        $document.ready(function () {
+
+            $window
+                .off('scroll', ScrollHandler)
+                .on('scroll', ScrollHandler);
+
+        });
+
+        function ScrollHandler(e) {
+            //throttle event:
+            clearTimeout(_throttleTimer);
+            _throttleTimer = setTimeout(function () {
+
+                if ($window.scrollTop() + $window.height() > getDocHeight() - 100) {
+                    $('.right-scroll-area .bar').css('height', '100%');
+                    $('.top-scroll-area .bar').css('width', '100%');
+                }
+
+            }, _throttleDelay);
+        }
+        // end courtesy mention.
+        // end throttle detection.
+
+    };
+})(jQuery);
