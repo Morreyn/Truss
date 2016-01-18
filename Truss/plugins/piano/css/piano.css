@@ -1,0 +1,249 @@
+body {
+    padding-top: 100px;
+}
+.pianoCase {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    z-index: 9;
+    overflow-x: hidden;
+}
+.piano {
+    padding: 0 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: RGBA(107, 106, 116, 0.4);
+    margin: 0 auto;
+    z-index: 10;
+    -webkit-transition: -webkit-transform 1s ease-in 0s;
+    -moz-transition: -moz-transform 1s ease-in 0s;
+    -o-transition: -o-transform 1s ease-in 0s;
+    -ms-transition: -ms-transform 1s ease-in 0s;
+    transition: transform 1s ease-in 0s;
+}
+@-webkit-keyframes width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 300;
+    }
+}
+@keyframes width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 200;
+    }
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.tabs {
+    display: inline;
+    float: left;
+    margin-right: 4px;
+    z-index: 11;
+}
+.tabs div {
+    display: inline-block;
+    -webkit-animation: width 0.3s;
+    animation: width 0.3s;
+    font-size: 1.2em;
+    padding: 30px 20px;
+    overflow: scroll;
+    background: RGBA(255, 255, 255, 0.7);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tabs.hidden div {
+    display: none;
+}
+.tabs div > * {
+    display: inline-block;
+    -webkit-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
+    line-height: 1.2;
+    text-align: justify;
+}
+.tabs.deactive > h1,
+.tabs.deactive > h2,
+.tabs.deactive > h3,
+.tabs.deactive > h4,
+.tabs.deactive > h5,
+.tabs.deactive > h6 {
+    background: RGBA(0, 0, 0, 0.7);
+    vertical-align: top;
+    display: inline-block;
+    line-height: 1;
+    cursor: pointer;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    width: 2.5em;
+    color: RGBA(255, 255, 255, 0.8);
+    padding: 0;
+    margin-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tabs.active > h1,
+.tabs.active > h2,
+.tabs.active > h3,
+.tabs.active > h4,
+.tabs.active > h5,
+.tabs.active > h6 {
+    background: RGBA(0, 0, 0, .7);
+    color: RGBA(255, 255, 255, 0.8);
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    padding: 5px 10px;
+    margin-top: 0;
+    white-space: pre-line;
+    word-break: keep-all;
+    text-align: left;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-animation: width 0.4s;
+    animation: width 0.4s;
+}
+.tabs > h1:hover,
+.tabs > h2:hover,
+.tabs > h3:hover,
+.tabs > h4:hover,
+.tabs > h5:hover,
+.tabs > h6:hover {
+    background: RGBA(255, 255, 255, 1);
+    color: RGBA(0, 0, 0, 1);
+}
+#prev {
+    position: absolute;
+    left: 10px;
+    z-index: 999;
+    vertical-align: middle;
+    color: RGBA(0, 0, 0, 0.3);
+}
+#next {
+    position: absolute;
+    right: 10px;
+    z-index: 999;
+    vertical-align: middle;
+    color: RGBA(0, 0, 0, 0.3);
+}
+#prev:hover,
+#next:hover {
+    color: RGBA(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/* Some basic styles for handheld devices. Needs work. */
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+    * {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+    .piano {
+        padding: 20px;
+        margin: 10px 20px;
+        width: 90%;
+    }
+    .tabs,
+    .tabs div,
+    .tabs div > * {
+        display: block;
+        float: none;
+    }
+    .tabs.hidden:first-child div {
+        display: block;
+    }
+    #next,
+    #prev {
+        display: none;
+    }
+    .tabs.deactive > h1,
+    .tabs.deactive > h2,
+    .tabs.deactive > h3,
+    .tabs.deactive > h4,
+    .tabs.deactive > h5,
+    .tabs.deactive > h6,
+    .tabs.active > h1,
+    .tabs.active > h2,
+    .tabs.active > h3,
+    .tabs.active > h4,
+    .tabs.active > h5,
+    .tabs.active > h6 {
+        background: RGBA(0, 0, 0, 0.7);
+        color: RGBA(255, 255, 255, 0.8);
+        display: block;
+        position: relative;
+        vertical-align: middle;
+        padding: 5px;
+        white-space: pre-line;
+        word-break: keep-all;
+        text-align: left;
+        width: 100%;
+        line-height: 1;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    .tabs > h1:hover,
+    .tabs > h2:hover,
+    .tabs > h3:hover,
+    .tabs > h4:hover,
+    .tabs > h5:hover,
+    .tabs > h6:hover {
+        background: RGBA(0, 0, 0, 1);
+        color: RGBA(255, 255, 255, 1);
+    }
+}
