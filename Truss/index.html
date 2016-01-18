@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="glyphicons/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/compiledCSS/truss styles.css">
     <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
+
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
@@ -25,29 +26,29 @@
         </section>
         <!-- Paragraph -->
         <section id="paragraph">
-            <p>The base type is 16px over 1.2 line height.
+            <p><i class="fa fa-camera-retro"></i>The base type is 16px over 1.2 line height.
             </p>
-
-
-
         </section>
         <!-- Quoting -->
         <section>
             <q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q>
-            <br>
+            <hr>
+            <blockquote class="blockquote-simple">
+                <p>Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio. </p>
+                <footer>said <cite>somebody</cite></footer>
+            </blockquote>
+            <hr>
             <div class="testimonial-quote">
                 <img>
-                <div class="">
-                    <blockquote>
-                        <p>Blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
-                        <footer>Collaborators of Truss in
-                            <br><cite>Some Book or Something</cite></footer>
-                    </blockquote>
-                </div>
+                <blockquote class="blockquote-fancy">
+                    <p>The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
+                    <footer>Collaborators of Truss in
+                        <br><cite>Some Book or Something</cite></footer>
+                </blockquote>
             </div>
             <div class="testimonial-quote right">
-                <img value="picture">
-                <blockquote>
+                <img>
+                <blockquote class="blockquote-fancy">
                     <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
                     <footer>Collaborators of Truss in
                         <br><cite>Another Book or Something</cite></footer>
@@ -115,25 +116,27 @@ y += x + 10;</code></pre>
                 <table class="standard">
                     <caption>Standard Table</caption>
                     <thead>
-                        <th>Heading 1</th>
-                        <th>Heading 2</th>
-                        <th>Heading 3</th>
+                        <tr>
+                            <th>Heading 1</th>
+                            <th>Heading 2</th>
+                            <th>Heading 3</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
-                            <td>DataCell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                     </tbody>
                 </table>
@@ -148,19 +151,19 @@ y += x + 10;</code></pre>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                     </tbody>
                 </table>
@@ -176,19 +179,20 @@ y += x + 10;</code></pre>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
                         </tr>
                         <tr>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
-                            <td>Data Cell</td>
+                            <td data-th="Heading 1">DataCell</td>
+                            <td data-th="Heading 2">DataCell</td>
+                            <td data-th="Heading 3">DataCell</td>
+                        </tr>
                         </tr>
                     </tbody>
                 </table>
@@ -242,12 +246,14 @@ y += x + 10;</code></pre>
 
                     <legend>Text Inputs</legend>
                     <div class="form-group">
-                        <input type="text" id="username" />
                         <label for="username">Username</label>
+                        <input type="text" id="username" />
+
                     </div>
                     <div class="form-group">
-                        <input type="password" id="password" />
                         <label for="password">Password</label>
+                        <input type="password" id="password" />
+
                     </div>
 
                 </fieldset>

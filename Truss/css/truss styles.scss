@@ -1,6 +1,60 @@
+@import '../font-awesome-4.5.0/scss/font-awesome.scss';
 @import 'reset.scss';
 
 /* ------ SCSS ------ */
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('../../fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-BlackItalic';
+    src: url('../../fonts/Lato-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../../fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-BoldItalic';
+    src: url('../../fonts/Lato-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Hairline';
+    src: url('../../fonts/Lato-Hairline.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-HairlineItalic';
+    src: url('../../fonts/Lato-HairlineItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Italic';
+    src: url('../../fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-LightItalic';
+    src: url('../../fonts/Lato-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../../fonts/Lato-Regular.ttf');
+}
 
 
 /* VARIABLES */
@@ -19,9 +73,15 @@ $secondary-color: #DCD6B2;
 $light-secondary: #efecdc;
 $text-color: #0d3155;
 $hover-input: #144c85;
-$gray-text: rgba(0, 0, 0, 0.8);
+$gray-text: rgba(0,
+0,
+0,
+0.8);
 $neutral-background: #FFFfff;
-$disabled: rgba(0, 0, 0, .1);
+$disabled: rgba(0,
+0,
+0,
+.1);
 
 /* MIXINS */
 
@@ -38,7 +98,8 @@ $disabled: rgba(0, 0, 0, .1);
     transition: $options;
 }
 
-@mixin transdur($property, $duration) {
+@mixin transdur($property,
+$duration) {
     -webkit-transition-property: $property;
     -webkit-transition-duration: $duration;
 }
@@ -49,7 +110,8 @@ $disabled: rgba(0, 0, 0, .1);
     border-radius: $options;
 }
 
-@mixin linear-gradient($color1, $color2) {
+@mixin linear-gradient($color1,
+$color2) {
     background: $color1;
     background: -webkit-linear-gradient(left bottom, $color1, $color2);
     background: -mox-linear-gradient(left bottom, $color1, $color2);
@@ -82,9 +144,8 @@ $disabled: rgba(0, 0, 0, .1);
 /* General */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-Regular', sans-serif;
     font-size: 1em;
-    font-weight: 400;
 }
 
 
@@ -96,7 +157,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     margin: 0 0 .2em 0;
 }
 
@@ -134,7 +195,7 @@ h6 {
 /* Paragraphs */
 
 p {
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     line-height: 1.2;
     font-size: 1.0em;
     padding: .2em;
@@ -144,43 +205,84 @@ p {
 /* Quoting */
 
 q {
-    font-style: italic;
+    font-family: 'Lato-Italic', sans-serif;
+}
+
+.blockquote-simple {
+    margin: 5%;
+    p {
+        color: $text-color;
+        font-family: 'Lato-Italic', sans-serif;
+        font-size: 1em;
+        line-height: 1.2;
+        &:before,
+        &:after {
+            content: '\201C';
+            color: $text-color;
+            font-size: 1em;
+        }
+        &:after {
+            content: '\201D';
+            color: $text-color;
+            font-size: 1em;
+        }
+    }
+    footer {
+        color: $text-color;
+        &:before {
+            content: '\2010\2008';
+            color: $text-color;
+            margin-left: 50%;
+            @media only screen and (max-width: 480px) {
+                margin-left: 10%;
+            }
+        }
+        cite {
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
 }
 
 
-/*NOTE: when grid arrives change blockquote layout for mobile sizes*/
+/*NOTE: when grid arrives change alternating blockquote layout for mobile sizes*/
 
 .testimonial-quote {
     position: relative;
     margin-top: 30px;
-    blockquote {
+    .blockquote-fancy {
         background: none;
         color: $text-color;
-        font-weight: 300;
         font-size: 1.2em;
-        font-style: italic;
         line-height: 1.4 !important;
         padding-left: 160px;
         position: relative;
         text-shadow: 0 1px white;
         z-index: 50;
         min-height: 150px;
+        @media only screen and (max-width: 480px) {
+            padding-left: 0;
+        }
         * {
             box-sizing: border-box;
         }
         p {
             line-height: 1.4 !important;
+            font-family: 'Lato-Italic', sans-serif;
             &:first-child:before {
                 content: '\201C';
                 color: $primary-color;
                 font-size: 7.5em;
-                font-weight: 700;
+                font-family: 'Lato-Bold', sans-serif;
                 opacity: .3;
                 position: absolute;
                 top: -.4em;
                 left: 140px;
                 text-shadow: none;
                 z-index: -1;
+                @media only screen and (max-width: 480px) {
+                    left: -15px;
+                }
             }
         }
     }
@@ -194,6 +296,11 @@ q {
         position: absolute;
         top: -.2em;
         left: 0;
+        @media only screen and (max-width: 480px) {
+            position: relative;
+            left: 27%;
+            margin-bottom: 30px;
+        }
     }
     footer {
         color: $text-color;
@@ -204,7 +311,7 @@ q {
             color: $primary-color;
             font-size: 1em;
             font-style: normal;
-            font-weight: 700;
+            font-family: 'Lato-Bold', sans-serif;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-shadow: 0 1px $neutral-background;
@@ -215,23 +322,33 @@ q {
 .testimonial-quote.right {
     display: block;
     margin-top: 30px;
-    blockquote {
+    .blockquote-fancy {
         padding-left: 0;
         margin-left: 50px;
         padding-right: 160px;
+        @media only screen and (max-width: 600px) {
+            margin-left: 10px;
+        }
+        @media only screen and (max-width: 480px) {
+            padding-right: 0;
+            width: 100%;
+        }
         p {
             line-height: 1.4 !important;
             &:first-child:before {
                 content: '\201C';
                 color: $primary-color;
                 font-size: 7.5em;
-                font-weight: 700;
+                font-family: 'Lato-Bold', sans-serif;
                 opacity: .4;
                 position: absolute;
                 top: -.4em;
                 left: -.2em;
                 text-shadow: none;
                 z-index: -1;
+                @media only screen and (max-width: 480px) {
+                    left: -15px;
+                }
             }
         }
     }
@@ -239,9 +356,17 @@ q {
         left: auto;
         right: 0;
         top: -.2em;
+        @media only screen and (max-width: 480px) {
+            position: relative;
+            left: 27%;
+            margin-bottom: 30px;
+        }
     }
     footer {
         text-align: right;
+        @media only screen and (max-width: 480px) {
+            text-align: left;
+        }
     }
 }
 
@@ -279,25 +404,25 @@ var {
 /* Inline Styles */
 
 strong {
-    font-weight: 700;
+    font-family: 'Lato-Bold', sans-serif;
 }
 
 em {
-    font-weight: 400;
+    font-family: 'Lato-Italic', sans-serif;
 }
 
 u {}
 
 mark {
     background-color: #EDEDAB;
-    padding: 5px 5px 1px 5px;
+    padding: 0px 5px 1px 5px;
 }
 
 a {
     color: $primary-color;
     &:hover {
         color: $text-color;
-        font-weight: 700;
+        font-family: 'Lato-Bold', sans-serif;
     }
 }
 
@@ -365,9 +490,6 @@ address {
 
 /* ------ TABLE STYLING ------ */
 
-
-/*NOTE: Add responsive table rules*/
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -375,7 +497,7 @@ table {
         font-size: 1.5em;
         line-height: 1.5;
         text-transform: uppercase;
-        font-weight: 400;
+        font-family: 'Lato-Regular', sans-serif;
         color: $gray-text;
     }
 }
@@ -383,21 +505,40 @@ table {
 .standard {
     thead {
         th {
-            font-weight: 400;
+            font-family: 'Lato-Bold', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
         tr {
             border-bottom: 1px solid $primary-color;
+            @media only screen and (max-width: 767px) {
+                &:first-child {
+                    border-top: 1px solid $primary-color;
+                }
+            }
             td {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
             }
         }
         tr:hover {
@@ -406,6 +547,11 @@ table {
             border-top: 1px solid $primary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -414,11 +560,16 @@ table {
 .striped {
     thead {
         th {
-            font-weight: 400;
+            font-family: 'Lato-Bold', sans-serif;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
@@ -430,12 +581,31 @@ table {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
+            }
+            @media only screen and (max-width: 767px) {
+                &:first-child {
+                    border-top: 1px solid $primary-color;
+                }
             }
         }
         tr:hover {
             background-color: $secondary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -446,12 +616,17 @@ table {
     thead {
         border: 1px solid $primary-color;
         th {
-            font-weight: 400;
+            font-family: 'Lato-Bold', sans-serif;
             border-bottom: 2px solid $secondary-color;
             line-height: 1.5;
             padding: 0.75em;
             text-transform: uppercase;
             text-align: center;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                text-align: center;
+                display: none;
+            }
         }
     }
     tbody {
@@ -462,6 +637,19 @@ table {
                 line-height: 1.5;
                 padding: 0.75em;
                 text-align: left;
+                @media only screen and (max-width: 767px) {
+                    display: block;
+                    text-align: center;
+                    border-bottom: 1px dashed $primary-color;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    &:before {
+                        content: attr(data-th)": ";
+                        padding-right: 10px;
+                        font-family: 'Lato-Bold', sans-serif;
+                    }
+                }
             }
         }
         tr:hover {
@@ -470,6 +658,11 @@ table {
             border-top: 1px solid $primary-color;
             td {
                 color: $gray-text;
+                @media only screen and (max-width: 767px) {
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
             }
         }
     }
@@ -484,7 +677,7 @@ table {
     margin: .05% auto;
     padding: 2%;
     h1 {
-        font-weight: 300;
+        font-family: 'Lato-Light', sans-serif;
         font-size: 36px;
         line-height: 1.2em;
     }
@@ -590,7 +783,7 @@ table {
     &:after {
         content: '>';
         color: $primary-color;
-        font-weight: 700;
+        font-family: 'Lato-Bold', sans-serif;
         -ms-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
@@ -646,6 +839,8 @@ table {
     float: left;
     top: 6px;
     margin-right: 10px;
+    margin-bottom: .75em;
+    padding-right: 5px;
     color: $gray-text;
     cursor: pointer;
     @include transition(all 0.25s ease-in-out);
@@ -659,6 +854,7 @@ table {
 .textarea .form-group,
 .text-input .form-group {
     display: inline-block;
+    margin-bottom: 1em;
 }
 
 .text-input input:focus + label {
@@ -677,10 +873,10 @@ table {
 .stacked .form-group {
     width: 100%;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 1em;
     label {
-        width: 16%;
-        margin-bottom: 10px;
+        min-width: 16%;
+        margin-bottom: .75em;
     }
     input {
         width: 84%;
@@ -702,9 +898,8 @@ input[type="reset"] {
     text-align: center;
     text-decoration: none;
     font-size: 12px;
-    font-family: 'Lato', sans-serif;
     letter-spacing: .10em;
-    font-weight: 400;
+    font-family: 'Lato-Regular', sans-serif;
     text-transform: uppercase;
     border-radius: 2px;
 }
@@ -717,12 +912,14 @@ input[type="reset"] {
     &:focus {
         background-color: $neutral-background;
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
     }
     &:active {
         background-color: $neutral-background;
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
         @include box-shadow(inset 0px 1px 3px 2px $primary-color);
         cursor: pointer;
     }
@@ -736,12 +933,14 @@ input[type="reset"] {
         background-color: $primary-color;
         color: $neutral-background;
         border-color: $primary-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
     }
     &:active {
         background-color: rgba(0, 0, 0, 0.1);
         color: $text-color;
-        @include transdur(background-color, .5s);
+        @include transdur(background-color,
+        .5s);
         @include box-shadow(inset 0px 1px 3px 2px $primary-color);
         cursor: pointer;
     }
@@ -758,7 +957,7 @@ input[type="reset"] {
 .medium,
 .large {
     @include border-radius(3px);
-    font-weight: 300;
+    font-family: 'Lato-Light', sans-serif;
 }
 
 .xsmall {
@@ -774,93 +973,6 @@ input[type="reset"] {
 .large {
     padding: 10px 30px;
     font-size: 18px;
-}
-
-
-/* ------ MODAL STYLING ------ */
-
-#modalbox {
-    & > div {
-        position: relative;
-        margin-bottom: 60px;
-    }
-}
-
-.open-modal {
-    position: absolute;
-    top: 45%;
-    left: 42%;
-    border-radius: 4px;
-    padding: 2%;
-    color: #000;
-    font-size: 1.25rem;
-    background: white;
-    transition: background .5s ease;
-    &:hover {
-        background: blue;
-    }
-}
-
-.modal {
-    z-index: 100;
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    &:target {
-        visibility: visible;
-    }
-}
-
-.modal__dialog {
-    width: 50%;
-    margin: 10% auto;
-    -webkit-box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-    .modal__header {
-        position: relative;
-        background: white;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-size: 220%;
-            text-align: center;
-            padding: 0.5%;
-        }
-        a {
-            position: absolute;
-            top: 0;
-            right: 2%;
-            color: #fff;
-            font-size: 150%;
-            font-weight: bolder;
-        }
-    }
-    /* end of .modal__header */
-    .modal__body {
-        background: #fff;
-        p {
-            padding: 1.5%;
-            font-size: 130%;
-            line-height: 1.7;
-        }
-    }
-    /* end of .modal__body */
-    .modal__footer {
-        background: white;
-        text-align: right;
-        padding: 0.5%;
-        font-size: 120%;
-    }
-    /* end of .modal__footer */
 }
 
 
@@ -890,7 +1002,8 @@ input[type="reset"] {
     min-width: 200px;
 }
 
-@include breakpoints (0, 480px) {
+@include breakpoints (0,
+480px) {
     .leftFloatImage,
     .rightFloatImage {
         float: none;

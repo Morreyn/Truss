@@ -7,30 +7,74 @@ body {
   padding: 0;
   margin: 0; }
 
-.scroll-area {
+.scroll {
+  background-color: lightgray; }
+
+.right-scroll-area {
   position: fixed;
   height: 500px;
   width: 40px;
   right: 20px;
-  top: 10%;
-  visibility: hidden; }
+  top: 10%; }
+  @media only screen and (max-width: 550px) {
+    .right-scroll-area {
+      height: 350px; } }
+  .right-scroll-area .bar {
+    position: absolute;
+    right: 25%;
+    z-index: -1;
+    width: 20px; }
+  .right-scroll-area .bar + .markers {
+    height: 100%; }
+    .right-scroll-area .bar + .markers li {
+      list-style-type: none;
+      height: 19.75%;
+      width: 100%; }
 
-.line {
-  background-color: lightblue;
-  position: absolute;
-  right: 25%;
-  z-index: -1;
-  height: 506px;
-  width: 20px; }
+.top-scroll-area {
+  position: fixed;
+  width: 500px;
+  height: 40px;
+  top: 0%;
+  left: 50%;
+  margin-left: -250px; }
+  @media only screen and (max-width: 550px) {
+    .top-scroll-area {
+      width: 350px;
+      margin-left: -175px; } }
+  @media only screen and (max-width: 400px) {
+    .top-scroll-area {
+      width: 250px;
+      margin-left: -125px; } }
+  .top-scroll-area .bar {
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 10px;
+    z-index: -1;
+    height: 20px; }
+    @media only screen and (max-width: 550px) {
+      .top-scroll-area .bar {
+        margin-left: -175px; } }
+    @media only screen and (max-width: 400px) {
+      .top-scroll-area .bar {
+        margin-left: -125px; } }
+  .top-scroll-area .bar + .markers {
+    height: 100%; }
+    .top-scroll-area .bar + .markers li {
+      list-style-type: none;
+      float: left;
+      width: 19.70%;
+      height: 100%; }
+      @media only screen and (max-width: 550px) {
+        .top-scroll-area .bar + .markers li {
+          width: 19.60%; } }
+      @media only screen and (max-width: 400px) {
+        .top-scroll-area .bar + .markers li {
+          width: 19.35%; } }
 
-.markers {
-  height: 100%; }
-  .markers li {
-    list-style-type: none;
-    height: 20%;
-    width: 100%;
-    border-top: 1px solid black; }
-    .markers li:nth-of-type(5) {
-      border-bottom: 1px solid black; }
+section {
+  margin: 50px auto;
+  width: 70%; }
 
 /*# sourceMappingURL=scroll%20progressbar.css.map */
