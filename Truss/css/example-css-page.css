@@ -19,3 +19,13 @@ section {
 .tableContainer {
     margin-bottom: 50px;
 }
+
+.explanationParagraph {
+    background-color: #DCD6B2;
+    padding: 2%;
+}
+
+.explanationParagraph a {
+    color: #FFF;
+    text-decoration: underline;
+}

@@ -2205,7 +2205,7 @@ h6 {
 /* Paragraphs */
 p {
   font-family: 'Lato-Regular', sans-serif;
-  line-height: 1.2;
+  line-height: 1.4;
   font-size: 1.0em;
   padding: .2em; }
 
@@ -2219,7 +2219,7 @@ q {
     color: #0d3155;
     font-family: 'Lato-Italic', sans-serif;
     font-size: 1em;
-    line-height: 1.2; }
+    line-height: 1.4; }
     .blockquote-simple p:before, .blockquote-simple p:after {
       content: '\201C';
       color: #0d3155;
@@ -2306,23 +2306,23 @@ q {
       text-transform: uppercase;
       text-shadow: 0 1px #FFFfff; }
 
-.testimonial-quote.right {
+.testimonial-quote.alternate {
   display: block;
   margin-top: 30px; }
-  .testimonial-quote.right .blockquote-fancy {
+  .testimonial-quote.alternate .blockquote-fancy {
     padding-left: 0;
     margin-left: 50px;
     padding-right: 160px; }
     @media only screen and (max-width: 600px) {
-      .testimonial-quote.right .blockquote-fancy {
+      .testimonial-quote.alternate .blockquote-fancy {
         margin-left: 10px; } }
     @media only screen and (max-width: 480px) {
-      .testimonial-quote.right .blockquote-fancy {
+      .testimonial-quote.alternate .blockquote-fancy {
         padding-right: 0;
         width: 100%; } }
-    .testimonial-quote.right .blockquote-fancy p {
+    .testimonial-quote.alternate .blockquote-fancy p {
       line-height: 1.4 !important; }
-      .testimonial-quote.right .blockquote-fancy p:first-child:before {
+      .testimonial-quote.alternate .blockquote-fancy p:first-child:before {
         content: '\201C';
         color: #cfc796;
         font-size: 7.5em;
@@ -2334,41 +2334,42 @@ q {
         text-shadow: none;
         z-index: -1; }
         @media only screen and (max-width: 480px) {
-          .testimonial-quote.right .blockquote-fancy p:first-child:before {
+          .testimonial-quote.alternate .blockquote-fancy p:first-child:before {
             left: -15px; } }
-  .testimonial-quote.right img {
+  .testimonial-quote.alternate img {
     left: auto;
     right: 0;
     top: -.2em; }
     @media only screen and (max-width: 480px) {
-      .testimonial-quote.right img {
+      .testimonial-quote.alternate img {
         position: relative;
         left: 27%;
         margin-bottom: 30px; } }
-  .testimonial-quote.right footer {
+  .testimonial-quote.alternate footer {
     text-align: right; }
     @media only screen and (max-width: 480px) {
-      .testimonial-quote.right footer {
+      .testimonial-quote.alternate footer {
         text-align: left; } }
 
 /* Code */
 pre > code {
   padding: 5px 10px;
+  margin-right: 2%;
   line-height: 1.4;
   text-overflow: ellipsis;
   display: block;
-  width: 95%;
   background-color: #d9d9d9;
-  margin: 20px auto; }
+  margin: 20px auto;
+  word-wrap: break-word; }
 
 code {
-  padding: 5px 5px 0 5px;
+  padding: 0 5px 0 5px;
   background-color: #d9d9d9; }
 
 kbd {
   background-color: #000000;
   color: #FFF;
-  padding: 3px 3px 0 3px; }
+  padding: 0px 3px 0 3px; }
 
 var {
   font-size: .9em;
@@ -2849,77 +2850,6 @@ input[type="reset"] {
 .large {
   padding: 10px 30px;
   font-size: 18px; }
-
-/* ------ MODAL STYLING ------ */
-#modalbox > div {
-  position: relative;
-  margin-bottom: 60px; }
-
-.open-modal {
-  position: absolute;
-  top: 45%;
-  left: 42%;
-  border-radius: 4px;
-  padding: 2%;
-  color: #000;
-  font-size: 1.25rem;
-  background: white;
-  transition: background .5s ease; }
-  .open-modal:hover {
-    background: blue; }
-
-.modal {
-  z-index: 100;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); }
-  .modal:target {
-    visibility: visible; }
-
-.modal__dialog {
-  width: 50%;
-  margin: 10% auto;
-  -webkit-box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 43px 9px rgba(0, 0, 0, 0.75);
-  /* end of .modal__header */
-  /* end of .modal__body */
-  /* end of .modal__footer */ }
-  .modal__dialog .modal__header {
-    position: relative;
-    background: white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px; }
-    .modal__dialog .modal__header h1,
-    .modal__dialog .modal__header h2,
-    .modal__dialog .modal__header h3,
-    .modal__dialog .modal__header h4,
-    .modal__dialog .modal__header h5,
-    .modal__dialog .modal__header h6 {
-      font-size: 220%;
-      text-align: center;
-      padding: 0.5%; }
-    .modal__dialog .modal__header a {
-      position: absolute;
-      top: 0;
-      right: 2%;
-      color: #fff;
-      font-size: 150%;
-      font-family: 'Lato-Bold', sans-serif; }
-  .modal__dialog .modal__body {
-    background: #fff; }
-    .modal__dialog .modal__body p {
-      padding: 1.5%;
-      font-size: 130%;
-      line-height: 1.7; }
-  .modal__dialog .modal__footer {
-    background: white;
-    text-align: right;
-    padding: 0.5%;
-    font-size: 120%; }
 
 /* ------ IMAGE STYLING ------ */
 /* Reponsive image */

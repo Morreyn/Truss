@@ -196,7 +196,7 @@ h6 {
 
 p {
     font-family: 'Lato-Regular', sans-serif;
-    line-height: 1.2;
+    line-height: 1.4;
     font-size: 1.0em;
     padding: .2em;
 }
@@ -214,7 +214,7 @@ q {
         color: $text-color;
         font-family: 'Lato-Italic', sans-serif;
         font-size: 1em;
-        line-height: 1.2;
+        line-height: 1.4;
         &:before,
         &:after {
             content: '\201C';
@@ -319,7 +319,7 @@ q {
     }
 }
 
-.testimonial-quote.right {
+.testimonial-quote.alternate {
     display: block;
     margin-top: 30px;
     .blockquote-fancy {
@@ -375,23 +375,24 @@ q {
 
 pre > code {
     padding: 5px 10px;
+    margin-right: 2%;
     line-height: 1.4;
     text-overflow: ellipsis;
     display: block;
-    width: 95%;
     background-color: #d9d9d9;
     margin: 20px auto;
+    word-wrap: break-word;
 }
 
 code {
-    padding: 5px 5px 0 5px;
+    padding: 0 5px 0 5px;
     background-color: #d9d9d9;
 }
 
 kbd {
     background-color: #000000;
     color: #FFF;
-    padding: 3px 3px 0 3px;
+    padding: 0px 3px 0 3px;
 }
 
 var {
