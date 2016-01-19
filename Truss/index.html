@@ -73,64 +73,72 @@
             <h4 class="uppercase center">Quotes and Blockquotes</h4>
             <hr>
             <p class="explanationParagraph">For simple quotes, use the <code>&lt;q&gt;</code> tag: </p>
-            <p><q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q></p>
+            <section>
+                <p><q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q></p>
+            </section>
             <pre><code>&lt;p&gt;&lt;q&gt;This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors&lt;/q&gt;&lt;/p&gt;</code></pre>
 
             <hr>
             <p class="explanationParagraph">Simple blockquotes have both a &lt;p&gt; section for the main quoted text and a footer section with an optional cite tag to effortlessly style the quote citation: </p>
-            <blockquote class="blockquote-simple">
-                <p>Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio. </p>
-                <footer>said <cite>somebody</cite></footer>
-            </blockquote>
+            <section>
+                <blockquote class="blockquote-simple">
+                    <p>Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio. </p>
+                    <footer>said <cite>somebody</cite></footer>
+                </blockquote>
+            </section>
             <pre><code>
-            &lt;blockquote class="blockquote-simple"&gt;
-            &lt;p&gt;Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio.&lt;/p&gt;
-            &lt;footer&gt; said &lt;cite&gt;somebody &lt;/cite&gt;&lt;/footer&gt;
-            &lt;/blockquote&gt;
+    &lt;blockquote class="blockquote-simple"&gt;
+           &lt;p&gt;Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio.&lt;/p&gt; 
+           &lt;footer&gt; said &lt;cite&gt;somebody &lt;/cite&gt;&lt;/footer&gt;
+    &lt;/blockquote&gt;
             </code></pre>
 
             <hr>
             <p class="explanationParagraph">Fancy blockquotes retain a <code>&lt;p&gt;</code> section for the main quoted text and a footer section with an optional cite tag, but they also include an <code>&lt;img&gt;</code> and wrapper. To insert this CSS component into your webpage, simply copy and paste the code below and insert your own text. If you would like alternating blockquotes, add the "right" class to every right-floating quote.</p>
-            <div class="testimonial-quote">
-                <img>
-                <blockquote class="blockquote-fancy">
-                    <p>The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
-                    <footer>Collaborators of Truss in
-                        <br><cite>Some Book or Something</cite></footer>
-                </blockquote>
-            </div>
+            <section>
+                <div class="testimonial-quote">
+                    <img>
+                    <blockquote class="blockquote-fancy">
+                        <p>The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
+                        <footer>Collaborators of Truss in
+                            <br><cite>Some Book or Something</cite></footer>
+                    </blockquote>
+                </div>
+            </section>
 
             <pre><code>
-            &lt;div class="testimonial-quote"&gt;
-                &lt;img&gt;
-                &lt;blockquote class="blockquote-fancy"&gt;
-                    &lt;p&gt;The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.&lt;/p&gt; 
-                    &lt;footer&gt; Collaborators of Truss in 
-                    &lt;br&gt; 
-                    &lt;cite&gt;Some Book or Something&lt;/cite&gt;&lt;/footer&gt;
-                &lt;/blockquote&gt;
-            &lt;/div&gt;
+    &lt;div class="testimonial-quote"&gt;
+        &lt;img&gt;
+        &lt;blockquote class="blockquote-fancy"&gt;
+            &lt;p&gt;The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.&lt;/p&gt; 
+            &lt;footer&gt; Collaborators of Truss in 
+            &lt;br&gt; 
+            &lt;cite&gt;Some Book or Something&lt;/cite&gt;&lt;/footer&gt;
+        &lt;/blockquote&gt;
+    &lt;/div&gt;
             </code></pre>
 
-            <div class="testimonial-quote alternate">
-                <img>
-                <blockquote class="blockquote-fancy">
-                    <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
-                    <footer>Collaborators of Truss in
-                        <br><cite>Another Book or Something</cite></footer>
-                </blockquote>
-            </div>
+            <section>
+                <div class="testimonial-quote alternate">
+                    <img>
+                    <blockquote class="blockquote-fancy">
+                        <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
+                        <footer>Collaborators of Truss in
+                            <br><cite>Another Book or Something</cite></footer>
+                    </blockquote>
+                </div>
+            </section>
 
             <div class="clear"><pre><code>
-            &lt;div class="testimonial-quote right"&gt;
-                &lt;img&gt;
-                &lt;blockquote class="blockquote-fancy"&gt;
-                    &lt;p&gt;Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. &lt;/p&gt; 
-                    &lt;footer&gt; Collaborators of Truss in 
-                    &lt;br&gt; 
-                    &lt;cite&gt;Another Book or Something&lt;/cite&gt;&lt;/footer&gt;
-                &lt;/blockquote&gt;
-            &lt;/div&gt;
+        &lt;div class="testimonial-quote right"&gt;
+            &lt;img&gt;
+            &lt;blockquote class="blockquote-fancy"&gt;
+                &lt;p&gt;Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. &lt;/p&gt; 
+                &lt;footer&gt; Collaborators of Truss in 
+                &lt;br&gt; 
+                &lt;cite&gt;Another Book or Something&lt;/cite&gt;&lt;/footer&gt;
+            &lt;/blockquote&gt;
+        &lt;/div&gt;
             </code></pre>
             </div>
         </section>
@@ -140,18 +148,20 @@
             <h4 class="uppercase center">code</h4>
             <hr>
             <p class="explanationParagraph">Truss allows you to not worry about individually styling blocks of code, inline code snippets, keyboard inputs, or variables. Inline code only needs the HTML <code>&lt;code&gt;</code> tag, while inline keyboard inputs need the <code>&lt;kbd&gt;</code> tag. For the block code below, the <code>&lt;pre&gt;</code>tag outside the <code>&lt;code&gt;</code> tag preserves all breaks and spaces to show the code block below:</p>
-            <pre><code>Block code:
+            <section><pre><code>Block code:
 <var>x</var> = prompt("What is your favorite number?")
 User input: <kbd>"10"</kbd>
 <var>x</var> = 10;
 <var>y</var> += x + 10;</code></pre>
+            </section>
 
-            <pre><code>HTML of code codeblock above:
-&lt;pre&gt;&lt;code&gt;Block code:
-&lt;var&gt;x&lt;var&gt; = prompt("What is your favorite number?")
-User input: &lt;kbd&gt;"10"&lt;kbd&gt;
-&lt;var&gt;x&lt;var&gt; = 10;
-&lt;var&gt;y&lt;var&gt; += &lt;var&gt;x&lt;var&gt; + 10;&lt;code&gt;&lt;pre&gt;
+            <pre><code>
+        HTML of code codeblock above:
+            &lt;pre&gt;&lt;code&gt;Block code:
+            &lt;var&gt;x&lt;var&gt; = prompt("What is your favorite number?")
+            User input: &lt;kbd&gt;"10"&lt;kbd&gt;
+            &lt;var&gt;x&lt;var&gt; = 10;
+            &lt;var&gt;y&lt;var&gt; += &lt;var&gt;x&lt;var&gt; + 10;&lt;code&gt;&lt;pre&gt;
             </code></pre>
 
         </section>
@@ -162,16 +172,25 @@ User input: &lt;kbd&gt;"10"&lt;kbd&gt;
             <h4 class="uppercase center">Lists</h4>
             <hr>
             <p class="explanationParagraph">There are no extras when it comes to making ordered and unordered lists, just simple HTML tag usage:</p>
-            <ol>
-                <li>Ordered list item 1</li>
-                <li>Ordered list item 2</li>
-                <li>Ordered list item 3</li>
-            </ol>
-            <ul>
-                <li>Unordered list item 1</li>
-                <li>Unordered list item 2</li>
-                <li>Unordered list item 3</li>
-            </ul>
+            <section>
+                <ol>
+                    <li>Ordered list item 1</li>
+                    <li>Ordered list item 2</li>
+                    <ul>
+                        <li>Sublist item 1</li>
+                    </ul>
+                    <li>Ordered list item 3</li>
+                </ol>
+                <ul>
+                    <li>Unordered list item 1</li>
+                    <ol>
+                        <li>Sublist item 1</li>
+                        <li>Sublist item 2</li>
+                    </ol>
+                    <li>Unordered list item 2</li>
+                    <li>Unordered list item 3</li>
+                </ul>
+            </section>
             <pre><code>
             &lt;/ol&gt;
                 &lt;/li&gt;Ordered list item 1&lt;/li&gt;
@@ -188,91 +207,192 @@ User input: &lt;kbd&gt;"10"&lt;kbd&gt;
 
         <!-- TABLE STYLING -->
         <section>
-            <div class="tableContainer">
-                <table class="standard">
-                    <caption>Standard Table</caption>
-                    <thead>
-                        <tr>
+            <h4 class="uppercase center">Tables</h4>
+            <hr>
+            <p class="explanationParagraph">All tables should start with the same basic layout. The only difference is whether you prefer the standard, striped, or bordered look, all of which can be achieved by putting a class on the table itself. All tables are responsive and depreciate gracefully to mobile sizes. To achieve graceful depreciation, make sure to include "data-th='Heading Title'" in the heading data cells and their corresponding body data cells. See below for examples. </p>
+            <section>
+                <div class="tableContainer">
+                    <table class="standard">
+                        <caption>Standard Table</caption>
+                        <thead>
+                            <tr>
+                                <th>Heading 1</th>
+                                <th>Heading 2</th>
+                                <th>Heading 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre><code>
+            &lt;div class="tableContainer"&gt;
+                &lt;table class="standard"&gt;
+                    &lt;caption>Standard Table&lt;/caption&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Heading 1&gt;/th&gt;
+                            &lt;th&gt;Heading 2&gt;/th&gt;
+                            &lt;th&gt;Heading 3&gt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            </code></pre>
+            </section>
+            <section>
+                <div class="tableContainer">
+                    <table class="striped">
+                        <caption>Striped Table</caption>
+                        <thead>
                             <th>Heading 1</th>
                             <th>Heading 2</th>
                             <th>Heading 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tableContainer">
-                <table class="striped">
-                    <caption>Striped Table</caption>
-                    <thead>
-                        <th>Heading 1</th>
-                        <th>Heading 2</th>
-                        <th>Heading 3</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tableContainer">
-
-                <table class="bordered">
-                    <caption>Bordered Table</caption>
-                    <thead>
-                        <th>Heading 1</th>
-                        <th>Heading 2</th>
-                        <th>Heading 3</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        <tr>
-                            <td data-th="Heading 1">DataCell</td>
-                            <td data-th="Heading 2">DataCell</td>
-                            <td data-th="Heading 3">DataCell</td>
-                        </tr>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre><code>
+            &lt;div class="tableContainer"&gt;
+                &lt;table class="striped"&gt;
+                    &lt;caption>Striped Table&lt;/caption&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Heading 1&gt;/th&gt;
+                            &lt;th&gt;Heading 2&gt;/th&gt;
+                            &lt;th&gt;Heading 3&gt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            </code></pre>
+            </section>
+            <section>
+                <div class="tableContainer">
+                    <table class="bordered">
+                        <caption>Bordered Table</caption>
+                        <thead>
+                            <th>Heading 1</th>
+                            <th>Heading 2</th>
+                            <th>Heading 3</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Heading 1">DataCell</td>
+                                <td data-th="Heading 2">DataCell</td>
+                                <td data-th="Heading 3">DataCell</td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre><code>
+            &lt;div class="tableContainer"&gt;
+                &lt;table class="bordered"&gt;
+                    &lt;caption>Bordered Table&lt;/caption&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Heading 1&gt;/th&gt;
+                            &lt;th&gt;Heading 2&gt;/th&gt;
+                            &lt;th&gt;Heading 3&gt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td data-th="Heading 1">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 2">DataCell&lt;/td&gt;
+                            &lt;td data-th="Heading 3">DataCell&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            </code></pre>
+            </section>
         </section>
 
 
@@ -280,171 +400,329 @@ User input: &lt;kbd&gt;"10"&lt;kbd&gt;
         <section>
             <h4 class="uppercase center">Forms and Form Elements</h4>
             <hr>
+            <p class="explanationParagraph">Each form as the same basic skeleton that begins with <code>&lt;form class="formcontainer"&gt;&lt;/form&gt;</code> wrapping everything else. Fieldsets separate the sections of your form with a small border and a legend. All classes applied to fieldsets can also be applied to divs instead if you want to forgo the fieldset styling.</p>
+            <pre><code>
+        Basic Skeleton:
+            &lt;form class="formcontainer"&gt;
+                // Code Here
+            &lt;/form&gt;
+
+        With Fieldsets:
+            &lt;form class="formcontainer"&gt;
+               &lt;fieldset class="radio/checkbox/text-input/text-input stacked/textarea stacked"&gt;
+                        // Code Here
+                &lt;/fieldset&gt;
+                &lt;fieldset class="radio/checkbox/text-input/text-input stacked/textarea stacked"&gt;
+                        // Code Here
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        NOTE: the same classes can be applied to divs to avoid fieldset styling while still grouping.
+            </code></pre>
+
+
             <form class="formcontainer">
-                <fieldset class="checkbox">
-                    <legend>Checkboxes</legend>
-                    <input type="checkbox" id="checkbox1">
-                    <label for="checkbox1">Option One</label>
-                    <input type="checkbox" id="checkbox2">
-                    <label for="checkbox2">Option Two</label>
-                    <input type="checkbox" id="checkbox3">
-                    <label for="checkbox3">Option Three</label>
-                    <input type="checkbox" id="checkbox4">
-                    <label for="checkbox4">Option Four</label>
-                </fieldset>
-                <fieldset class="radio">
-                    <legend>Radio Buttons</legend>
-                    <input type="radio" id="radio1" name="radio-group">
-                    <label for="radio1">Option One</label>
-                    <input type="radio" id="radio2" name="radio-group">
-                    <label for="radio2">Option Two</label>
-                    <input type="radio" id="radio3" name="radio-group">
-                    <label for="radio3">Option Three</label>
-                    <input type="radio" id="radio4" name="radio-group">
-                    <label for="radio4">Option Four</label>
+                <section>
+                    <p class="explanationParagraph">Checkboxes should have a container with a class of <code>&lt;checkbox&gt;</code>. IDs are optional, but don't forget the "for" and "type"!</p>
+                    <fieldset class="checkbox">
+                        <legend>Checkboxes</legend>
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1">Option One</label>
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2">Option Two</label>
+                        <input type="checkbox" id="checkbox3">
+                        <label for="checkbox3">Option Three</label>
+                        <input type="checkbox" id="checkbox4">
+                        <label for="checkbox4">Option Four</label>
+                    </fieldset>
 
-                </fieldset>
-                <fieldset>
+                    <pre><code>
+        &lt;fieldset class="checkbox"&gt;
+            &lt;legend&gt;Checkboxes&lt;/legend&gt;
+            &lt;input type="checkbox" id="checkbox1"&gt;
+            &lt;label for="checkbox1"&gt;Option One&lt;/label&gt;
+            &lt;input type="checkbox" id="checkbox2"&gt;
+            &lt;label for="checkbox2"&gt;Option Two&lt;/label&gt;
+            &lt;input type="checkbox" id="checkbox3"&gt;
+            &lt;label for="checkbox3"&gt;Option Three&lt;/label&gt;
+            &lt;input type="checkbox" id="checkbox4"&gt;
+            &lt;label for="checkbox4"&gt;Option Four&lt;/label&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    <legend>Drop-down</legend>
-                    <div class="form-group">
-                        <label for="dropdown" class="dropdown">
-                            <select>
-                                <option value="option1" selected>Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                                <option value="option4">Option 4</option>
-                            </select>
-                        </label>
+                <section>
+                    <p class="explanationParagraph">Radio buttons should have a container with a class of <code>&lt;radio&gt;</code>. IDs are optional, but don't forget the "for" and "type", and "name"!</p>
+                    <fieldset class="radio">
+                        <legend>Radio Buttons</legend>
+                        <input type="radio" id="radio1" name="radio-group">
+                        <label for="radio1">Option One</label>
+                        <input type="radio" id="radio2" name="radio-group">
+                        <label for="radio2">Option Two</label>
+                        <input type="radio" id="radio3" name="radio-group">
+                        <label for="radio3">Option Three</label>
+                        <input type="radio" id="radio4" name="radio-group">
+                        <label for="radio4">Option Four</label>
+                    </fieldset>
+                    <pre><code>
+        &lt;fieldset class="radio"&gt;
+            &lt;legend>Radio Buttons&lt;/legend&gt;
+            &lt;input type="radio" id="radio1" name="radio-group"&gt;
+            &lt;label for="radio1">Option One&lt;/label&gt;
+            &lt;input type="radio" id="radio2" name="radio-group"&gt;
+            &lt;label for="radio2">Option Two&lt;/label&gt;
+            &lt;input type="radio" id="radio3" name="radio-group"&gt;
+            &lt;label for="radio3">Option Three&lt;/label&gt;
+            &lt;input type="radio" id="radio4" name="radio-group"&gt;
+            &lt;label for="radio4">Option Four&lt;/label&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    </div>
+                <section>
+                    <p class="explanationParagraph">Dropdowns should have a form-group around them to isolate the label and dropdown.</p>
+                    <fieldset class="dropdown">
+                        <legend>Drop-down</legend>
+                        <div class="form-group">
+                            <label for="dropdown">
+                                <select>
+                                    <option value="option1" selected>Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                </select>
+                            </label>
+                        </div>
+                    </fieldset>
 
-                </fieldset>
-                <fieldset class="text-input">
+                    <pre><code>
+        &lt;fieldset  class="dropdown"&gt;
+            &lt;legend&gt;Drop-down&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="dropdown"&gt;
+                    &lt;select&gt;
+                        &lt;option value="option1" selected>Option 1&lt;/option&gt;
+                        &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+                        &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+                        &lt;option value="option4"&gt;Option 4&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    <legend>Text Inputs</legend>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" />
+                <section>
+                    <p class="explanationParagraph">Text inputs require a container div around all inputs in a group as well as a container "form-group" isolating labels and their corresponding inputs. Label + input pairs will stay inline until limited space forces them to stack.</p>
+                    <fieldset class="text-input">
+                        <legend>Text Inputs</legend>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" />
+                        </div>
+                    </fieldset>
 
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" />
+                    <pre><code>
+        &lt;fieldset class="text-input"&gt;
+            &lt;legend&gt;Text Inputs&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="username">Username&lt;/label&gt;
+                &lt;input type="text" id="username" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="password">Password&lt;/label&gt;
+                &lt;input type="password" id="password" /&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    </div>
+                <section>
+                    <p class="explanationParagraph">On larger screens, text areas surrounded by a container class of "textarea" will show their labels in line with their corresponding inputs. On smaller screens textareas will default to a stacked position.</p>
+                    <fieldset class="textarea">
+                        <legend>Text Area</legend>
+                        <div class="form-group">
+                            <label for="textarea">Text Area</label>
+                            <textarea></textarea>
+                        </div>
+                    </fieldset>
 
-                </fieldset>
-                <fieldset class="textarea">
+                    <pre><code>
+        &lt;fieldset class="textarea"&gt;
+            &lt;legend>Text Area&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="textarea"&gt;Text Area&lt;/label&gt;
+                &lt;textarea>&lt;/textarea&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    <legend>Text Area</legend>
-                    <div class="form-group">
-                        <label for="textarea">Text Area</label>
-                        <textarea></textarea>
-                    </div>
+                <section>
+                    <p class="explanationParagraph">If you prefer a stacked appearance, simply add the class "stacked" to the text-input container fieldset/div.</p>
+                    <fieldset class="text-input stacked">
+                        <legend>Text Inputs (Stacked)</legend>
+                        <div class="form-group">
+                            <label for="username2">Username</label>
+                            <input type="text" id="username2" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Password</label>
+                            <input type="password" id="password2" />
+                        </div>
+                    </fieldset>
 
-                </fieldset>
-                <fieldset class="text-input stacked">
+                    <pre><code>
+        &lt;fieldset class="text-input stacked"&gt;
+            &lt;legend&gt;Text Inputs (Stacked)&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="username2"&gt;Username&lt;/label&gt;
+                &lt;input type="text" id="username2" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="password2"&gt;Password&lt;/label&gt;
+                &lt;input type="password" id="password2" /&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+                </code></pre>
+                </section>
 
-                    <legend>Text Inputs (Stacked)</legend>
-                    <div class="form-group">
-                        <label for="username2">Username</label>
-                        <input type="text" id="username2" />
+                <section>
+                    <p class="explanationParagraph">If you prefer a stacked appearance, simply add the class "stacked" to the textarea container fieldset/div.</p>
+                    <fieldset class="textarea stacked">
+                        <legend>Text Area (Stacked)</legend>
+                        <div class="form-group">
+                            <label for="textarea">Text Area</label>
+                            <textarea></textarea>
+                        </div>
+                    </fieldset>
 
-                    </div>
-                    <div class="form-group">
-                        <label for="password2">Password</label>
-                        <input type="password" id="password2" />
+                    <pre><code>
+        &lt;fieldset class="textarea stacked"&gt;
+            &lt;legend&gt;Text Area (Stacked)&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="textarea"&gt;Text Area&lt;/label&gt;
+                &lt;textarea>&lt;/textarea&gt;
+            &lt;/div&gt;
+        &lt;fieldset&gt;
+                </code></pre>
+                </section>
 
-                    </div>
-
-                </fieldset>
-                <fieldset class="textarea stacked">
-
-                    <legend>Text Area (Stacked)</legend>
-                    <div class="form-group">
-                        <label for="textarea">Text Area</label>
-                        <textarea></textarea>
-                    </div>
-
-                </fieldset>
             </form>
         </section>
 
-        <section>
+        <section id="buttons">
             <h4 class="uppercase center">All the buttons</h4>
             <hr>
             <!-- BUTTON STYLING -->
-            <h4>XSmall Buttons</h4>
-            <button class="white xsmall">Button</button>
-            <button class="transparent xsmall">Button</button>
+            <section>
+                <h4>XSmall Buttons</h4>
+                <button class="white xsmall">Button</button>
+                <button class="nonwhite xsmall">Button</button>
+                <pre><code>
+        &lt;button class="white xsmall"&gt;Button&lt;/button&gt;
+        &lt;button class="nonwhite xsmall"&gt;Button&lt;/button&gt;
+                </code></pre>
+            </section>
 
-            <h4>Default Buttons</h4>
-            <button href="#" class="white">button</button>
-            <button href="#" class="transparent">button</button>
+            <section>
+                <h4>Default Buttons</h4>
+                <button href="#" class="white">button</button>
+                <button href="#" class="nonwhite">button</button>
+                <pre><code>
+        &lt;button class="white"&gt;Button&lt;/button&gt;
+        &lt;button class="nonwhite"&gt;Button&lt;/button&gt;
+                </code></pre>
+            </section>
 
 
-            <h4>Medium Buttons</h4>
-            <button href="#" class="white medium">button</button>
-            <button href="#" class="transparent medium">button</button>
+            <section>
+                <h4>Medium Buttons</h4>
+                <button href="#" class="white medium">button</button>
+                <button href="#" class="nonwhite medium">button</button>
+                <pre><code>
+        &lt;button class="white medium"&gt;Button&lt;/button&gt;
+        &lt;button class="nonwhite medium"&gt;Button&lt;/button&gt;
+                </code></pre>
+            </section>
 
 
-            <h4>Large Buttons</h4>
-            <button href="#" class="white large">button</button>
-            <button class="transparent large">button</button>
+            <section>
+                <h4>Large Buttons</h4>
+                <button href="#" class="white large">button</button>
+                <button class="nonwhite large">button</button>
+                <pre><code>
+        &lt;button class="white medium"&gt;Button&lt;/button&gt;
+        &lt;button class="nonwhite medium"&gt;Button&lt;/button&gt;
+                </code></pre>
+            </section>
 
-            <h4>Other Buttons</h4>
-            <input type="button" class="disabled" Value="Disabled">
-            <input type="submit" class="white" Value="Submit Button">
-            <input type="reset" class="transparent" value="Reset Button">
+            <section>
+                <h4>Other Buttons</h4>
+                <input type="button" class="disabled" Value="Disabled">
+                <input type="reset" class="nonwhite" value="Reset Button">
+                <input type="submit" class="white" Value="Submit Button">
+                <pre><code>
+        &lt;input type="button" class="disabled" Value="Disabled"&gt;
+        &lt;input type="reset" class="nonwhite" value="Reset Button"&gt;
+        &lt;input type="submit" class="white" Value="Submit Button"&gt;
+                </code></pre>
+            </section>
         </section>
 
 
         <section>
             <h4 class="uppercase center">Responsive Images</h4>
             <hr>
-            <div>
-                <h4>Responsive Image - Full Width</h4>
-                <img src="images/git.jpg" alt="responsiveImage" class="responsiveImg">
-            </div>
-            <hr>
+            <p class="explanationParagraph">It's easy to incorporate responsive images into your website. We've designed a class to place right in the <code>&lt;img&gt;</code> tag to do all the work for you.</p>
+            <section>
+                <div>
+                    <h4>Responsive Image - Full Width</h4>
+                    <img src="images/git.jpg" alt="responsiveImage" class="responsiveImg">
+                </div>
+                <pre><code>
+        &lt;img src="images/git.jpg" alt="responsiveImage" class="responsiveImg"&gt;
+            </code></pre>
+            </section>
 
-            <div>
-                <h4>Responsive Image - Floated Right</h4>
-                <img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage">
-                <p>
-                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-                <p>
-                    Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
+            <section>
+                <div>
+                    <h4>Responsive Image - Floated Right</h4>
+                    <img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage">
+                    <p>
+                        Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                    <p>
+                        Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
 
-                <p>
-                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-            </div>
-            <hr>
-            <div>
-                <h4>Responsive Image - Floated Left</h4>
-                <img src="images/git.jpg" alt="responsiveImage" class="leftFloatImage">
-                <p>
-                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-                <p>
-                    Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
+                    <p>
+                        Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                </div>
+                <pre><code>
+        &lt;img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage"&gt;
+            </code></pre>
+            </section>
 
-                <p>
-                    Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
-            </div>
+            <section>
+                <div>
+                    <h4>Responsive Image - Floated Left</h4>
+                    <img src="images/git.jpg" alt="responsiveImage" class="leftFloatImage">
+                    <p>
+                        Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                    <p>
+                        Maecenas vehicula tempor bibendum. Ut eu efficitur erat. Proin convallis placerat mauris dapibus viverra. Sed ultrices viverra semper. Mauris id tincidunt justo. Integer id porta lacus. Integer sit amet malesuada nulla, quis aliquet massa. Phasellus sagittis, nulla a lacinia varius, augue turpis pulvinar velit, et malesuada massa arcu vel nisl. Donec luctus, nulla quis varius mollis, nunc ante ullamcorper justo, non ultrices tortor lacus ac turpis. Integer vel odio risus.</P>
 
-
-
-
-
+                    <p>
+                        Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
+                </div>
+                <pre><code>
+        &lt;"images/git.jpg" alt="responsiveImage" class="leftFloatImage"&gt;
+            </code></pre>
+            </section>
         </section>
-
-
-
-
-
     </div>
-
 </body>
 
 </html>
