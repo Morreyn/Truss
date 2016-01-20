@@ -15,6 +15,7 @@
     </header>
     <!-- TYPOGRAPHY STYLING --->
     <div class="container">
+        <h2 class="center">Getting Started with Truss</h2>
         <section>
             <h4 class="uppercase center">Typography</h4>
             <hr>
@@ -38,13 +39,18 @@
                 <span class="capitalize">capitalize</span> = <code>&lt;span class="capitalize"&gt;text&lt;/span&gt;</code>
             </p>
 
-            <p class="explanationParagraph">Abbreviations merely require the <code>&lt;abbr title="place full form here"&gt;&lt;/abbr&gt;</code> tag. A question mark will appear when you hover over the abbreviation, and once you hover the abbreviation will appear. Example: <abbr title="World Wide Web Consortium">An abbreviation of <strong>W3C</strong></abbr>.</p>
-            <p class="explanationParagraph">Addresses have the following format:
-                <code><br> &lt;address&gt;
-                <br> 12345 Sample Address&lt;br&gt;
-                <br> Some City, USA Zip
-                <br>&lt;address&gt;</code>
-            </p>
+            <p class="explanationParagraph">Abbreviations merely require the <code>&lt;abbr title="place full form here"&gt;&lt;/abbr&gt;</code> tag. A question mark will appear when you hover over the abbreviation, and after another moment or two the abbreviation will appear. Example: <abbr title="World Wide Web Consortium">An abbreviation of <strong>W3C</strong></abbr>.</p>
+            <section>
+                <p class="explanationParagraph">Addresses have the following format:</p>
+                <p>12345 Sample Address
+                    <br> Some City, USA Zip</p>
+                <pre><code>
+        &lt;address&gt;
+         12345 Sample Address&lt;br&gt;
+         Some City, USA Zip
+        &lt;address&gt;
+           </code></pre>
+            </section>
 
         </section>
 
@@ -52,24 +58,30 @@
             <h4 class="uppercase center">Utility Classes</h4>
             <hr>
             <section>
-                <p class="explanationParagraph">No-Print class prevents the element that the class is attached to from being sent to the printer. </p>
-                <p>NO PRINT EXAMPLES HERE</p>
+                <p class="explanationParagraph">The "no-print" class prevents the element that the class is attached to from being sent to the printer.This includes text, images, etc.</p>
+                <p class="no-print">Example: While this sentence shows up in the webpage, it will disappear when you try to print this page.</p>
                 <pre><code>
-                    NO PRINT CODE HERE
+        &lt;p class="no-print"&gt;Example: While this sentence shows up in the webpage, it will disappear when you try to print this page.&lt;/p&gt;
+                    </code></pre>
+            </section>
+            <section>
+                <p class="explanationParagraph">The "no-screen" class prevents the display of the element that the class is attached to, but it will show up when you try to print the page. </p>
+                <p class="no-screen">Example: This sentence will not show up in your webpage until you try to print.</p>
+                <pre><code>
+        &lt;p class="no-screen"&gt;Example: This sentence will not show up in your webpage until you try to print.&lt;/p&gt;
                 </code></pre>
             </section>
             <section>
-                <p class="explanationParagraph">No-Screen class prevents the element that the class is attached to from being dispayed on the screen at the DOM load. </p>
-                <p>NO SCREEN EXAMPLES HERE</p>
+                <p class="explanationParagraph">Clearfix solves the zero-height container problem for floated elements.</p>
+                <div class="tclearfix">
+                    <img src="images/LogoIdea2.png" class="tfloat-right">
+                    <img src="images/LogoIdea2.png" class="tfloat-right">
+                </div>
                 <pre><code>
-                    NO SCREEN CODE HERE
-                </code></pre>
-            </section>
-            <section>
-                <p class="explanationParagraph">Clearfix allows you to something something </p>
-                <p>CLEARFIX EXAMPLES HERE</p>
-                <pre><code>
-                   &lt;something class="tclearfix"&gt;
+        &lt;div class="tclearfix"&gt;
+            &lt;img class="tfloat-right" src="images/LogoIdea2.png"&gt;
+            &lt;img class="tfloat-right" src="images/LogoIdea2.png"&gt;
+        &lt;/div&gt;
                 </code></pre>
             </section>
         </section>
@@ -100,12 +112,12 @@
             <hr>
             <p class="explanationParagraph">For simple quotes, use the <code>&lt;q&gt;</code> tag: </p>
             <section>
-                <p><q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q></p>
+                <q>This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors</q>
             </section>
             <pre><code>&lt;p&gt;&lt;q&gt;This is how we would show a quote about how amazing our framework is and why you should use it every day. - Contributors&lt;/q&gt;&lt;/p&gt;</code></pre>
 
             <hr>
-            <p class="explanationParagraph">Simple blockquotes have both a &lt;p&gt; section for the main quoted text and a footer section with an optional cite tag to effortlessly style the quote citation: </p>
+            <p class="explanationParagraph">Simple blockquotes have both a <code>&lt;p&gt;</code> section for the main quoted text and a <code>&lt;footer&gt;</code> section with an optional <code>&lt;cite&gt;</code> tag to effortlessly style the quote citation: </p>
             <section>
                 <blockquote class="blockquote-simple">
                     <p>Regular blockquoted text without getting too fancy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada maximus ante, sed convallis tortor convallis ac. Integer in cursus nibh. Etiam volutpat ante ut dui maximus ullamcorper. Nam vitae dolor sit amet mi bibendum fermentum at a odio. </p>
@@ -118,62 +130,14 @@
            &lt;footer&gt; said &lt;cite&gt;somebody &lt;/cite&gt;&lt;/footer&gt;
     &lt;/blockquote&gt;
             </code></pre>
-
-            <hr>
-            <p class="explanationParagraph">Fancy blockquotes retain a <code>&lt;p&gt;</code> section for the main quoted text and a footer section with an optional cite tag, but they also include an <code>&lt;img&gt;</code> and wrapper. To insert this CSS component into your webpage, simply copy and paste the code below and insert your own text. If you would like alternating blockquotes, add the "right" class to every right-floating quote.</p>
-            <section>
-                <div class="testimonial-quote">
-                    <img>
-                    <blockquote class="blockquote-fancy">
-                        <p>The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.</p>
-                        <footer>Collaborators of Truss in
-                            <br><cite>Some Book or Something</cite></footer>
-                    </blockquote>
-                </div>
-            </section>
-
-            <pre><code>
-    &lt;div class="testimonial-quote"&gt;
-        &lt;img&gt;
-        &lt;blockquote class="blockquote-fancy"&gt;
-            &lt;p&gt;The left side of alternating blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam.&lt;/p&gt; 
-            &lt;footer&gt; Collaborators of Truss in 
-            &lt;br&gt; 
-            &lt;cite&gt;Some Book or Something&lt;/cite&gt;&lt;/footer&gt;
-        &lt;/blockquote&gt;
-    &lt;/div&gt;
-            </code></pre>
-
-            <section>
-                <div class="testimonial-quote alternate">
-                    <img>
-                    <blockquote class="blockquote-fancy">
-                        <p>Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. </p>
-                        <footer>Collaborators of Truss in
-                            <br><cite>Another Book or Something</cite></footer>
-                    </blockquote>
-                </div>
-            </section>
-
-            <div class="clear"><pre><code>
-        &lt;div class="testimonial-quote right"&gt;
-            &lt;img&gt;
-            &lt;blockquote class="blockquote-fancy"&gt;
-                &lt;p&gt;Alternated blockquoted text from a user identifying how this framework has changed his/her life. Now for lorem ipsum. Lorem ipsum dolor sit amet, luctus integer nulla amet eu nam, arcu massa, integer cubilia metus id vestibulum. &lt;/p&gt; 
-                &lt;footer&gt; Collaborators of Truss in 
-                &lt;br&gt; 
-                &lt;cite&gt;Another Book or Something&lt;/cite&gt;&lt;/footer&gt;
-            &lt;/blockquote&gt;
-        &lt;/div&gt;
-            </code></pre>
-            </div>
         </section>
+
         <!-- Code -->
 
         <section>
             <h4 class="uppercase center">code</h4>
             <hr>
-            <p class="explanationParagraph">Truss allows you to not worry about individually styling blocks of code, inline code snippets, keyboard inputs, or variables. Inline code only needs the HTML <code>&lt;code&gt;</code> tag, while inline keyboard inputs need the <code>&lt;kbd&gt;</code> tag. For the block code below, the <code>&lt;pre&gt;</code>tag outside the <code>&lt;code&gt;</code> tag preserves all breaks and spaces to show the code block below:</p>
+            <p class="explanationParagraph">Truss allows you to not worry about individually styling blocks of code, inline code snippets, keyboard inputs, or variables. Inline code simply needs the HTML <code>&lt;code&gt;</code> tag, while inline keyboard inputs need the <code>&lt;kbd&gt;</code> tag. For the block code below, the <code>&lt;pre&gt;</code>tag outside the <code>&lt;code&gt;</code> tag preserves all breaks and spaces to show the code block below:</p>
             <section><pre><code>Block code:
 <var>x</var> = prompt("What is your favorite number?")
 User input: <kbd>"10"</kbd>
@@ -182,7 +146,7 @@ User input: <kbd>"10"</kbd>
             </section>
 
             <pre><code>
-        HTML of code codeblock above:
+        HTML of codeblock above:
             &lt;pre&gt;&lt;code&gt;Block code:
             &lt;var&gt;x&lt;var&gt; = prompt("What is your favorite number?")
             User input: &lt;kbd&gt;"10"&lt;kbd&gt;
@@ -197,37 +161,64 @@ User input: <kbd>"10"</kbd>
         <section>
             <h4 class="uppercase center">Lists</h4>
             <hr>
-            <p class="explanationParagraph">There are no extras when it comes to making ordered and unordered lists, just simple HTML tag usage:</p>
+            <p class="explanationParagraph">There are no extras when it comes to making ordered and unordered lists, just simple HTML tag usage. However, Truss does not support subs of sub-lists and further.</p>
             <section>
                 <ol>
                     <li>Ordered list item 1</li>
+                    <ol>
+                        <li>Sub-ordered item 1</li>
+                        <li>Sub-ordered item 2</li>
+                    </ol>
                     <li>Ordered list item 2</li>
                     <ul>
-                        <li>Sublist item 1</li>
+                        <li>Sub-unordered list item 1</li>
+                        <li>Sub-unordered item 2</li>
                     </ul>
                     <li>Ordered list item 3</li>
                 </ol>
+                <hr>
                 <ul>
                     <li>Unordered list item 1</li>
                     <ol>
-                        <li>Sublist item 1</li>
-                        <li>Sublist item 2</li>
+                        <li>Sub-ordered item 1</li>
+                        <li>Sub-ordered item 2</li>
                     </ol>
                     <li>Unordered list item 2</li>
+                    <ul>
+                        <li>Sub-unordered list item 1</li>
+                        <li>Sub-unordered item 2</li>
+                    </ul>
                     <li>Unordered list item 3</li>
                 </ul>
             </section>
             <pre><code>
             &lt;/ol&gt;
-                &lt;/li&gt;Ordered list item 1&lt;/li&gt;
-                &lt;/li&gt;Ordered list item 2&lt;/li&gt;
-                &lt;/li&gt;Ordered list item 3&lt;/li&gt;
-            &lt;/ol&gt;
-            &lt;ul&gt;
-                &lt;/li&gt;Unordered list item 1&lt;/li&gt;
-                &lt;/li&gt;Unordered list item 2&lt;/li&gt;
-                &lt;/li&gt;Unordered list item 3&lt;/li&gt;
-            &lt;/ul&gt;
+                    &lt;li&gt;Ordered list item 1&lt;/li&gt;
+                    &lt;ol&gt;
+                        &lt;li>Sub-ordered item 1&lt;/li&gt;
+                        &lt;li>Sub-ordered item 2&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;li&gt;Ordered list item 2&lt;/li&gt;
+                    &lt;ul&gt;
+                        &lt;li>Sub-unordered list item 1&lt;/li&gt;
+                        &lt;li>Sub-unordered item 2&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;li&gt;Ordered list item 3&lt;/li&gt;
+                &lt;/ol&gt;
+            
+                &lt;ul&gt;
+                    &lt;li&gt;Unordered list item 1&lt;/li&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;Sub-ordered item 1&lt;/li&gt;
+                        &lt;li&gt;Sub-ordered item 2&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;li&gt;Unordered list item 2&lt;/li&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;Sub-unordered list item 1&lt;/li&gt;
+                        &lt;li&gt;Sub-unordered item 2&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;li&gt;Unordered list item 3&lt;/li&gt;
+                &lt;/ul>
             </code></pre>
         </section>
 
@@ -426,7 +417,7 @@ User input: <kbd>"10"</kbd>
         <section>
             <h4 class="uppercase center">Forms and Form Elements</h4>
             <hr>
-            <p class="explanationParagraph">Each form as the same basic skeleton that begins with <code>&lt;form class="formcontainer"&gt;&lt;/form&gt;</code> wrapping everything else. Fieldsets separate the sections of your form with a small border and a legend. All classes applied to fieldsets can also be applied to divs instead if you want to forgo the fieldset styling.</p>
+            <p class="explanationParagraph">Each form has the same basic skeleton that begins with <code>&lt;form class="formcontainer"&gt;&lt;/form&gt;</code> wrapping everything else. Fieldsets separate the sections of your form with a small border and a legend. All classes applied to fieldsets can also be applied to divs instead if you want to forgo the fieldset styling.</p>
             <pre><code>
         Basic Skeleton:
             &lt;form class="formcontainer"&gt;
@@ -639,11 +630,11 @@ User input: <kbd>"10"</kbd>
 
             </form>
         </section>
-
+        <!-- BUTTON STYLING -->
         <section id="buttons">
             <h4 class="uppercase center">All the buttons</h4>
             <hr>
-            <!-- BUTTON STYLING -->
+            <p class="explanationParagraph">Buttons come in two classes: "white" and "nonwhite". Specify your size and type preference with classes as shown below.</p>
             <section>
                 <h4>XSmall Buttons</h4>
                 <button class="white xsmall">Button</button>
@@ -707,17 +698,17 @@ User input: <kbd>"10"</kbd>
             <section>
                 <div>
                     <h4>Responsive Image - Full Width</h4>
-                    <img src="images/git.jpg" alt="responsiveImage" class="responsiveImg">
+                    <img src="images/trusses.jpg" alt="responsiveImage" class="responsiveImg">
                 </div>
                 <pre><code>
-        &lt;img src="images/git.jpg" alt="responsiveImage" class="responsiveImg"&gt;
+        &lt;img src="images/trusses.jpg" alt="responsiveImage" class="responsiveImg"&gt;
             </code></pre>
             </section>
 
             <section>
                 <div>
                     <h4>Responsive Image - Floated Right</h4>
-                    <img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage">
+                    <img src="images/trusses.jpg" alt="responsiveImage" class="rightFloatImage">
                     <p>
                         Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
                     <p>
@@ -727,14 +718,14 @@ User input: <kbd>"10"</kbd>
                         Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
                 </div>
                 <pre><code>
-        &lt;img src="images/git.jpg" alt="responsiveImage" class="rightFloatImage"&gt;
+        &lt;img src="images/trusses.jpg" alt="responsiveImage" class="rightFloatImage"&gt;
             </code></pre>
             </section>
 
             <section>
                 <div>
                     <h4>Responsive Image - Floated Left</h4>
-                    <img src="images/git.jpg" alt="responsiveImage" class="leftFloatImage">
+                    <img src="images/trusses.jpg" alt="responsiveImage" class="leftFloatImage">
                     <p>
                         Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
                     <p>
@@ -744,7 +735,7 @@ User input: <kbd>"10"</kbd>
                         Nulla nunc neque, commodo et auctor eget, bibendum eget purus. Pellentesque finibus maximus nisl vel laoreet. Morbi sollicitudin id tortor a egestas. Etiam mollis dignissim lobortis. Vivamus ante mauris, iaculis at lectus sed, convallis congue nisl. Vivamus dignissim tincidunt sem. Sed aliquam lectus nec eros cursus euismod. Suspendisse varius augue nunc, eu pharetra odio lobortis ut. Phasellus ac placerat mauris. Suspendisse potenti. Nunc ac convallis sapien. Duis rhoncus mollis sem et interdum. Donec nec dui quam. Cras lacinia luctus odio, quis ultrices lacus.</p>
                 </div>
                 <pre><code>
-        &lt;"images/git.jpg" alt="responsiveImage" class="leftFloatImage"&gt;
+        &lt;"images/trusses.jpg" alt="responsiveImage" class="leftFloatImage"&gt;
             </code></pre>
             </section>
         </section>
