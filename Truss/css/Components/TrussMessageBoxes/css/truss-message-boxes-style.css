@@ -1,0 +1,281 @@
+/* ----------------------------------------------------------------
+                 Truss Message Boxes
+
+author: Joseph McDonald - McDonald Media Production
+------------------------------------------------------------------ */
+/* -- ========================================================= -- */
+/* -- ===                                                   === -- */
+/* -- ========================================================= -- */
+
+/*    ========================================= */
+/*			INCLUDE THE NEXT TWO BLOCKS         */
+
+ div span {
+	font-weight:bold; 
+	text-transform: uppercase;
+}
+
+/*  HOVER OR FOCUS BY TAB INTO ITEM     */
+/*   BACKGROUND IMAGE GRADIENTS         */ 	
+.msg-box:hover, .msg-box:focus
+{	
+	color: #000;  
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0))); /* Safari & Chrome */
+	background-image: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); 	/* firefox         */
+	background-image: -o-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 25, 0));  	/* opera           */
+	background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 25, 0));        /* internet explorer */	
+/* TRANSITIONS GRADUALLY CHANGES THE PROPERTIES */ 
+	-moz-transition: 1.5s;       /* firefox         */
+	-o-transition: 1.5s;         /* opera           */
+	-webkit-transition: 1.5s;    /* Safari & Chrome */
+	 transition: 1.5s;   
+ }
+
+/*    =========================================  */
+/*			CHOOSE THE DESIRED CLASSES BELOW     */
+
+.success {
+	color: #4F8A10;
+	background:#e9ffd9 url('../images/success.png') no-repeat 10px 50%;
+	border:1px solid #a6ca8a;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;
+	}
+
+.warning {  
+	color: #9F6000;
+	background:#fff8c4 url('../images/warning.png') no-repeat 10px 50%;
+	border:1px solid #f2c779;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;
+}	
+
+
+.notice {
+	color: #004efd;
+	background:#e3f7fc url('../images/notice.png') no-repeat 10px 50%;
+	border:1px solid #8ed9f6;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}
+
+.validation  {  
+	color: #fcb139;
+	background:#ffd7c9 url('../images/validation20x20-a.png') no-repeat 10px 50%;
+	border:1px solid #8ed9f6;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;
+	}
+
+.favorite {
+	color: #ed6d00;   
+	background: #f7deca url('../images/Favorite-20x20-b.png') no-repeat 10px 50%;
+	border:1px solid #97cbff;
+		
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}
+
+.appointment {
+	color: #3399FF;
+	background:#ffd033 url('../images/Appointment Urgent-20x20-a.png') no-repeat 10px 50%;
+	border:1px solid #97cbff;
+		
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px	
+	}
+
+
+.help { 
+	color: #d833ff;
+	background:#fad0fa url('../images/Knob Help-20x20-e.png') no-repeat 10px 50%;
+	border: 1px solid #97cbff;	
+	
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+    }
+
+
+.tip {  
+	color: #800517;
+	background: #e3f7fc  url('../images/tip-20x20-a.png') no-repeat 10px 50%;
+	border:1px solid #843c47;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}
+
+.important {  
+	color: #000000;
+	background: #E66C2C url('../images/important-20x20-c.png') no-repeat 10px 50%;
+	border:1px solid #99C68E;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}
+
+
+.error { 
+	color: #D8000C;
+	background:#ffecec url('../images/error.png') no-repeat 10px 50%;
+	border:1px solid #f5aca6;
+				
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}
+
+.noimage{ 
+	color: #00529B;
+	background:#e3f7fc no-repeat 10px 50%;
+	border:1px solid #8ed9f6;
+			
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+	text-align: left;
+	padding:10px 36px;
+	margin:10px;	
+	background-position: 7px 50%; 
+	border-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px; 
+	-moz-border-radius-topleft:10x; 
+	-moz-border-radius-topright:10x;
+	-webkit-border-top-left-radius:10x;
+	-webkit-border-top-right-radius:10x; 
+	-webkit-border-bottom-left-radius:10x; 
+	-webkit-border-bottom-right-radius:10px;	
+	}

@@ -2121,7 +2121,7 @@ del {
 fieldset, img {
   border: 0; }
 
-/* ------ SCSS ------ */
+/* ------ TRUSS STYLING - Misty Morreyn ------ */
 /* FONTS */
 @font-face {
   font-family: 'Lato-Black';
@@ -2353,14 +2353,15 @@ q {
 
 /* Code */
 pre > code {
-  padding: 5px 10px;
+  padding: 5px 5px;
+  padding-left: 10px;
   margin-right: 2%;
   line-height: 1.4;
   text-overflow: ellipsis;
   display: block;
   background-color: #d9d9d9;
   margin: 20px auto;
-  word-wrap: break-word; }
+  white-space: pre-wrap; }
 
 code {
   padding: 0 5px 0 5px;
@@ -2406,6 +2407,11 @@ a {
 ol {
   padding: .5em;
   margin-left: .5em; }
+  ol li {
+    list-style-type: upper-latin; }
+  ol ol,
+  ol ul {
+    margin-left: 3%; }
 
 ul {
   padding: .5em;
@@ -2414,6 +2420,11 @@ ul {
     content: "\002022";
     color: #cfc796;
     margin-right: .5em; }
+  ul ol,
+  ul ul {
+    margin-left: 5%; }
+  ul ul {
+    list-style-type: none; }
 
 /* Other */
 abbr[title] {
@@ -2670,9 +2681,9 @@ table {
     .radio input + label:hover:before {
       border-color: #144c85; }
 
-.dropdown {
+.dropdown label {
   position: relative; }
-  .dropdown:after {
+  .dropdown label:after {
     content: '>';
     color: #cfc796;
     font-family: 'Lato-Bold', sans-serif;
@@ -2685,7 +2696,7 @@ table {
     height: 20px;
     background: primary-color;
     position: absolute; }
-  .dropdown select {
+  .dropdown label select {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -2701,7 +2712,7 @@ table {
     appearance: none;
     cursor: pointer;
     display: inline-block; }
-    .dropdown select option {
+    .dropdown label select option {
       background-color: #cfc796;
       color: #FFFfff; }
 
@@ -2787,16 +2798,16 @@ input[type="reset"] {
   text-transform: uppercase;
   border-radius: 2px; }
 
-.transparent {
+.nonwhite {
   color: #FFFfff;
   border-color: #cfc796;
   background-color: #cfc796; }
-  .transparent:hover, .transparent:focus {
+  .nonwhite:hover, .nonwhite:focus {
     background-color: #FFFfff;
     color: #0d3155;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.5s; }
-  .transparent:active {
+  .nonwhite:active {
     background-color: #FFFfff;
     color: #0d3155;
     -webkit-transition-property: background-color;
@@ -2851,7 +2862,7 @@ input[type="reset"] {
   padding: 10px 30px;
   font-size: 18px; }
 
-/* ------ IMAGE STYLING ------ */
+/* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 /* Reponsive image */
 .responsiveImg {
   width: 100%; }
@@ -2877,5 +2888,36 @@ input[type="reset"] {
     display: block;
     width: 95%;
     min-width: 300px; } }
+/* ------ CLEARFIX  - Joe McDonald------ */
+/* Based on Nicolas Gallagher - "micro" clearfix.*/
+.tclearfix {
+  *zoom: 1;
+  /* include this for IE 6/7 only (trigger hasLayout) */ }
+  .tclearfix:before, .tclearfix::after {
+    content: " ";
+    display: table; }
+  .tclearfix:after {
+    clear: both; }
+
+/* ------ QuickFloat  - Joe McDonald------ */
+.tfloat-right {
+  float: right !important; }
+
+.tfloat-left {
+  float: left !important; }
+
+/* ------ NoPrintNoScreen  - Joe McDonald------ */
+@media print {
+  .no-print {
+    display: none !important;
+    height: 0; }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+    height: 0; } }
+@media screen {
+  .no-screen {
+    display: none; } }
 
 /*# sourceMappingURL=truss%20styles.css.map */

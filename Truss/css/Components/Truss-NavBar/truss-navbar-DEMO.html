@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Truss 3 Tier Fixed Top Navigation Bar</title>
+	<meta charset="utf-8">
+	<meta name="description" content="A 3 tier fixed-position top navigation bar that remains visible while the user scrolls the page.">
+	<meta name="Joseph McDonald" content="McDonald Media Production">
+<!-- 		NAVBAR CSS 				-->	
+	<link  href="css/normalize.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/truss-navbar-style.css" rel="stylesheet" type="text/css" media="all">
+	
+<!-- 		Demo CSS	 			-->		
+	<link href="demo/css/truss-navbar-demo-style.css" rel="stylesheet" type="text/css" media="all" />	
+	
+	<style>
+/* modify below CSS to your needs */		
+/*  CAN CHANGE THE DEFAULT LIST ITEM COLORS HERE OR IN THE CSS FILE*/		
+/*  SETS ALL LIST ITEM COLOR  */					
+	#navBarId ul li a {
+		background: #cfc796;
+		border-top: 2px solid #144c85;
+		border-right: 2px solid #0d3155;
+		border-bottom: 2px solid #0d3155;
+		border-left: 2px solid #144c85;	
+		}
+		
+/*    BACKGROUND COLOR FOR LIST ITEM THAT CONTAINS THE ARROW IMAGE  */	
+	#navBarId li a.right, #navBarId li a.down, #navBarId li a.left  {
+		background-color: #cfc796;
+		}
+	
+/*  SETS HOVER OR FOCUS LIST ITEM COLOR  */			
+	#navBarId ul li a:hover,
+	#navBarId ul li a:focus {
+		background: #DCD6B2;       
+		border-top: 2px solid #e8dd9c;
+		border-right: 2px solid #f0e8b9;
+		border-bottom: 2px solid #f0e8b9;
+		border-left: 2px solid  #e8dd9c;
+}				
+	</style>		
+								
+</head>
+<body>   
+	<nav id="navBarId">
+	   
+		<ul >
+			<li><a  class=" down" href="index.html">Menu1</a>
+				<ul>	
+					<li><a class="right" href="#" >Menu11</a>
+						<ul>
+							<li><a href="#">Menu111</a></li>
+							<li><a href="#">Menu112</a></li>
+							<li><a href="#">Menu113</a></li>
+							<li><a href="#">Menu114</a></li>
+						</ul>
+					</li>
+				</ul>
+			  </li>
+			<li><a  class=" down" href="#">Menu2</a>
+				<ul>
+					<li><a href="#">Menu21</a></li>
+					<li><a href="#">Menu22</a></li>
+					<li><a href="#">Menu23</a></li>
+					<li><a  class="right" href="#">Menu24</a>
+						<ul>
+							<li><a href="#">Menu241</a></li>
+							<li><a href="#">Menu242</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Menu25</a></li>
+					<li><a href="#">Menu26</a></li>
+					<li><a href="#">Menu27</a></li>
+				</ul>
+			</li>
+			<li><a class=" down" href="#">Menu3</a>
+				<ul>
+					<li><a class="right" href="#">Menu31</a>
+						<ul>
+							<li><a href="#">Menu311</a></li>
+							<li><a href="#">Menu312</a></li>
+							<li><a href="#">Menu313</a></li>
+							<li><a href="#">Menu314</a></li>
+						</ul>
+					</li>
+					<li><a  class="right"  href="#">Menu32</a>
+						<ul>
+							<li><a href="#">Menu321</a></li>
+							<li><a href="#">Menu322</a></li>
+							<li><a href="#">Menu323</a></li>
+							<li><a href="#">Menu324</a></li>
+						</ul>
+					</li>
+					<li><a class="right" href="#" >Menu33</a>
+						<ul>
+							<li><a href="#">Menu331</a></li>
+							<li><a href="#">Menu332</a></li>
+							<li><a href="#">Menu333</a></li>
+							<li><a href="#">Menu334</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Menu34</a></li>
+					<li><a href="#">Menu35</a></li>
+					<li><a href="#">Menu36</a></li>
+				</ul>
+
+			</li>
+			<li class="last"><a class="down" href="#">Menu4</a>
+				<ul>
+					<li><a href="#">Menu41</a></li>
+					<li><a href="#">Menu42</a></li>
+					<li><a  href="#" class="left">Menu43</a>
+						<ul>
+							<li><a href="#">Menu431</a></li>
+							<li><a href="#">Menu432</a></li>
+							<li><a href="#">Menu433</a></li>
+							<li><a href="#">Menu434</a></li>
+							<li><a href="#">Menu435</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Menu44</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+<br>
+<!--     ================== Demo info  =======================    -->
+
+<div id="wrapper">
+		<h1>Truss Three Tier Fixed Top Navigation Bar Demo </h1>
+		<p><i></i></p>
+	
+<h2>Basic HTML Setup:</h2>
+<h4>1. Include CSS files (normalize.css and truss-navbar-style.css) </h4>
+			
+			<pre>
+&lt;link  href="css/normalize.css" rel="stylesheet" type="text/css" media="all"&gt;
+&lt;link href="css/truss-navbar-style.css" rel="stylesheet" type="text/css" media="all"&gt;
+			</pre> <br>
+<h4>2. Include HTML Navigation Bar (modify to your needs)  </h4>
+<pre>	<span class="comment"> <b>
+Change the anchor tag description for the item and include any necessary href links.<br>When adding list items to navbar, besure to include any required classes. 	<br>Class: 'right', 'left', 'down' are for the direction of arrow image.  	<br>Class 'last' is for the operation of left flyout.	<br>The top level list items is fixed width.<br>If list items are added or removed the width will require changing in the CSS. <br></b> </span>			
+&lt;nav id="navBarId"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a  class=" down" href="index.html"&gt;Menu1&lt;/a&gt;
+			&lt;ul&gt;	
+				&lt;li&gt;&lt;a class="right" href="#" &gt;Menu11&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu111&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu112&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu113&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu114&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		  &lt;/li&gt;
+		&lt;li&gt;&lt;a  class=" down" href="#"&gt;Menu2&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu21&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu22&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu23&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a  class="right" href="#"&gt;Menu24&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu241&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu242&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu25&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu26&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu27&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a class=" down" href="#"&gt;Menu3&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a class="right" href="#"&gt;Menu31&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu311&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu312&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu313&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu314&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a  class="right"  href="#"&gt;Menu32&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu321&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu322&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu323&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu324&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a class="right" href="#" &gt;Menu33&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu331&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu332&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu333&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu334&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu34&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu35&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu36&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+		&lt;/li&gt;
+		&lt;li class="last"&gt;&lt;a class="down" href="#"&gt;Menu4&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu41&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu42&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a  href="#" class="left"&gt;Menu43&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu431&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu432&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu433&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu434&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Menu435&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Menu44&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;			
+			
+</pre>
+<br>
+			
+<h4> 3. Include Optional Embedded CSS (modify to your needs). See table below.</h4>
+		
+<pre>		
+/*  CAN CHANGE THE DEFAULT LIST ITEM COLORS HERE OR IN THE CSS FILE*/		
+/*  SETS ALL LIST ITEM COLOR  */					
+	#navBarId ul li a {
+		background: #cfc796;
+		border-top: 2px solid #144c85;
+		border-right: 2px solid #0d3155;
+		border-bottom: 2px solid #0d3155;
+		border-left: 2px solid #144c85;	
+		}
+		
+/*  BACKGROUND COLOR FOR LIST ITEM THAT CONTAINS THE ARROW IMAGE  */	
+	#navBarId li a.right, #navBarId li a.down, #navBarId li a.left  {
+		background-color: #cfc796;
+		}
+	
+/*  SETS HOVER OR FOCUS LIST ITEM COLOR  */			
+	#navBarId ul li a:hover,
+	#navBarId ul li a:focus {
+		background: #dcd6b2;       
+		border-top: 2px solid #e8dd9c;
+		border-right: 2px solid #f0e8b9;
+		border-bottom: 2px solid #f0e8b9;
+		border-left: 2px solid  #e8dd9c;
+		}	
+</pre>
+<pre>
+		<table>
+			<thead>
+				<tr>
+					<th>Option</th>
+					<th>Description</th>
+					<th>Type</th>
+					<th>Default</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>background</td>
+					<td>Background color for list item. </td>
+					<td>String (hex)</td>
+					<td> #cfc796 and <br> #dcd6b2</td>
+				</tr>
+				<tr>
+					<td>background</td>
+					<td>Background color for list item that contains the arrow image. </td>
+					<td>String (hex)</td>
+					<td> #cfc796</td>
+				</tr>
+				
+				
+				<tr>
+					<td>border-'side'</td>
+				    <td>Border background color values for a specific side: top, right, bottom, left.</td>
+					<td>String (hex) </td>
+					<td> #144c85 and <br> #0d3155<br> #e8dd9c and <br> #f0e8b9  </td>
+				</tr>
+			</tbody>
+		</table>
+</pre>
+	
+		<br>
+		<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,1274 @@
+/* ----------------------------------------------------------------
+                        Truss Grid Template
+
+author: Joseph McDonald - McDonald Media Production
+------------------------------------------------------------------ */
+/* -- ========================================================= -- */
+/* -- =======             Headings                       ====== -- */
+/* -- ========================================================= -- */
+#th1, .text4, .text6, .text12, .text16  
+    {
+	max-width: 650px;
+	margin: auto;
+	padding: 0 10px;
+	text-align: center;
+	}
+
+/* -- ========================================================= -- */
+/* -- = CLEAR Small Portrait Layout 249 or less px all columns= -- */
+/* -- ========================================================= -- */
+@media only screen and (max-width: 249px)
+  {  
+  .trussGridContainer-16 , .trussGridContainer-12 , .trussGridContainer-6, 
+  .trussGridContainer-4 , .text16, .text12, .text6, .text4, #th1
+  {
+    display: none;
+	height: 0;
+  }
+  }
+
+/* -- ========================================================= -- */
+/* -- = CLEAR Large Desktop Layout 1921 or more px all columns =-- */
+/* -- ========================================================= -- */
+ @media only screen and (min-width: 1921px)
+   {  
+.trussGridContainer-16, .trussGridContainer-12, .trussGridContainer-6, 
+.trussGridContainer-4, .text16, .text12, .text6, .text4, #th1
+    {
+    display: none;
+  	}
+   }
+
+/* -- ========================================================= -- */
+/* -- ===      Large Desktop Layout - 1200 to 1920 px       === -- */
+/* -- ========================================================= -- */   
+/* -- ========================================================= -- */
+/* -- === Large Desktop Layout - 1200 to 1920 px 16 columns === -- */
+/* -- ========================================================= -- */   
+@media only screen and (min-width: 1200px) and (max-width: 1920px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+
+.trussGridContainer-16{
+    width: 100%;
+	margin: auto;                  	 
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+    box-sizing: border-box; 
+    }
+	   
+/* -- ========================================================= -- */ 
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;  /* container width divided by number of columns */
+        /*-- gutter -- */  					 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 6.25%; }
+    .col-16-2{ width: 12.5%; }
+    .col-16-3{ width: 18.75%; }
+    .col-16-4{ width: 25%; }
+    .col-16-5{ width: 31.25%; }
+	.col-16-6{ width: 37.5%; }
+    .col-16-7{ width: 43.75%; }
+    .col-16-8{ width: 50%;  }
+    .col-16-9{ width: 56.25%; }
+    .col-16-10{ width: 62.5%; }	
+	.col-16-11{ width: 68.75%; }
+    .col-16-12{ width: 75%; }  
+    .col-16-13{ width: 81.25%; }
+    .col-16-14{ width: 87.5%; }
+    .col-16-15{ width: 93.75%; }
+	.col-16-16{ width: 100%; } 
+
+/* -- ========================================================= -- */ 
+	   
+.text16::before {
+  content: "Large Desktop Layout 1200 - 1920 px";
+  display: inline;
+	}	
+ }
+
+/* -- ========================================================= -- */
+/* -- === Large Desktop Layout - 1200 to 1920 px 12 columns === -- */
+/* -- ========================================================= -- */ 
+@media only screen and (min-width: 1200px) and (max-width: 1920px)
+   { 	   
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%; 
+	margin: auto;
+    }      
+
+/*-- setting border box on all elements inside the grid --*/    
+.trussGridContainer-12 *{
+    box-sizing: border-box; 
+    }                                     
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 8.33333333333%; }
+    .col-12-2{ width: 16.66666666666%; }
+    .col-12-3{ width: 24.99999999999%; }
+    .col-12-4{ width: 33.33333333332%; }
+    .col-12-5{ width: 41.66666666665%; }
+	.col-12-6{ width: 49.99999999998%; }
+    .col-12-7{ width: 58.33333333331%; }
+    .col-12-8{ width: 66.66666666664%;  }
+    .col-12-9{ width: 74.99999999997%; }
+    .col-12-10{ width: 83.3333333333%; }	
+	.col-12-11{ width: 91.66666666663%; }
+    .col-12-12{ width: 99.99999999996%; }
+
+/*  -- ========================================================= --  */    
+		   
+.text12::before {
+    content: "Large Desktop Layout 1200 - 1920 px";
+	display: inline;
+	}
+}
+
+/* -- =========================================================== -- */
+/* -- === Large Desktop Layout - 1200 to 1920 px 6 columns    === -- */
+/* -- =========================================================== -- */  
+ @media only screen and (min-width: 1200px) and (max-width: 1920px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }		   
+	   
+.trussGridContainer-6{
+    width: 100%; 
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-6 *{
+    box-sizing: border-box; 
+    }
+
+/*-- ========================================================= --*/
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/*-- ========================================================= --*/
+	   
+.text6::before {
+    content: "Large Desktop Layout 1200 - 1920 px";
+	display: inline;
+	}  
+ }
+
+/* -- =========================================================== -- */
+/* -- === Large Desktop Layout - 1200 to 1920 px 4 columns   === -- */
+/* -- =========================================================== -- */ 
+@media only screen and (min-width: 1200px) and (max-width: 1920px)	 	 	 
+   {	   
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }		   
+	   
+.trussGridContainer-4{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+        box-sizing: border-box; 
+    }
+
+/*-- ========================================================= --*/
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%;    }
+    .col-4-4{ width: 100%; }
+
+/*-- ========================================================= --*/
+	   
+.text4::before {
+    content: "Large Desktop Layout 1200 - 1920 px";
+	display: inline;
+	}	      
+ }
+
+/* -- ========================================================= -- */
+/* -- =      Tablet landscape & desktop - 960 to 1199 px      = -- */
+/* -- ========================================================= -- */
+/* -- ========================================================= -- */
+/* -- == Tablet landscape & desktop - 960 to 1199 px 16 columns -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 960px) and (max-width: 1199px)
+   {
+/*-- our cleafix hack -- */ 
+  .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+ 
+.trussGridContainer-16{
+    width: 100%; 
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+        box-sizing: border-box; 
+    }
+	   
+/* -- ========================================================= -- */   
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;   /*container width divided by number of columns */           
+        /*-- gutter -- */  				 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 6.25%; }
+    .col-16-2{ width: 12.5%; }
+    .col-16-3{ width: 18.75%; }
+    .col-16-4{ width: 25%; }
+    .col-16-5{ width: 31.25%; }
+	.col-16-6{ width: 37.5%; }
+    .col-16-7{ width: 43.75%; }
+    .col-16-8{ width: 50%;  }
+    .col-16-9{ width: 56.25%; }
+    .col-16-10{ width: 62.5%; }	
+	.col-16-11{ width: 68.75%; }
+    .col-16-12{ width: 75%; }  
+    .col-16-13{ width: 81.25%; }
+    .col-16-14{ width: 87.5%; }
+    .col-16-15{ width: 93.75%; }
+	.col-16-16{ width: 100%; }       
+
+/* -- ========================================================= -- */ 
+	   
+.text16::before {
+    content: "Large Landscape Tablet & Desktop Layout 960 - 1199 px";
+	display: inline;
+	}
+ }
+
+/* -- ========================================================= -- */
+/* -- == Tablet landscape & desktop - 960 to 1199 px 12 columns -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width:960px) and (max-width: 1199px)   
+   { 
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%;
+	margin: auto;
+    }      
+
+/*-- setting border box on all elements inside the grid --*/    
+.trussGridContainer-12 *{
+        box-sizing: border-box; 
+    } 
+	   
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */ 
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 8.33333333333%; }
+    .col-12-2{ width: 16.66666666666%; }
+    .col-12-3{ width: 24.99999999999%; }
+    .col-12-4{ width: 33.33333333332%; }
+    .col-12-5{ width: 41.66666666665%; }
+	.col-12-6{ width: 49.99999999998%; }
+    .col-12-7{ width: 58.33333333331%; }
+    .col-12-8{ width: 66.66666666664%;  }
+    .col-12-9{ width: 74.99999999997%; }
+    .col-12-10{ width: 83.3333333333%; }	
+	.col-12-11{ width: 91.66666666663%; }
+    .col-12-12{ width: 99.99999999996%; }
+
+/*  -- ========================================================= --  */    
+	  	   
+.text12::before {
+    content: "Large Landscape Tablet & Desktop Layout 960 - 1199 px";
+	display: inline;
+	}	   
+  }
+
+/* -- ========================================================= -- */
+/* -- == Tablet landscape & desktop - 960 to 1199 px 6 columns  -- */
+/* -- ========================================================= -- */  
+@media only screen and (min-width:960px) and (max-width: 1199px)   
+   {
+/* -- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }   	   
+	   
+.trussGridContainer-6{
+    width: 100%;
+	margin: auto;
+    }
+
+/* -- setting border box on all elements inside the grid -- */
+.trussGridContainer-6 *{
+        box-sizing: border-box; 
+    }
+	
+/* -- ========================================================= --*/
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/* -- ========================================================= -- */
+	  	   
+.text6::before {
+    content: "Large Landscape Tablet & Desktop Layout 960 - 1199 px";
+	display: inline;
+	}    
+ }
+
+/* -- =========================================================== -- */
+/* -- == Tablet landscape & desktop - 960 to 1199 px 4 columns  -- */
+/* -- =========================================================== -- */ 
+@media only screen and (min-width:960px) and (max-width: 1199px)   
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	   
+	   
+.trussGridContainer-4{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+        box-sizing: border-box; 
+    }
+	
+/* -- ========================================================= -- */
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%;    }
+    .col-4-4{ width: 100%; }
+
+/* -- ========================================================= -- */
+	   
+.text4::before {
+    content: "Large Landscape Tablet & Desktop Layout 960 - 1199 px";
+	display: inline;
+	}  
+ }
+/* -- ========================================================= -- */
+/* -- ===      Tablet Portrait Layout 768 - 959 px         ==== -- */
+/* -- ========================================================= -- */
+/* -- ========================================================= -- */
+/* -- === Tablet Portrait Layout 768 - 959 px 16 columns   ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 768px) and (max-width:959px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+ 
+.trussGridContainer-16{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+        box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */ 
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;  /*container width divided by number of columns */
+        /*-- gutter -- */  					 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 6.25%; }
+    .col-16-2{ width: 12.5%; }
+    .col-16-3{ width: 18.75%; }
+    .col-16-4{ width: 25%; }
+    .col-16-5{ width: 31.25%; }
+	.col-16-6{ width: 37.5%; }
+    .col-16-7{ width: 43.75%; }
+    .col-16-8{ width: 50%;  }
+    .col-16-9{ width: 56.25%; }
+    .col-16-10{ width: 62.5%; }	
+	.col-16-11{ width: 68.75%; }
+    .col-16-12{ width: 75%; }  
+    .col-16-13{ width: 81.25%; }
+    .col-16-14{ width: 87.5%; }
+    .col-16-15{ width: 93.75%; }
+	.col-16-16{ width: 100%; } 
+
+/* -- ========================================================= -- */ 
+	   
+.text16::before {
+    content: "Tablet Portrait Layout 768 - 959 px ";
+	display: inline;
+	}
+ }
+
+/* -- ========================================================= -- */
+/* -- === Tablet Portrait Layout 768 - 959 px 12 columns   ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 768px) and (max-width:959px)
+   { 
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%; 
+	margin: auto;
+    }      
+
+/*-- setting border box on all elements inside the grid --*/    
+.trussGridContainer-12 *{
+        box-sizing: border-box; 
+    }                                     
+
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 8.33333333333%; }
+    .col-12-2{ width: 16.66666666666%; }
+    .col-12-3{ width: 24.99999999999%; }
+    .col-12-4{ width: 33.33333333332%; }
+    .col-12-5{ width: 41.66666666665%; }
+	.col-12-6{ width: 49.99999999998%; }
+    .col-12-7{ width: 58.33333333331%; }
+    .col-12-8{ width: 66.66666666664%;  }
+    .col-12-9{ width: 74.99999999997%; }
+    .col-12-10{ width: 83.3333333333%; }	
+	.col-12-11{ width: 91.66666666663%; }
+    .col-12-12{ width: 99.99999999996%; }
+
+/*  -- ========================================================= --  */    
+	   
+.text12::before {
+    content: "Tablet Portrait Layout 768 - 959 px ";
+	display: inline;
+	}
+  }
+
+/* -- ========================================================= -- */
+/* -- === Tablet Portrait Layout 768 - 959 px  6 columns   ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 768px) and (max-width:959px) 
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	   
+	   
+.trussGridContainer-6{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-6 *{
+        box-sizing: border-box; 
+    }	
+
+/* -- ========================================================= -- */
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/* -- ========================================================= -- */
+	
+.text6::before {
+    content: "Tablet Portrait Layout 768 - 959 px ";
+	display: inline;
+	} 	   
+}
+
+/* -- ========================================================= -- */
+/* -- === Tablet Portrait Layout 768 - 959 px  4 columns   ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 768px) and (max-width:959px) 
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	   
+	   
+.trussGridContainer-4{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+        box-sizing: border-box; 
+    }
+	
+/* -- ========================================================= -- */
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%; }
+    .col-4-4{ width: 100%; }
+
+/* -- ========================================================= -- */
+	   
+.text4::before {
+    content: "Tablet Portrait Layout 768 - 959 px ";
+	display: inline;
+	}
+ }
+
+/* -- ========================================================= -- */
+/* -- ==      Mobile Landscape Layout  480 - 767 px        ==== -- */
+/* -- ========================================================= -- */
+/* -- ========================================================= -- */
+/* -- == Mobile Landscape Layout  480 - 767 px 16 columns  ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 480px) and (max-width:767px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+ 
+.trussGridContainer-16{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+        box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */     
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;   /*container width divided by number of columns */
+        /*-- gutter -- */  					 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 6.25%; }
+    .col-16-2{ width: 12.5%; }
+    .col-16-3{ width: 18.75%; }
+    .col-16-4{ width: 25%; }
+    .col-16-5{ width: 31.25%; }
+	.col-16-6{ width: 37.5%; }
+    .col-16-7{ width: 43.75%; }
+    .col-16-8{ width: 50%;  }
+    .col-16-9{ width: 56.25%; }
+    .col-16-10{ width: 62.5%; }	
+	.col-16-11{ width: 68.75%; }
+    .col-16-12{ width: 75%; }  
+    .col-16-13{ width: 81.25%; }
+    .col-16-14{ width: 87.5%; }
+    .col-16-15{ width: 93.75%; }
+	.col-16-16{ width: 100%; } 
+
+/* -- ========================================================= -- */ 
+ 	   
+.text16::before {
+    content: "Mobile Landscape Layout 480 - 767 px";
+	display: inline;
+	}
+ }
+
+/* -- ========================================================= -- */
+/* -- == Mobile Landscape Layout  480 - 767 px 12 columns  ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 480px) and (max-width:767px)
+   { 
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%;
+	margin: auto;
+    }      
+
+/* -- setting border box on all elements inside the grid -- */    
+.trussGridContainer-12 *{
+        box-sizing: border-box; 
+    } 
+	   
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */ 
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 8.33333333333%; }
+    .col-12-2{ width: 16.66666666666%; }
+    .col-12-3{ width: 24.99999999999%; }
+    .col-12-4{ width: 33.33333333332%; }
+    .col-12-5{ width: 41.66666666665%; }
+	.col-12-6{ width: 49.99999999998%; }
+    .col-12-7{ width: 58.33333333331%; }
+    .col-12-8{ width: 66.66666666664%;  }
+    .col-12-9{ width: 74.99999999997%; }
+    .col-12-10{ width: 83.3333333333%; }	
+	.col-12-11{ width: 91.66666666663%; }
+    .col-12-12{ width: 99.99999999996%; }
+
+/*  -- ========================================================= --  */    
+	   	   
+.text12::before {
+    content: "Mobile Landscape Layout 480 - 767 px";
+	display: inline;
+	}  	   
+  }
+
+/* -- ========================================================= -- */
+/* -- == Mobile Landscape Layout  480 - 767 px  6 columns  ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 480px) and (max-width:767px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	   	   
+	   
+.trussGridContainer-6{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-6 *{
+        box-sizing: border-box; 
+    }
+	   
+/* -- ========================================================= -- */ 
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;  /*container width divided by number of columns */ 
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/*-- ========================================================= --*/
+	  	   
+.text6::before {
+    content: "Mobile Landscape Layout 480 - 767 px";
+	display: inline;
+	}   	   
+   }
+
+/* -- ========================================================= -- */
+/* -- == Mobile Landscape Layout  480 - 767 px  4 columns  ==== -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 480px) and (max-width:767px)
+   {	   
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	
+   
+.trussGridContainer-4{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+        box-sizing: border-box; 
+    }
+
+/*-- ========================================================= -- */
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%; }
+    .col-4-4{ width: 100%; }
+
+/*-- ========================================================= --*/	   
+			   
+.text4::before {
+    content: "Mobile Landscape Layout 480 - 767 px";
+	display: inline;
+	}   
+ }
+
+/* -- ========================================================= -- */
+/* -- ===        Mobile Portrait Layout 422 to 479 px       === -- */
+/* -- ========================================================= -- *
+
+/* -- ========================================================= -- */
+/* -- ===  Mobile Portrait Layout 422 to 479 px 16 columns  === -- */
+/* -- ========================================================= -- */
+ @media only screen and (min-width: 422px) and (max-width: 479px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+ 
+.trussGridContainer-16{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+        box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */     
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;  /*container width divided by number of columns */
+        /*-- gutter -- */  					 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 100%; }
+    .col-16-2{ width: 100%; }
+    .col-16-3{ width: 100%; }
+    .col-16-4{ width: 100%; }
+    .col-16-5{ width: 100%; }
+	.col-16-6{ width: 100%; }
+    .col-16-7{ width: 100%; }
+    .col-16-8{ width: 100%;  }
+    .col-16-9{ width: 100%; }
+    .col-16-10{ width: 100%; }	
+	.col-16-11{ width: 100%; }
+    .col-16-12{ width: 100%; }  
+    .col-16-13{ width: 100%; }
+    .col-16-14{ width: 100%; }
+    .col-16-15{ width: 100%; }
+	.col-16-16{ width: 100%; } 
+
+/* -- ========================================================= -- */ 
+	   
+.text16::before {
+    content: "Mobile Portrait Layout 422 to 479 px";
+	display: inline;
+	}  
+ }
+
+/* -- ========================================================= -- */
+/* -- ===  Mobile Portrait Layout 422 to 479 px 12 columns  === -- */
+/* -- ========================================================= -- */
+ @media only screen and (min-width: 422px) and (max-width: 479px)
+   {
+/*	#tgc-12-row-1 { display: none;}	/*  HIDES ROW 1  */
+	   	      
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%;
+	margin: auto;
+    }      
+
+/*-- setting border box on all elements inside the grid --*/    
+.trussGridContainer-12 *{
+        box-sizing: border-box; 
+    }                                     
+
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 8.33333333333%; }
+    .col-12-2{ width: 16.66666666666%; }
+    .col-12-3{ width: 24.99999999999%; }
+    .col-12-4{ width: 33.33333333332%; }
+    .col-12-5{ width: 41.66666666665%; }
+	.col-12-6{ width: 49.99999999998%; }
+    .col-12-7{ width: 58.33333333331%; }
+    .col-12-8{ width: 66.66666666664%;  }
+    .col-12-9{ width: 74.99999999997%; }
+    .col-12-10{ width: 83.3333333333%; }	
+	.col-12-11{ width: 91.66666666663%; }
+    .col-12-12{ width: 99.99999999996%; }
+
+/*  -- ========================================================= --  */      
+	   
+.text12::before {
+    content: "Mobile Portrait Layout 422 to 479 px";
+	display: inline;
+	}  
+  }
+
+/* -- ========================================================= -- */
+/* -- ===  Mobile Portrait Layout 422 to 479 px 6 columns   === -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 422px) and (max-width: 479px)
+   {   
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }
+	   
+.trussGridContainer-6{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-6 *{
+        box-sizing: border-box; 
+    }
+	
+/*-- ========================================================= --*/
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/*-- ========================================================= --*/
+	   
+.text6::before {
+    content: "Mobile Portrait Layout 422 to 479 px";
+	display: inline;
+	}   
+   }
+
+/* -- ========================================================= -- */
+/* -- ===  Mobile Portrait Layout 422 to 479 px 4 columns   === -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 422px) and (max-width: 479px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	
+	   
+.trussGridContainer-4{
+    width: 100%; 
+	margin: auto; 
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+    box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */ 
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%;  /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%; }
+    .col-4-4{ width: 100%; }
+
+/*-- ========================================================= --*/
+
+.text4::before {
+    content: "Mobile Portrait Layout 422 to 479 px";
+	display: inline;  		
+	}	  
+ }
+
+/* -- ========================================================= -- */
+/* --            Small Portrait Layout 250 to 421 px            -- */
+/* -- ========================================================= -- */
+
+/* -- ========================================================= -- */
+/* -- = Small Mobile Portrait Layout 250 to 421 px 16 columns = -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 250px) and (max-width: 421px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	 
+ 
+.trussGridContainer-16{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/     
+.trussGridContainer-16 *{
+        box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */     
+    [class*='col-16'] {
+        float: left; 
+        min-height: 1px; 
+        width: 6.25%;  /*container width divided by number of columns */
+        /*-- gutter -- */  					 			
+        padding: 12px;    								
+    }
+
+    .col-16-1{ width: 100%; }
+    .col-16-2{ width: 100%; }
+    .col-16-3{ width: 100%; }
+    .col-16-4{ width: 100%; }
+    .col-16-5{ width: 100%; }
+	.col-16-6{ width: 100%; }
+    .col-16-7{ width: 100%; }
+    .col-16-8{ width: 100%;  }
+    .col-16-9{ width: 100%; }
+    .col-16-10{ width: 100%; }	
+	.col-16-11{ width: 100%; }
+    .col-16-12{ width: 100%; }  
+    .col-16-13{ width: 100%; }
+    .col-16-14{ width: 100%; }
+    .col-16-15{ width: 100%; }
+	.col-16-16{ width: 100%; } 
+
+/* -- ========================================================= -- */ 
+	   
+.text16::before {
+    content: "Small Mobile Portrait Layout 250 to 421 px";
+	display: inline;
+	}  
+ }
+
+/* -- ========================================================= -- */
+/* -- = Small Mobile Portrait Layout 250 to 421 px 12 columns = -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 250px) and (max-width: 421px)
+   {
+/*	#tgc-12-row-1 { display: none;}	/*  HIDES ROW 1  */
+	   	      
+/*-- our cleafix hack -- */               
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	     
+
+.trussGridContainer-12{
+    width: 100%;
+	margin: auto;
+    }      
+
+/*-- setting border box on all elements inside the grid --*/    
+.trussGridContainer-12 *{
+        box-sizing: border-box; 
+    }                                     
+
+/* -- ========================================================= -- */ 
+    [class*='col-12'] {
+        float: left; 
+        min-height: 1px; 
+        width: 8.33333333333%;  /*container width divided by number of columns */ 
+        /*-- gutter -- */              
+        padding: 12px; 
+    }
+
+    .col-12-1{ width: 100%; }
+    .col-12-2{ width: 100%; }
+    .col-12-3{ width: 100%; }
+    .col-12-4{ width: 100%; }
+    .col-12-5{ width: 100%; }
+	.col-12-6{ width: 100%; }
+    .col-12-7{ width: 100%; }
+    .col-12-8{ width: 100%; }
+    .col-12-9{ width: 100%; }
+    .col-12-10{ width: 100%; }	
+	.col-12-11{ width: 100%; }
+    .col-12-12{ width: 100%; }
+
+/*  -- ========================================================= --  */      
+	   
+.text12::before {
+    content: "Small Mobile Portrait Layout 250 to 421 px";
+	display: inline;
+	}  
+  }
+
+/* -- ========================================================= -- */
+/* -- = Small Mobile Portrait Layout 250 to 421 px 6 columns  = -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 250px) and (max-width: 421px)
+   {   
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }
+	   
+.trussGridContainer-6{
+    width: 100%;
+	margin: auto;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-6 *{
+        box-sizing: border-box; 
+    }
+	
+/* -- ========================================================= -- */ 
+    [class*='col-6'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%; /*container width divided by number of columns */ 
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-6-1{ width: 16.66%; }
+    .col-6-2{ width: 33.33%; }
+    .col-6-3{ width: 50%;    }
+    .col-6-4{ width: 66.66%; }
+    .col-6-5{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+/*-- ========================================================= --*/	   
+	   
+.text6::before {
+    content: "Small Mobile Portrait Layout 250 to 421 px";
+	display: inline;
+	} 
+   }
+
+/* -- ========================================================= -- */
+/* -- ===  Mobile Portrait Layout 250 to 421px 4 columns    === -- */
+/* -- ========================================================= -- */
+@media only screen and (min-width: 250px) and (max-width: 421px)
+   {
+/*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }	
+	   
+.trussGridContainer-4{
+    width: 100%; 
+	margin: auto; 
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.trussGridContainer-4 *{
+    box-sizing: border-box; 
+    }
+
+/* -- ========================================================= -- */ 
+    [class*='col-4'] {
+        float: left; 
+        min-height: 1px; 
+        width: 25%; /*container width divided by number of columns */
+        /*-- gutter -- */
+        padding: 12px; 
+    }
+
+    .col-4-1{ width: 25%; }
+    .col-4-2{ width: 50%; }
+    .col-4-3{ width: 75%; }
+    .col-4-4{ width: 100%; }
+
+/*-- ========================================================= --*/
+ 	   
+.text4::before {
+    content: "Small Mobile Portrait Layout 250 to 421 px";
+	display: inline;  		
+	}	
+ }
