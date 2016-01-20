@@ -23,6 +23,10 @@ section section {
     margin-bottom: 50px;
 }
 
+.tclearfix img {
+    width: 30%;
+}
+
 .explanationParagraph {
     background-color: #DCD6B2;
     padding: 2%;
