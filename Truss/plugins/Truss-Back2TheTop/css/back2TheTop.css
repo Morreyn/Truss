@@ -1,0 +1,80 @@
+/*  Main cascading stylesheet for back2TheTop jQuery Plugin   */
+
+#back2TheTopId {
+	padding: 10px;
+	border-radius: 4px;
+	text-indent: -9999px;	
+	z-index: 999999999;
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;	
+	display: none;
+	position: fixed;
+	cursor: pointer;		
+	width: 35px;
+	height: 35px;
+  	bottom: 40px;  
+	/*	right: 20px; */
+}
+
+
+/*  		Arrow options  		  */
+
+#back2TheTopId.white {
+	background: url(../images/arrow-up-2-side-thin-black-white-35px-b3.png) no-repeat center center rgba(255, 255, 255, 0.8);
+	border: 1px solid #ccc;
+}
+
+#back2TheTopId.black {
+	background: url(../images/arrow-up-2-side-thin-white-white-35px-wa.png) no-repeat center center rgba(0, 0, 0, 0.8);
+	border: 1px solid #ccc;
+}
+
+#back2TheTopId.red {
+	background: url(../images/arrow-up-2-side-thin-white-white-35px-wa.png) no-repeat center center rgba(255, 0, 0, 0.8);
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.grey {
+	background: url(../images/arrow-up-2-side-thin-white-white-35px-wa.png) no-repeat center center rgba(147, 142, 142, 0.8);
+	border: 1px solid #ccc;
+}
+
+#back2TheTopId.green {
+	background: url(../images/arrow-up-2-side-thin-white-white-35px-wa.png) no-repeat center center rgb(0, 128, 0);
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-blue {
+	background: url(../images/arrow-up-round-blue-35px-b6.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-green {
+	background: url(../images/arrow-up-round-green-35px-g8.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-orange {
+	background: url(../images/arrow-up-round-orange-35px-o1.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-grey {
+	background: url(../images/arrow-up-round-grey-35px-g4.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-corner-grey {
+	background: url(../images/arrow-up-round-corner-grey-35px-g2.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+#back2TheTopId.round-corner-black {
+	background: url(../images/arrow-up-round-corner-black-35px-b4.png) no-repeat center center;
+	border: 1px solid #fff;
+}
+
+back2TheTopId.round-broken-line {
+	background: url(../images/arrow-up-broken-line-black-35-b1.png) no-repeat center center;
+	border: 1px solid #fff;
+}

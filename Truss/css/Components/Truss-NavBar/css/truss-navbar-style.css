@@ -1,0 +1,155 @@
+/*-------------------------
+THREE TIER FIXED POSITION TOP NAVIGATION BAR 
+author: Joseph McDonald
+--------------------------*/
+	/* RESET */
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+/*-------------------------
+	body font styles, margins
+--------------------------*/
+	body {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 87.5%;
+		background-color: white;
+		margin-top: 75px;
+		margin-right: 35px;
+		margin-left: 15px;
+	}
+	
+	h2 {
+		margin-bottom: .5em;
+		clear: both;
+	}
+
+/*-------------------------
+	fixed navigation bar position & background styles
+--------------------------*/
+/* NAVIGATION BAR AREA */
+	#navBarId{
+		width: 777px;
+	    margin: auto; 
+ 
+/* FIXED NAVIGATION BAR */		
+		position: fixed;  
+		top: 5px;  
+        left: 0; 
+		right: 0;
+		z-index: 9999; 
+
+/* BACKGROUND SIZE PADDING & OPACITY SET TO SEE THROUGH  */
+		height: 52px;
+		padding: 10px;
+		background-color: rgba(237, 237, 237, .5);  	
+	}  
+
+/*-------------------------
+  operation 3-tier fixed navigation bar
+--------------------------*/
+	#navBarId ul {
+		list-style-type: none;   	/* REMOVES BULLETS */
+		position: relative;  		/* So the first submenu can be positioned within the main menu */
+	}
+	
+	#navBarId ul li {
+		float: left;  /* DISPLAYS ITEMS HORIZONTALLY - FLOAT EACH LI TO THE LEFT OF PREVIOUS LI */	
+	}
+	
+	#navBarId ul ul {
+		display: none; 		/* Don't display submenu until hover of the li element */
+		position: absolute;
+		top: 100%; 			/* Position the submenu at the bottom of the main menu */
+	}
+	
+	#navBarId ul ul li {
+		float: none;  	        /* Display the submenus vertically */
+		position: relative; 	/* So the second submenu can be positioned within the first submenu */
+	}
+
+/*     FLYOUT   RIGHT    */	
+	#navBarId ul ul li ul {
+		position: absolute;
+		left: 100%;  		/* Position the second submenu at the RIGHT side of the li element */
+	    top: 10px;  */   	/* Position the second submenu near the top of the li element */
+	}
+
+/*      FLYOUT  LEFT    */
+	#navBarId ul li.last ul li ul { 
+		position: absolute;
+		left: -100%;  		/* Position the second submenu at the LEFT side of the li element */
+		top: 10px;  		/* Position the second submenu near the top of the li element */
+	}
+	
+	#navBarId ul li:hover > ul {    /* SELECT UL CHILD OF THE LI ELEMENT */
+		display: block;  			/* Display the submenu on hover over li element */
+	}
+	
+	#navBarId > ul::after { /* SELECT THE FIRST UL ELEMENT (CHILD OF NAV ELEMENT)  */
+		content: "";  		/* ADD EMPTY CONTENT TO THE END OF FIRST UL */
+		display: block;  	/* DISPLAY CONTENT AS BLOCK ELEMENT */
+		clear: both;  		/* STOP FLOATING OF LI ITEMS IN NAV BAR */
+	}
+
+/*-------------------------
+  formatting 3-tier fixed navigation bar
+--------------------------*/
+/* The styles for the formatting of the 3-tier navigation bar */
+/*  item color, transition line, height, font                 */	
+#navBarId ul {
+	margin: 0;
+	padding: 0;
+}
+
+/*  SETS ALL LIST ITEM PROPERTIES  */
+	#navBarId ul li a {
+		-moz-transition: 1.5s;   /* FireFox - TRANSITION GRADUALLY CHANGES THE PROPERTIES */
+		-o-transition: 1.5s;		/* Opera  */
+		-webkit-transition: 1.5s;   /* Chrome Safari */
+		transition: 1.5s;    
+		background: #cfc796;		/* BACKGROUND COLOR  */
+		border-top: 2px solid #144c85;
+		border-right: 2px solid #0d3155;
+		border-bottom: 2px solid #0d3155;
+		border-left: 2px solid #144c85;
+	    color: #fff; 		/* TEXT COLOR */
+		display: block;     /* ENTIRE BLOCK IS CLICKABLE  */
+		font-size: 16px;
+		line-height: 35px;
+		padding: 5px 20px;		/* PADDING ABOVE AND BELOW <a> ELEMENTS */
+		text-decoration: none;  /* UNDERLINE IS REMOVED            */
+		text-align: center;		/* TEXT IS CENTERED                */
+		width: 150px;			/* WIDTH OF EACH LI -  EACH BLOCK  */
+		font-weight: bold;
+	}
+
+/*      ARROW IMAGES PLACED IN ITEM DEPENDING ON DIRECTION OF ITEM     */
+#navBarId li a.right { 		
+	background: #cfc796 url(../images/arrow-right.gif) no-repeat right center;      
+} 
+
+#navBarId li a.down  { 
+	 background: #cfc796 url(../images/arrow-down-13x9-4.gif) no-repeat right center; 
+}
+
+#navBarId li a.left { 
+	background: #cfc796 url(../images/arrow-left.gif) no-repeat left center; 
+}
+
+/*  HOVER OR FOCUS BY TAB INTO ITEM     */
+/*   BACKGROUND IMAGE GRADIENTS         */
+#navBarId ul li a:hover,
+#navBarId ul li a:focus {  	
+		background: #DCD6B2;		/* BACKGROUND COLOR  */
+		border-top: 2px solid #e8dd9c;
+		border-right: 2px solid #f0e8b9
+		border-bottom: 2px solid #f0e8b9
+		border-left: 2px solid  #e8dd9c;
+		color: #fff;	
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+		background-image: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+		background-image: -o-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 25, 0)); 	
+	}

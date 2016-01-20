@@ -2121,7 +2121,7 @@ del {
 fieldset, img {
   border: 0; }
 
-/* ------ SCSS ------ */
+/* ------ TRUSS STYLING - Misty Morreyn ------ */
 /* FONTS */
 @font-face {
   font-family: 'Lato-Black';
@@ -2862,7 +2862,7 @@ input[type="reset"] {
   padding: 10px 30px;
   font-size: 18px; }
 
-/* ------ IMAGE STYLING ------ */
+/* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 /* Reponsive image */
 .responsiveImg {
   width: 100%; }
@@ -2888,5 +2888,36 @@ input[type="reset"] {
     display: block;
     width: 95%;
     min-width: 300px; } }
+/* ------ CLEARFIX  - Joe McDonald------ */
+/* Based on Nicolas Gallagher - "micro" clearfix.*/
+.tclearfix {
+  *zoom: 1;
+  /* include this for IE 6/7 only (trigger hasLayout) */ }
+  .tclearfix:before, .tclearfix::after {
+    content: " ";
+    display: table; }
+  .tclearfix:after {
+    clear: both; }
+
+/* ------ QuickFloat  - Joe McDonald------ */
+.tfloat-right {
+  float: right !important; }
+
+.tfloat-left {
+  float: left !important; }
+
+/* ------ NoPrintNoScreen  - Joe McDonald------ */
+@media print {
+  .no-print {
+    display: none !important;
+    height: 0; }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+    height: 0; } }
+@media screen {
+  .no-screen {
+    display: none; } }
 
 /*# sourceMappingURL=truss%20styles.css.map */

@@ -1,0 +1,61 @@
+#wrapper {
+	width: 50%;
+	margin: 30px auto;
+}
+
+body {
+	background-color: #F7F7F7;
+	font-family: "Arial";
+	font-size: 15px;
+}
+
+h1 {
+	font-size: 25px;
+	color: #00e346;
+	margin-top: 20px;
+}
+
+h2 {
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+p {
+	text-align: justify;
+}
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+
+table thead {
+	color: #fff;
+	background-color: #000;
+	font-weight: bold;
+}
+
+table th {
+	padding-bottom: 10px;
+	border: 2px solid black;
+}
+
+table td {
+	padding: 5px;
+	padding-bottom: 20px;
+	vertical-align: top;
+	border: solid black 1px;
+}
+
+pre {
+	background-color: #ffffff;
+	color: blue;
+	font-size: 12px;
+	padding: 12px 20px 0;
+	font-weight: bolder;
+}
+
+pre span.comment {
+	color: #00e346;
+}

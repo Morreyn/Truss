@@ -1,7 +1,7 @@
 @import '../font-awesome-4.5.0/scss/font-awesome.scss';
 @import 'reset.scss';
 
-/* ------ SCSS ------ */
+/* ------ TRUSS STYLING - Misty Morreyn ------ */
 
 
 /* FONTS */
@@ -992,7 +992,7 @@ input[type="reset"] {
 }
 
 
-/* ------ IMAGE STYLING ------ */
+/* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 
 
 /* Reponsive image */
@@ -1027,5 +1027,56 @@ input[type="reset"] {
         display: block;
         width: 95%;
         min-width: 300px;
+    }
+}
+
+
+/* ------ CLEARFIX  - Joe McDonald------ */
+
+
+/* Based on Nicolas Gallagher - "micro" clearfix.*/
+
+.tclearfix {
+    *zoom: 1;
+    /* include this for IE 6/7 only (trigger hasLayout) */
+    &:before,
+    &::after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/* ------ QuickFloat  - Joe McDonald------ */
+
+.tfloat-right {
+    float: right !important;
+}
+
+.tfloat-left {
+    float: left !important;
+}
+
+
+/* ------ NoPrintNoScreen  - Joe McDonald------ */
+
+@media print {
+    .no-print {
+        display: none !important;
+        height: 0;
+    }
+    .no-print,
+    .no-print * {
+        display: none !important;
+        height: 0;
+    }
+}
+
+@media screen {
+    .no-screen {
+        display: none;
     }
 }
