@@ -1022,44 +1022,35 @@ input[type="reset"] {
     padding: 3px 7px;
     font-size: 12px;
 }
-
 .medium {
     padding: 6px 25px;
     font-size: 14px;
 }
-
 .large {
     padding: 10px 30px;
     font-size: 18px;
 }
 
-
 /* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 
-
 /* Reponsive image */
-
 .responsiveImg {
     width: 100%;
 }
 
-
 /* Reponsive image with float */
-
 .leftFloatImage {
     float: left;
     margin: .5em 1em 1em 0;
     width: 50%;
     min-width: 200px;
 }
-
 .rightFloatImage {
     float: right;
     margin: .5em 0 1em 1em;
     width: 50%;
     min-width: 200px;
 }
-
 @include breakpoints (0,
 480px) {
     .leftFloatImage,
@@ -1072,62 +1063,53 @@ input[type="reset"] {
     }
 }
 
-
 /* ------ CLEARFIX  - Joe McDonald------ */
 
-
 /* Based on Nicolas Gallagher - "micro" clearfix.*/
-
 .tclearfix {
     *zoom: 1;
     /* include this for IE 6/7 only (trigger hasLayout) */
+    
     &:before,
     &::after {
         content: " ";
         display: table;
     }
+    
     &:after {
         clear: both;
     }
 }
 
-
 /* ------ QuickFloat  - Joe McDonald------ */
-
 .tfloat-right {
     float: right !important;
 }
-
 .tfloat-left {
     float: left !important;
 }
 
-
 /* ------ NoPrintNoScreen  - Joe McDonald------ */
-
 @media print {
     .no-print {
         display: none !important;
         height: 0;
     }
+    
     .no-print,
     .no-print * {
         display: none !important;
         height: 0;
     }
 }
-
 @media screen {
     .no-screen {
         display: none;
     }
 }
 
-
 /* ------ NavBar  - Joe McDonald------ */
 
-
 /* ------ Message Boxes  - Joe McDonald------ */
-
 
 /* ------ codeTag - Ahmad Sadeed ------ */
