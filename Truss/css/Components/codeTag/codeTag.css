@@ -33,7 +33,7 @@ section#pre article {
     color: #000000;
 }
 
-pre {
+section#pre pre {
     width: 80%;
     margin: 30px auto;
     background-color: RGB(0, 0, 0);
@@ -42,8 +42,7 @@ pre {
     counter-reset: linenumber;
     overflow: auto;
 }
-
-pre code {
+section#pre pre code {
     line-height: 2;
     direction: ltr;
     white-space: pre;
@@ -63,7 +62,7 @@ pre code i::before {
     text-align: right;
 }
 
-code.inline {
+section#pre code.inline {
     color: #FF0000;
     display: inline;
     font-weight: normal;
