@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/compiledCSS/truss styles.min.css">
     <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
     <link rel="stylesheet" type="text/css" href="css/Components/cssComponentsExampleStyles.css">
+    <link rel="stylesheet" type="text/css" href="css/Components/TrussMessageBoxes/css/truss-message-boxes-style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
 </head>
@@ -17,6 +18,150 @@
     <div class="container">
         <h2 class="center">Optional CSS Components</h2>
         <section>
+            <!-- NAVBAR -->
+            <h4 class="uppercase center">Three Tier Fixed Top Navigation Bar</h4>
+            <hr>
+            <button id="navDemo" type="button" class="nonwhite large"><a href="css/Components/Truss-NavBar/truss-navbar.html" target="_blank">CLICK TO SEE DEMO</a></button>
+
+            <div id="wrapper">
+
+                <h4>Basic HTML Setup:</h4>
+                <h4>1. Include CSS files (truss-navbar-style.css) under all other stylesheets</h4>
+
+                <pre><code>
+    &lt;link href="css/truss-navbar-style.css" rel="stylesheet" type="text/css" media="all"&gt;
+			</code></pre>
+                <br>
+                <h4>2. Include HTML Navigation Bar</h4>
+
+                <p class="explanationParagraph">Change the anchor tag description for the item and include any necessary href links.
+                    <br>When adding list items to navbar, be sure to include any required classes.
+                    <br>Class: 'right', 'left', 'down' are for the direction of arrow image.
+                    <br>Class 'last' is for the operation of left flyout.
+                    <br>The top level list items is fixed width.
+                    <br>If list items are added or removed the width will require changing in the CSS.
+                    <br>
+                </p>
+                <pre><code>	
+    &lt;nav id="navBarId"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a  class=" down" href="index.html"&gt;Menu1&lt;/a&gt;
+                &lt;ul&gt;	
+                    &lt;li&gt;&lt;a class="right" href="#" &gt;Menu11&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu111&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu112&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu113&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu114&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;li&gt;&lt;a  class=" down" href="#"&gt;Menu2&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu21&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu22&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu23&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a  class="right" href="#"&gt;Menu24&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu241&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu242&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu25&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu26&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu27&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a class=" down" href="#"&gt;Menu3&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a class="right" href="#"&gt;Menu31&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu311&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu312&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu313&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu314&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a  class="right"  href="#"&gt;Menu32&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu321&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu322&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu323&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu324&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a class="right" href="#" &gt;Menu33&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu331&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu332&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu333&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu334&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu34&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu35&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu36&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+
+            &lt;/li&gt;
+            &lt;li class="last"&gt;&lt;a class="down" href="#"&gt;Menu4&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu41&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu42&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a  href="#" class="left"&gt;Menu43&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu431&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu432&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu433&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu434&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Menu435&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Menu44&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;		
+    	
+</code>	
+</pre>
+                <br>
+
+                <h4> 3. Include Optional Embedded CSS (modify to your needs). See table below.</h4>
+
+                <pre><code>	
+    /*  CAN CHANGE THE DEFAULT LIST ITEM COLORS HERE OR IN THE CSS FILE*/		
+
+    /*  SETS ALL LIST ITEM COLOR  */					
+        #navBarId ul li a {
+            background: #cfc796;
+            border-top: 2px solid #144c85;
+            border-right: 2px solid #0d3155;
+            border-bottom: 2px solid #0d3155;
+            border-left: 2px solid #144c85;	
+            }
+
+    /*  BACKGROUND COLOR FOR LIST ITEM THAT CONTAINS THE ARROW IMAGE  */	
+        #navBarId li a.right, #navBarId li a.down, #navBarId li a.left  {
+            background-color: #cfc796;
+            }
+
+    /*  SETS HOVER OR FOCUS LIST ITEM COLOR  */			
+        #navBarId ul li a:hover,
+        #navBarId ul li a:focus {
+            background: #dcd6b2;       
+            border-top: 2px solid #e8dd9c;
+            border-right: 2px solid #f0e8b9;
+            border-bottom: 2px solid #f0e8b9;
+            border-left: 2px solid  #e8dd9c;
+            }	
+            
+</code>
+</pre>
+            </div>
+
+            <br>
             <!-- FANCY BLOCKQUOTES -->
             <h4 class="uppercase center">Fancy Blockquotes</h4>
             <hr>
@@ -68,8 +213,8 @@
         &lt;/div&gt;
             </code></pre>
             </div>
-
             <!-- FANCY CODE EDITOR -->
+
 
             <h4 class="uppercase center">Fancy Code Editor</h4>
             <hr>
@@ -79,10 +224,57 @@
             <h4 class="uppercase center">Message Boxes</h4>
             <hr>
 
-            <!-- NABAR -->
-            <h4 class="uppercase center">NavBar</h4>
+            <!-- MESSAGE BOXES -->
+
+            <h4 class="uppercase center">Message Boxes</h4>
             <hr>
 
+            <p class="explanationParagraph">Stuff and things about message boxes and what you might need them for?
+            </p>
+            <br>
+            <h4> 1. Include the stylesheet below in your html.</h4>
+            <pre><code>
+        &lt;link href="css/Components/TrussMessageBoxes/css/truss-message-boxes-style.css" rel="stylesheet" type="text/css"&gt;
+            </code></pre>
+            <h4> 2. View the message boxes below and pick your favorite.</h4>
+
+            <br>
+            <div class="msg-box success"><span>success: </span>Write your success message here.</div>
+            <div class="msg-box warning"><span>warning: </span>Write your warning message here.</div>
+            <div class="msg-box notice"><span>notice: </span>Write your notice message here.</div>
+            <div class="msg-box validation"><span>validation: </span>Write your validation message here.</div>
+            <div class="msg-box favorite"><span>favorite: </span>Write your favorite message here.</div>
+            <div class="msg-box appointment"><span>appointment: </span>Write your appointment message here.</div>
+            <div class="msg-box help"><span>help: </span>Write your help message here.</div>
+            <div class="msg-box tip"><span>tip: </span>Write your tip message here.</div>
+            <div class="msg-box important"><span>IMPORTANT: </span>Write your important message here.</div>
+            <div class="msg-box error"><span>error: </span>Write your error message here.</div>
+            <div class="msg-box noimage"><span>no image: </span>Write your message here.</div>
+            <br>
+            <h4> 3. Find the corresponding html, copy it into your html page, and customize the text for your own needs.</h4>
+            <pre><code>
+            &lt;div class="msg-box success"&gt;&lt;span&gt;success: &lt;/span&gt;Write your success message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box warning"&gt;&lt;span&gt;warning: &lt;/span&gt;Write your warning message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box notice">&lt;span>notice: &lt;/span&gt;Write your notice message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box validation"&gt;&lt;span>validation: &lt;/span&gt;Write your validation message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box favorite"&gt;&lt;span&gt;favorite: &lt;/span&gt;Write your favorite message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box appointment"&gt;&lt;span&gt;appointment: &lt;/span&gt;Write your appointment message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box help"&gt;&lt;span&gt;help: &lt;/span&gt;Write your help message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box tip"&gt;&lt;span&gt;tip: &lt;/span&gt;Write your tip message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box important"&gt;&lt;span>IMPORTANT: &lt;/span&gt;Write your important message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box error">&lt;span&gt;error: &lt;/span&gt;Write your error message here.&lt;/div&gt;
+            
+            &lt;div class="msg-box noimage"&gt;&lt;span&gt;no image: &lt;/span&gt;Write your message here.&lt;/div&gt;
+            </code></pre>
 
         </section>
 

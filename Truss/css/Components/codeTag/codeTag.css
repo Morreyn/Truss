@@ -42,6 +42,7 @@ section#pre pre {
     counter-reset: linenumber;
     overflow: auto;
 }
+
 section#pre pre code {
     line-height: 2;
     direction: ltr;

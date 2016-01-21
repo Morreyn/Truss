@@ -10,38 +10,47 @@
     font-family: 'Lato-Black';
     src: url('../../fonts/Lato-Black.ttf');
 }
+
 @font-face {
     font-family: 'Lato-BlackItalic';
     src: url('../../fonts/Lato-BlackItalic.ttf');
 }
+
 @font-face {
     font-family: 'Lato-Bold';
     src: url('../../fonts/Lato-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Lato-BoldItalic';
     src: url('../../fonts/Lato-BoldItalic.ttf');
 }
+
 @font-face {
     font-family: 'Lato-Hairline';
     src: url('../../fonts/Lato-Hairline.ttf');
 }
+
 @font-face {
     font-family: 'Lato-HairlineItalic';
     src: url('../../fonts/Lato-HairlineItalic.ttf');
 }
+
 @font-face {
     font-family: 'Lato-Italic';
     src: url('../../fonts/Lato-Italic.ttf');
 }
+
 @font-face {
     font-family: 'Lato-Light';
     src: url('../../fonts/Lato-Light.ttf');
 }
+
 @font-face {
     font-family: 'Lato-LightItalic';
     src: url('../../fonts/Lato-LightItalic.ttf');
 }
+
 @font-face {
     font-family: 'Lato-Regular';
     src: url('../../fonts/Lato-Regular.ttf');
@@ -80,22 +89,27 @@ $disabled: rgba(0,
     -moz-box-shadow: $options;
     box-shadow: $options;
 }
+
+
 @mixin transition ($options) {
     -webkit-transition: $options;
     -moz-transition: $options;
     -o-transition: $options;
     transition: $options;
 }
+
 @mixin transdur($property,
 $duration) {
     -webkit-transition-property: $property;
     -webkit-transition-duration: $duration;
 }
+
 @mixin border-radius($options) {
     -moz-border-radius: $options;
     -webkit-border-radius: $options;
     border-radius: $options;
 }
+
 @mixin linear-gradient($color1,
 $color2) {
     background: $color1;
@@ -104,6 +118,7 @@ $color2) {
     background: -o-linear-gradient(left bottom, $color1, $color2);
     background: linear-gradient(left bottom, $color1, $color2);
 }
+
 @mixin breakpoints($points...) {
     @if length($points)==1 {
         @media (min-width: nth($points, 1)) {
@@ -117,6 +132,7 @@ $color2) {
     }
 }
 
+
 /* ------ TYPOGRAPHY STYLING ------ */
 
 * {
@@ -124,12 +140,14 @@ $color2) {
     margin: 0;
 }
 
+
 /* General */
 
 body {
     font-family: 'Lato-Regular', sans-serif;
     font-size: 1em;
 }
+
 
 /* Headings */
 
@@ -142,30 +160,37 @@ h6 {
     font-family: 'Lato-Regular', sans-serif;
     margin: 0 0 .2em 0;
 }
+
 h1 {
     font-size: 5.063em;
     line-height: 1.2;
 }
+
 h2 {
     font-size: 3.375em;
     line-height: 1.2;
 }
+
 h3 {
     font-size: 2.25em;
     line-height: 1.2;
 }
+
 h4 {
     font-size: 1.5em;
     line-height: 1.5;
 }
+
 h5 {
     font-size: 0.92em;
     line-height: 2.0;
 }
+
 h6 {
     font-size: 0.667em;
     line-height: 2.5;
 }
+
 
 /* Paragraphs */
 
@@ -176,11 +201,13 @@ p {
     padding: .2em;
 }
 
+
 /* Quoting */
 
 q {
     font-family: 'Lato-Italic', sans-serif;
 }
+
 .blockquote-simple {
     margin: 5%;
     p {
@@ -216,6 +243,7 @@ q {
         }
     }
 }
+
 
 /*NOTE: when grid arrives change alternating blockquote layout for mobile sizes*/
 
@@ -290,6 +318,7 @@ q {
         }
     }
 }
+
 .testimonial-quote.alternate {
     display: block;
     margin-top: 30px;
@@ -485,6 +514,7 @@ table {
         color: $gray-text;
     }
 }
+
 .standard {
     thead {
         th {
@@ -539,6 +569,7 @@ table {
         }
     }
 }
+
 .striped {
     thead {
         th {
@@ -592,6 +623,7 @@ table {
         }
     }
 }
+
 .bordered {
     border: 1px solid $primary-color;
     thead {
@@ -649,7 +681,9 @@ table {
     }
 }
 
+
 /* ------ FORM STYLING ------ */
+
 .formcontainer {
     box-sizing: border-box;
     width: 100%;
@@ -703,6 +737,7 @@ table {
         }
     }
 }
+
 .checkbox,
 .radio {
     form {
@@ -755,6 +790,7 @@ table {
         }
     }
 }
+
 .dropdown label {
     position: relative;
     &:after {
@@ -791,6 +827,7 @@ table {
         }
     }
 }
+
 .textarea textarea,
 .text-input input {
     border-radius: 6px;
@@ -807,6 +844,7 @@ table {
         color: $gray-text;
     }
 }
+
 .dropdown label,
 .textarea label,
 .text-input label {
@@ -820,25 +858,33 @@ table {
     cursor: pointer;
     @include transition(all 0.25s ease-in-out);
 }
+
 .textarea input:focus + label,
 .text-input input:focus + label {
     color: $gray-text;
 }
+
 .textarea .form-group,
 .text-input .form-group {
     display: inline-block;
     margin-bottom: 1em;
 }
+
+
 .text-input input:focus + label {
     color: $gray-text;
 }
+
 .textarea .form-group {
     width: 100%;
 }
+
+
 .textarea textarea {
     width: 84%;
     min-height: 6em;
 }
+
 .stacked .form-group {
     width: 100%;
     display: block;
@@ -853,7 +899,11 @@ table {
     }
 }
 
+
+
 /* ------ BUTTON STYLING ------ */
+
+
 button,
 input[type="button"],
 input[type="submit"],
@@ -870,6 +920,17 @@ input[type="reset"] {
     text-transform: uppercase;
     border-radius: 2px;
 }
+
+.nonwhite > a {
+    text-decoration: none;
+    color: $neutral-background;
+    padding: 10px;
+    &:hover {
+        color: $text-color;
+        font-family: 'Lato-Regular', sans-serif;
+    }
+}
+
 .nonwhite {
     color: $neutral-background;
     border-color: $primary-color;
@@ -890,6 +951,17 @@ input[type="reset"] {
         cursor: pointer;
     }
 }
+
+.white > a {
+    text-decoration: none;
+    color: $text-color;
+    padding: 10px;
+    &:hover {
+        color: $neutral-background;
+        font-family: 'Lato-Regular', sans-serif;
+    }
+}
+
 .white {
     color: $text-color;
     background: $neutral-background;
@@ -910,12 +982,14 @@ input[type="reset"] {
         cursor: pointer;
     }
 }
+
 .disabled {
     cursor: pointer;
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.6);
 }
+
 .xsmall,
 .medium,
 .large {
@@ -979,6 +1053,7 @@ input[type="reset"] {
         content: " ";
         display: table;
     }
+    
     &:after {
         clear: both;
     }
@@ -998,6 +1073,7 @@ input[type="reset"] {
         display: none !important;
         height: 0;
     }
+    
     .no-print,
     .no-print * {
         display: none !important;
