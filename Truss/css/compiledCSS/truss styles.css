@@ -2809,6 +2809,14 @@ input[type="reset"] {
   text-transform: uppercase;
   border-radius: 2px; }
 
+.nonwhite > a {
+  text-decoration: none;
+  color: #FFFfff;
+  padding: 10px; }
+  .nonwhite > a:hover {
+    color: #0d3155;
+    font-family: 'Lato-Regular', sans-serif; }
+
 .nonwhite {
   color: #FFFfff;
   border-color: #cfc796;
@@ -2827,6 +2835,14 @@ input[type="reset"] {
     -moz-box-shadow: inset 0px 1px 3px 2px #cfc796;
     box-shadow: inset 0px 1px 3px 2px #cfc796;
     cursor: pointer; }
+
+.white > a {
+  text-decoration: none;
+  color: #0d3155;
+  padding: 10px; }
+  .white > a:hover {
+    color: #FFFfff;
+    font-family: 'Lato-Regular', sans-serif; }
 
 .white {
   color: #0d3155;

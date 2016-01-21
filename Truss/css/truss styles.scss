@@ -56,7 +56,6 @@
     src: url('../../fonts/Lato-Regular.ttf');
 }
 
-
 /* VARIABLES */
 
 
@@ -90,6 +89,7 @@ $disabled: rgba(0,
     -moz-box-shadow: $options;
     box-shadow: $options;
 }
+
 
 @mixin transition ($options) {
     -webkit-transition: $options;
@@ -371,8 +371,8 @@ q {
 }
 
 
-/* Code */
 
+/* Code */
 pre > code {
     padding: 5px 5px;
     padding-left: 10px;
@@ -384,44 +384,33 @@ pre > code {
     margin: 20px auto;
     white-space: pre-wrap;
 }
-
 code {
     padding: 0 5px 0 5px;
     background-color: #d9d9d9;
 }
-
 kbd {
     background-color: #000000;
     color: #FFF;
     padding: 0px 3px 0 3px;
 }
-
 var {
     font-size: .9em;
     padding: 3px 3px 0 3px;
     font-style: italic;
 }
 
-
 /* Inline Styles */
-
 strong {
     font-family: 'Lato-Bold', sans-serif;
 }
-
 em {
     font-family: 'Lato-Italic', sans-serif;
 }
-
-u {
-    font-family: 'Lato-Regular', sans-serif;
-}
-
+u {}
 mark {
     background-color: #EDEDAB;
     padding: 0px 5px 1px 5px;
 }
-
 a {
     color: $primary-color;
     &:hover {
@@ -429,22 +418,17 @@ a {
         font-family: 'Lato-Bold', sans-serif;
     }
 }
-
 .uppercase {
     text-transform: uppercase;
 }
-
 .lowercase {
     text-transform: lowercase;
 }
-
 .capitalize {
     text-transform: capitalize;
 }
 
-
 /* Lists */
-
 ol {
     padding: .5em;
     margin-left: .5em;
@@ -465,7 +449,6 @@ ol {
         }
     }
 }
-
 ul {
     padding: .5em;
     list-style-type: none;
@@ -496,38 +479,30 @@ ul {
     }
 }
 
-
 /* Other */
-
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
     font-variant: none;
     cursor: help;
 }
-
 address {
     display: block;
 }
-
 .left {
     display: inline-block;
     float: left;
 }
-
 .center {
     clear: both;
     text-align: center;
 }
-
 .right {
     display: inline-block;
     float: right;
 }
 
-
 /* ------ TABLE STYLING ------ */
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -895,6 +870,7 @@ table {
     margin-bottom: 1em;
 }
 
+
 .text-input input:focus + label {
     color: $gray-text;
 }
@@ -902,6 +878,7 @@ table {
 .textarea .form-group {
     width: 100%;
 }
+
 
 .textarea textarea {
     width: 84%;
@@ -923,7 +900,9 @@ table {
 }
 
 
+
 /* ------ BUTTON STYLING ------ */
+
 
 button,
 input[type="button"],
@@ -1069,7 +1048,6 @@ input[type="reset"] {
 .tclearfix {
     *zoom: 1;
     /* include this for IE 6/7 only (trigger hasLayout) */
-    
     &:before,
     &::after {
         content: " ";
