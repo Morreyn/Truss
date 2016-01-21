@@ -56,6 +56,7 @@
     src: url('../../fonts/Lato-Regular.ttf');
 }
 
+
 /* VARIABLES */
 
 
@@ -89,7 +90,6 @@ $disabled: rgba(0,
     -moz-box-shadow: $options;
     box-shadow: $options;
 }
-
 
 @mixin transition ($options) {
     -webkit-transition: $options;
@@ -371,8 +371,8 @@ q {
 }
 
 
-
 /* Code */
+
 pre > code {
     padding: 5px 5px;
     padding-left: 10px;
@@ -384,33 +384,42 @@ pre > code {
     margin: 20px auto;
     white-space: pre-wrap;
 }
+
 code {
     padding: 0 5px 0 5px;
     background-color: #d9d9d9;
 }
+
 kbd {
     background-color: #000000;
     color: #FFF;
     padding: 0px 3px 0 3px;
 }
+
 var {
     font-size: .9em;
     padding: 3px 3px 0 3px;
     font-style: italic;
 }
 
+
 /* Inline Styles */
+
 strong {
     font-family: 'Lato-Bold', sans-serif;
 }
+
 em {
     font-family: 'Lato-Italic', sans-serif;
 }
+
 u {}
+
 mark {
     background-color: #EDEDAB;
     padding: 0px 5px 1px 5px;
 }
+
 a {
     color: $primary-color;
     &:hover {
@@ -418,17 +427,22 @@ a {
         font-family: 'Lato-Bold', sans-serif;
     }
 }
+
 .uppercase {
     text-transform: uppercase;
 }
+
 .lowercase {
     text-transform: lowercase;
 }
+
 .capitalize {
     text-transform: capitalize;
 }
 
+
 /* Lists */
+
 ol {
     padding: .5em;
     margin-left: .5em;
@@ -449,6 +463,7 @@ ol {
         }
     }
 }
+
 ul {
     padding: .5em;
     list-style-type: none;
@@ -479,30 +494,38 @@ ul {
     }
 }
 
+
 /* Other */
+
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
     font-variant: none;
     cursor: help;
 }
+
 address {
     display: block;
 }
+
 .left {
     display: inline-block;
     float: left;
 }
+
 .center {
     clear: both;
     text-align: center;
 }
+
 .right {
     display: inline-block;
     float: right;
 }
 
+
 /* ------ TABLE STYLING ------ */
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -870,7 +893,6 @@ table {
     margin-bottom: 1em;
 }
 
-
 .text-input input:focus + label {
     color: $gray-text;
 }
@@ -878,7 +900,6 @@ table {
 .textarea .form-group {
     width: 100%;
 }
-
 
 .textarea textarea {
     width: 84%;
@@ -900,9 +921,7 @@ table {
 }
 
 
-
 /* ------ BUTTON STYLING ------ */
-
 
 button,
 input[type="button"],
@@ -1001,35 +1020,44 @@ input[type="reset"] {
     padding: 3px 7px;
     font-size: 12px;
 }
+
 .medium {
     padding: 6px 25px;
     font-size: 14px;
 }
+
 .large {
     padding: 10px 30px;
     font-size: 18px;
 }
 
+
 /* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 
+
 /* Reponsive image */
+
 .responsiveImg {
     width: 100%;
 }
 
+
 /* Reponsive image with float */
+
 .leftFloatImage {
     float: left;
     margin: .5em 1em 1em 0;
     width: 50%;
     min-width: 200px;
 }
+
 .rightFloatImage {
     float: right;
     margin: .5em 0 1em 1em;
     width: 50%;
     min-width: 200px;
 }
+
 @include breakpoints (0,
 480px) {
     .leftFloatImage,
@@ -1042,9 +1070,12 @@ input[type="reset"] {
     }
 }
 
+
 /* ------ CLEARFIX  - Joe McDonald------ */
 
+
 /* Based on Nicolas Gallagher - "micro" clearfix.*/
+
 .tclearfix {
     *zoom: 1;
     /* include this for IE 6/7 only (trigger hasLayout) */
@@ -1053,41 +1084,209 @@ input[type="reset"] {
         content: " ";
         display: table;
     }
-    
     &:after {
         clear: both;
     }
 }
 
+
 /* ------ QuickFloat  - Joe McDonald------ */
+
 .tfloat-right {
     float: right !important;
 }
+
 .tfloat-left {
     float: left !important;
 }
 
+
 /* ------ NoPrintNoScreen  - Joe McDonald------ */
+
 @media print {
     .no-print {
         display: none !important;
         height: 0;
     }
-    
     .no-print,
     .no-print * {
         display: none !important;
         height: 0;
     }
 }
+
 @media screen {
     .no-screen {
         display: none;
     }
 }
 
-/* ------ NavBar  - Joe McDonald------ */
-
-/* ------ Message Boxes  - Joe McDonald------ */
 
 /* ------ codeTag - Ahmad Sadeed ------ */
+
+.pre > code {
+    padding: 0px 0px;
+    padding-left: 0px;
+    margin-right: 0%;
+    line-height: 0;
+    text-overflow: inherit;
+    display: block;
+    background-color: #000;
+    margin: 0px auto;
+}
+
+.pre code {
+    padding: 0 0px 0 5px;
+    background-color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+.pre {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pre pre {
+    width: 90%;
+    margin: 30px auto;
+    background-color: RGB(0, 0, 0);
+    color: RGB(240, 255, 255);
+    border-radius: 10px;
+    counter-reset: linenumber;
+    overflow: inherit;
+}
+
+.pre pre code {
+    line-height: 2;
+    direction: ltr;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: break-word;
+    background-color: RGB(0, 0, 0);
+}
+
+.pre pre code i::before {
+    counter-increment: linenumber;
+    content: counter(linenumber);
+    display: inline-block;
+    padding-right: 1em;
+    margin-right: 1em;
+    color: #808080;
+    width: 1em;
+    text-align: right;
+}
+
+.pre code.inline {
+    color: #000;
+    display: inline;
+    font-weight: normal;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #d9d9d9;
+}
+
+.pre span {
+    font-weight: normal;
+    text-transform: none;
+    font-family: 'Roboto';
+}
+
+
+/* Styles for javascript language */
+
+pre.js .comment {
+    color: #808080;
+}
+
+pre.js .keyword {
+    color: RGB(100, 149, 237);
+}
+
+pre.js .function {
+    color: #DC143C;
+}
+
+pre.js .string {
+    color: #B8860B;
+}
+
+pre.js .punctuation {
+    color: #7FFF00;
+}
+
+pre.js .number {
+    color: RGB(0, 255, 255);
+}
+
+pre.js .regex {
+    color: #D2691E;
+}
+
+
+/* Styles for HTML markup */
+
+pre.html {
+    color: #F0FFFF;
+}
+
+pre.html .comment {
+    color: #808080;
+}
+
+pre.html .punctuation {
+    color: #D2691E;
+}
+
+pre.html .tag {
+    color: RGB(143, 188, 143);
+}
+
+pre.html .attr {
+    color: #00CED1;
+}
+
+pre.html .value {
+    color: #B8860B;
+}
+
+pre.html .doctype {
+    color: #FFFFFF;
+}
+
+
+/* Styles for CSS rules inside <code> and <pre> elements */
+
+pre.css {
+    color: #F0FFFF;
+}
+
+pre.css .selector {
+    color: #6495ED;
+}
+
+pre.css .property {
+    color: #228B22;
+}
+
+pre.css .punctuation {
+    color: #7FFF00;
+}
+
+pre.css .number {
+    color: #DC143C;
+}
+
+pre.css .comment {
+    color: #808080;
+}

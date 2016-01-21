@@ -1,0 +1,562 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Truss Grid Template</title>
+    <meta name="description" content="Truss Grid Template">
+
+    <link href="css/compiledCSS/truss%20styles.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/example-css-page.css" rel="stylesheet" type="text/css" media="all">
+    <!-- 		GRID CSS 									-->
+    <link href="css/TrussGrid/demo/css/Truss-Grid-DEMO.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+
+    <h4 id="th1">         TRUSS GRID TEMPLATE       </h4>
+    <hr>
+    <section>
+        <p class="explanationParagraph"> A grid template that shows grids for 4 different column variations: 16 columns, 12 columns, 6 columns, and 4 columns, and 6 different major breakpoints for each:
+            <p class="explanationParagraph">
+                Large Desktop Layout - 1200px to 1920px,
+                <br> Tablet Landscape and Desktop Layout - 960px to 1199px,
+                <br> Tablet Portrait Layout - 768px to 959px,
+                <br> Mobile Landscape Layout - 480px to 767px,
+                <br> Mobile Portrait Layout - 422px to 479px,
+                <br> Small Portrait Layout - 250px to 421px</p>
+        </p>
+        <br>
+        <h4>Incorporating the Truss Grid:</h4>
+        <p class="explanationParagraph"> 1. Resize the window to see the different variations of columns and the breakpoints when the browser is resized. Select which columns and rows that you will be using.
+            <br>
+            <br>2. The Truss-Grid.css contains the grid dimensions as percentages. Be sure the CSS file Truss-Grid.css is in the <code>&lt;head&gt;</code> of the html file that you are creating.</p>
+        <pre><code>
+           &lt;link href="Truss/css/TrussGrid/css/Truss-Grid.css" rel="stylesheet" type="text/css" media="all"&gt;
+        </code></pre>
+        <p class="explanationParagraph">3. The page requires a container with the grid you want to use, as shown below. Everything else will go within this container.
+            <br>
+            <br>4. Add a <code>&lt;div class="row"&gt;</code> for elements you want to contain in the same horizontal field. You include as many rows as you want in the container.
+            <br>
+            <br> 5. Within each row add <code>&lt;div class="col-(container grid number)-?"&gt;&lt;/div&gt;</code> to specify how much horizontal space each element requires. The code snippet below is an example. Replace "?" with the number of columns you'd like the div to span. Make sure you have enough divs in each row to add up to the overall container number.
+            <br>
+        </p>
+
+        <pre><code>
+    &lt;div class="trussGridContainer-16"&gt;    &lt;!--- Container div, specifies the total grid columns --&gt;
+        &lt;div class="row"&gt; 
+            &lt;div class="col-16-14"&gt;    &lt;!--- 16 = overall grid, 14 = number of columns to span --&gt;
+                &lt;p&gt;16-14&lt;/p&gt; &lt;!--- Content --&gt;
+           &lt;/div&gt;
+            &lt;div class="col-16-2"&gt;
+                &lt;p&gt;16-2&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            </code></pre>
+        <!--<button id="navDemo" type="button" class="nonwhite large"><a href="css/Components/Truss-NavBar/truss-navbar.html" target="_blank">DOWNLOAD HTML AS STARTING POINT</a></button>-->
+        <br>
+        <h4>Grid Demo:</h4>
+        <h5 class="text16"> - 16 columns</h5>
+    </section>
+    <div class="trussGridContainer-16">
+        <div class="row" id="tgc-16-row-1">
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-5">
+                <p>16-5</p>
+            </div>
+            <div class="col-16-5">
+                <p>16-5</p>
+            </div>
+            <div class="col-16-5">
+                <p>16-5</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-6">
+                <p>16-6</p>
+            </div>
+            <div class="col-16-6">
+                <p>16-6</p>
+            </div>
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-7">
+                <p>16-7</p>
+            </div>
+            <div class="col-16-7">
+                <p>16-7</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-8">
+                <p>16-8</p>
+            </div>
+            <div class="col-16-8">
+                <p>16-8</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-9">
+                <p>16-9</p>
+            </div>
+            <div class="col-16-7">
+                <p>16-7</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-10">
+                <p>16-10</p>
+            </div>
+            <div class="col-16-6">
+                <p>16-6</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-11">
+                <p>16-11</p>
+            </div>
+            <div class="col-16-5">
+                <p>16-5</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-12">
+                <p>16-12</p>
+            </div>
+            <div class="col-16-4">
+                <p>16-4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-13">
+                <p>16-13</p>
+            </div>
+            <div class="col-16-3">
+                <p>16-3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-14">
+                <p>16-14</p>
+            </div>
+            <div class="col-16-2">
+                <p>16-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-15">
+                <p>16-15</p>
+            </div>
+            <div class="col-16-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-16-16">
+                <p>16-16</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- 	==========================================================	-->
+    <h5 class="text12"> - 12 columns</h5>
+
+    <div class="trussGridContainer-12">
+        <div class="row" id="tgc-12-row-1">
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-3">
+                <p>12-3</p>
+            </div>
+            <div class="col-12-3">
+                <p>12-3</p>
+            </div>
+            <div class="col-12-3">
+                <p>12-3</p>
+            </div>
+            <div class="col-12-3">
+                <p>12-3</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-4">
+                <p>12-4</p>
+            </div>
+            <div class="col-12-4">
+                <p>12-4</p>
+            </div>
+            <div class="col-12-4">
+                <p>12-4</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-5">
+                <p>12-5</p>
+            </div>
+            <div class="col-12-5">
+                <p>12-5</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-6">
+                <p>12-6</p>
+            </div>
+            <div class="col-12-6">
+                <p>12-6</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-7">
+                <p>12-7</p>
+            </div>
+            <div class="col-12-5">
+                <p>12-5</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12-8">
+                <p>12-8</p>
+            </div>
+            <div class="col-12-4">
+                <p>12-4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-9">
+                <p>12-9</p>
+            </div>
+            <div class="col-12-3">
+                <p>12-3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-10">
+                <p>12-10</p>
+            </div>
+            <div class="col-12-2">
+                <p>12-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-11">
+                <p>12-11</p>
+            </div>
+            <div class="col-12-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-12">
+                <p>12-12</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- 	==========================================================	-->
+    <h5 class="text6"> - 6 columns</h5>
+
+    <div class="trussGridContainer-6">
+        <div class="row">
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-2">
+                <p>6-2</p>
+            </div>
+            <div class="col-6-2">
+                <p>6-2</p>
+            </div>
+            <div class="col-6-2">
+                <p>6-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-3">
+                <p>6-3</p>
+            </div>
+            <div class="col-6-3">
+                <p>6-3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-4">
+                <p>6-4</p>
+            </div>
+            <div class="col-6-2">
+                <p>6-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-5">
+                <p>6-5</p>
+            </div>
+            <div class="col-6-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-6">
+                <p>6-6</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- 	==========================================================	-->
+    <h5 class="text4"> - 4 columns</h5>
+
+    <div class="trussGridContainer-4">
+        <div class="row">
+            <div class="col-4-1">
+                <p>1</p>
+            </div>
+            <div class="col-4-1">
+                <p>1</p>
+            </div>
+            <div class="col-4-1">
+                <p>1</p>
+            </div>
+            <div class="col-4-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4-2">
+                <p>4-2</p>
+            </div>
+            <div class="col-4-2">
+                <p>4-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4-3">
+                <p>4-3</p>
+            </div>
+            <div class="col-4-1">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4-4">
+                <p>4-4</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <br>
+    <!-- 	==========================================================	-->
+</body>
+
+</html>
