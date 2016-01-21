@@ -2409,22 +2409,33 @@ ol {
   margin-left: .5em; }
   ol li {
     list-style-type: upper-latin; }
-  ol ol,
+    ol li:before {
+      content: " "; }
+  ol ol {
+    list-style-type: none;
+    margin-left: 1em; }
   ol ul {
-    margin-left: 3%; }
+    margin-left: -.5em; }
+    ol ul li {
+      list-style-type: none; }
 
 ul {
   padding: .5em;
-  list-style: none; }
+  list-style-type: none; }
   ul li:before {
     content: "\002022";
     color: #cfc796;
     margin-right: .5em; }
-  ul ol,
+  ul ol {
+    margin-left: 2em; }
+    ul ol li:before {
+      content: none; }
   ul ul {
-    margin-left: 5%; }
-  ul ul {
-    list-style-type: none; }
+    margin-left: .5em; }
+    ul ul li:before {
+      content: "\002022";
+      color: #cfc796;
+      margin-right: .5em; }
 
 /* Other */
 abbr[title] {
