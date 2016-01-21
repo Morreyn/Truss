@@ -2891,7 +2891,7 @@ input[type="reset"] {
   width: 50%;
   min-width: 200px; }
 
-@media (min-width: 0) and (max-width: 670px) {
+@media (min-width: 0) and (max-width: 480px) {
   .leftFloatImage,
   .rightFloatImage {
     float: none;
