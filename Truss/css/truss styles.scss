@@ -1019,7 +1019,7 @@ input[type="reset"] {
 }
 
 @include breakpoints (0,
-480px) {
+670px) {
     .leftFloatImage,
     .rightFloatImage {
         float: none;
