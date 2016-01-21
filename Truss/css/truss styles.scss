@@ -1,4 +1,4 @@
-    @import '../font-awesome-4.5.0/scss/font-awesome.scss';
+@import '../font-awesome-4.5.0/scss/font-awesome.scss';
     @import 'reset.scss';
     /* ------ TRUSS STYLING - Misty Morreyn ------ */
     /* FONTS */
@@ -7,47 +7,38 @@
         font-family: 'Lato-Black';
         src: url('../../fonts/Lato-Black.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-BlackItalic';
         src: url('../../fonts/Lato-BlackItalic.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-Bold';
         src: url('../../fonts/Lato-Bold.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-BoldItalic';
         src: url('../../fonts/Lato-BoldItalic.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-Hairline';
         src: url('../../fonts/Lato-Hairline.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-HairlineItalic';
         src: url('../../fonts/Lato-HairlineItalic.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-Italic';
         src: url('../../fonts/Lato-Italic.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-Light';
         src: url('../../fonts/Lato-Light.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-LightItalic';
         src: url('../../fonts/Lato-LightItalic.ttf');
     }
-    
     @font-face {
         font-family: 'Lato-Regular';
         src: url('../../fonts/Lato-Regular.ttf');
@@ -80,26 +71,22 @@
         -moz-box-shadow: $options;
         box-shadow: $options;
     }
-    
     @mixin transition ($options) {
         -webkit-transition: $options;
         -moz-transition: $options;
         -o-transition: $options;
         transition: $options;
     }
-    
     @mixin transdur($property,
     $duration) {
         -webkit-transition-property: $property;
         -webkit-transition-duration: $duration;
     }
-    
     @mixin border-radius($options) {
         -moz-border-radius: $options;
         -webkit-border-radius: $options;
         border-radius: $options;
     }
-    
     @mixin linear-gradient($color1,
     $color2) {
         background: $color1;
@@ -108,7 +95,6 @@
         background: -o-linear-gradient(left bottom, $color1, $color2);
         background: linear-gradient(left bottom, $color1, $color2);
     }
-    
     @mixin breakpoints($points...) {
         @if length($points)==1 {
             @media (min-width: nth($points, 1)) {
@@ -144,32 +130,26 @@
         font-family: 'Lato-Regular', sans-serif;
         margin: 0 0 .2em 0;
     }
-    
     h1 {
         font-size: 5.063em;
         line-height: 1.2;
     }
-    
     h2 {
         font-size: 3.375em;
         line-height: 1.2;
     }
-    
     h3 {
         font-size: 2.25em;
         line-height: 1.2;
     }
-    
     h4 {
         font-size: 1.5em;
         line-height: 1.5;
     }
-    
     h5 {
         font-size: 0.92em;
         line-height: 2.0;
     }
-    
     h6 {
         font-size: 0.667em;
         line-height: 2.5;
@@ -187,7 +167,6 @@
     q {
         font-family: 'Lato-Italic', sans-serif;
     }
-    
     .blockquote-simple {
         margin: 5%;
         p {
@@ -296,7 +275,6 @@
             }
         }
     }
-    
     .testimonial-quote.alternate {
         display: block;
         margin-top: 30px;
@@ -360,18 +338,15 @@
         margin: 20px auto;
         white-space: pre-wrap;
     }
-    
     code {
         padding: 0 5px 0 5px;
         background-color: #d9d9d9;
     }
-    
     kbd {
         background-color: #000000;
         color: #FFF;
         padding: 0px 3px 0 3px;
     }
-    
     var {
         font-size: .9em;
         padding: 3px 3px 0 3px;
@@ -382,18 +357,14 @@
     strong {
         font-family: 'Lato-Bold', sans-serif;
     }
-    
     em {
         font-family: 'Lato-Italic', sans-serif;
     }
-    
     u {}
-    
     mark {
         background-color: #EDEDAB;
         padding: 0px 5px 1px 5px;
     }
-    
     a {
         color: $primary-color;
         &:hover {
@@ -401,15 +372,12 @@
             font-family: 'Lato-Bold', sans-serif;
         }
     }
-    
     .uppercase {
         text-transform: uppercase;
     }
-    
     .lowercase {
         text-transform: lowercase;
     }
-    
     .capitalize {
         text-transform: capitalize;
     }
@@ -435,7 +403,6 @@
             }
         }
     }
-    
     ul {
         padding: .5em;
         list-style-type: none;
@@ -473,21 +440,17 @@
         font-variant: none;
         cursor: help;
     }
-    
     address {
         display: block;
     }
-    
     .left {
         display: inline-block;
         float: left;
     }
-    
     .center {
         clear: both;
         text-align: center;
     }
-    
     .right {
         display: inline-block;
         float: right;
@@ -505,7 +468,6 @@
             color: $gray-text;
         }
     }
-    
     .standard {
         thead {
             th {
@@ -560,7 +522,6 @@
             }
         }
     }
-    
     .striped {
         thead {
             th {
@@ -614,7 +575,6 @@
             }
         }
     }
-    
     .bordered {
         border: 1px solid $primary-color;
         thead {
@@ -726,7 +686,6 @@
             }
         }
     }
-    
     .checkbox,
     .radio {
         form {
@@ -779,7 +738,6 @@
             }
         }
     }
-    
     .dropdown label {
         position: relative;
         &:after {
@@ -816,7 +774,6 @@
             }
         }
     }
-    
     .textarea textarea,
     .text-input input {
         border-radius: 6px;
@@ -833,7 +790,6 @@
             color: $gray-text;
         }
     }
-    
     .dropdown label,
     .textarea label,
     .text-input label {
@@ -847,31 +803,25 @@
         cursor: pointer;
         @include transition(all 0.25s ease-in-out);
     }
-    
     .textarea input:focus + label,
     .text-input input:focus + label {
         color: $gray-text;
     }
-    
     .textarea .form-group,
     .text-input .form-group {
         display: inline-block;
         margin-bottom: 1em;
     }
-    
     .text-input input:focus + label {
         color: $gray-text;
     }
-    
     .textarea .form-group {
         width: 100%;
     }
-    
     .textarea textarea {
         width: 84%;
         min-height: 6em;
     }
-    
     .stacked .form-group {
         width: 100%;
         display: block;
@@ -903,7 +853,6 @@
         text-transform: uppercase;
         border-radius: 2px;
     }
-    
     .nonwhite {
         color: $neutral-background;
         border-color: $primary-color;
@@ -924,7 +873,6 @@
             cursor: pointer;
         }
     }
-    
     .white {
         color: $text-color;
         background: $neutral-background;
@@ -945,172 +893,116 @@
             cursor: pointer;
         }
     }
-    
     .disabled {
         cursor: pointer;
         pointer-events: none;
         background-color: rgba(0, 0, 0, 0.1);
         color: rgba(0, 0, 0, 0.6);
     }
-    
     .xsmall,
     .medium,
     .large {
         @include border-radius(3px);
         font-family: 'Lato-Light', sans-serif;
     }
-<<<<<<< HEAD
+    <<<<<<< HEAD
 }
-
 .disabled {
     cursor: pointer;
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.6);
 }
-
 .xsmall,
 .medium,
 .large {
     @include border-radius(3px);
     font-family: 'Lato-Light', sans-serif;
 }
-
 .xsmall {
     padding: 3px 7px;
     font-size: 12px;
 }
-
 .medium {
     padding: 6px 25px;
     font-size: 14px;
 }
-
 .large {
     padding: 10px 30px;
     font-size: 18px;
 }
 
-
 /* ------ IMAGE STYLING - Ahmad Sadeed ------ */
 
-
 /* Reponsive image */
-
 .responsiveImg {
     width: 100%;
 }
 
-
 /* Reponsive image with float */
-
 .leftFloatImage {
     float: left;
     margin: .5em 1em 1em 0;
     width: 50%;
     min-width: 200px;
 }
-
 .rightFloatImage {
     float: right;
     margin: .5em 0 1em 1em;
     width: 50%;
     min-width: 200px;
 }
-
 @include breakpoints (0,
 670px) {
     .leftFloatImage,
-=======
-    
-    .xsmall {
-        padding: 3px 7px;
-        font-size: 12px;
-    }
-    
-    .medium {
-        padding: 6px 25px;
-        font-size: 14px;
-    }
-    
-    .large {
-        padding: 10px 30px;
-        font-size: 18px;
-    }
-    /* ------ IMAGE STYLING - Ahmad Sadeed ------ */
-    /* Reponsive image */
-    
-    .responsiveImg {
-        width: 100%;
-    }
-    /* Reponsive image with float */
-    
-    .leftFloatImage {
-        float: left;
-        margin: .5em 1em 1em 0;
-        width: 50%;
-        min-width: 200px;
-    }
-    
->>>>>>> Morreyn/master
     .rightFloatImage {
-        float: right;
-        margin: .5em 0 1em 1em;
-        width: 50%;
-        min-width: 200px;
+        float: none;
+        margin: 0 auto 2em;
+        display: block;
+        width: 95%;
+        min-width: 300px;
     }
+}
+
+/* ------ CLEARFIX  - Joe McDonald------ */
+
+/* Based on Nicolas Gallagher - "micro" clearfix.*/
+.tclearfix {
+    *zoom: 1;
+    /* include this for IE 6/7 only (trigger hasLayout) */
     
-    @include breakpoints (0,
-    480px) {
-        .leftFloatImage,
-        .rightFloatImage {
-            float: none;
-            margin: 0 auto 2em;
-            display: block;
-            width: 95%;
-            min-width: 300px;
-        }
+    &:before,
+    &::after {
+        content: " ";
+        display: table;
     }
-    /* ------ CLEARFIX  - Joe McDonald------ */
-    /* Based on Nicolas Gallagher - "micro" clearfix.*/
-    
-    .tclearfix {
-        *zoom: 1;
-        /* include this for IE 6/7 only (trigger hasLayout) */
-        &:before,
-        &::after {
-            content: " ";
-            display: table;
-        }
-        &:after {
-            clear: both;
-        }
+    &:after {
+        clear: both;
     }
-    /* ------ QuickFloat  - Joe McDonald------ */
-    
-    .tfloat-right {
-        float: right !important;
+}
+
+/* ------ QuickFloat  - Joe McDonald------ */
+.tfloat-right {
+    float: right !important;
+}
+.tfloat-left {
+    float: left !important;
+}
+
+/* ------ NoPrintNoScreen  - Joe McDonald------ */
+@media print {
+    .no-print {
+        display: none !important;
+        height: 0;
     }
-    
-    .tfloat-left {
-        float: left !important;
+    .no-print,
+    .no-print * {
+        display: none !important;
+        height: 0;
     }
-    /* ------ NoPrintNoScreen  - Joe McDonald------ */
-    
-    @media print {
-        .no-print {
-            display: none !important;
-            height: 0;
-        }
-        .no-print,
-        .no-print * {
-            display: none !important;
-            height: 0;
-        }
+}
+@media screen {
+    .no-screen {
+        display: none;
     }
-    
-    @media screen {
-        .no-screen {
-            display: none;
-        }
-    }
+}
