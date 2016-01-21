@@ -16,7 +16,7 @@
     <header>
     </header>
     <div class="container">
-        <h2 class="center">Optional CSS Components</h2>
+
         <section>
             <!-- NAVBAR -->
             <h4 class="uppercase center">Three Tier Fixed Top Navigation Bar</h4>
@@ -218,11 +218,150 @@
 
             <h4 class="uppercase center">Fancy Code Editor</h4>
             <hr>
+            <h4>Styling HTML <code class="inline">&lt;pre&gt; &lt;code&gt;&lt;/code&gt; &lt;/pre&gt;</code> and inline <code class="inline">&lt;code&gt;&lt;/code&gt;</code></h4>
+            <p class="explanationParagraph">Use the provided classes to style HTML, CSS, and Javascript used inside inline <code class='inline'>code</code> or <code class="inline">pre</code> tags.
+                <br> To keep adding line numbers, add <code class="inline">&lt;i&gt;&lt;/i&gt;</code> at the start of each line and then add your code and space your code as you always do inside a <code class="inline">pre</code> tag.
+                <br> Markup for an empty line with line number:
+            </p>
+            <div class="pre">
+                <article>
+
+                    <pre class="html">
+  <code>
+  <i></i><span class="comment">&lt;!-- Markup for an empty line with line number:--&gt;</span>
+  <i></i>&lt;pre class='js'&gt;
+  <i></i>     &lt;code&gt;
+  <i></i>        &lt;i&gt;&lt;/i&gt; // empty line
+  <i></i>     &lt;/code&gt;
+  <i></i>&lt;/pre&gt;
+  </code>
+  </pre> Result:
+                    <pre>
+  <code>
+  <i></i> // empty line
+  </code>
+  </pre>
+
+                </article>
+                <h4>Detailed Example: Javascript</h4>
+                <p class="explanationParagraph">Add <code class="inline">class='js'</code> to your <code class="inline">pre</code> tag.
+                    <br> Add <code class="inline">&lt;i&gt;&lt;/i&gt;</code> at the start of each line to get line numbers.
+                    <br> Wrap the javascript vocabulary with span tags and use these words as class names to style them: <code class="inline">regex</code>, <code class="inline">punctuation</code>, <code class="inline">function</code>, <code class="inline">comment</code>, <code class="inline">keyword</code>, <code class="inline">operator</code>, <code class="inline">number</code>, <code class="inline">string</code>.
+                </p>
 
 
-            <!-- MESSAGE BOXES -->
-            <h4 class="uppercase center">Message Boxes</h4>
-            <hr>
+                <pre class="html">
+  <code>
+  <i></i><span class="comment">&lt;!-- Markup for a single line of javascript:--&gt;</span>
+  <i></i>&lt;pre class='js'&gt;
+  <i></i>     &lt;code&gt;
+  <i></i>        &lt;i&gt;&lt;/i&gt; &lt;span class="keyword"&gt;var&lt;/span&gt; &lt;span class="function"&gt;x&lt;/span&gt; &lt;span class="operator"&gt;=&lt;/span&gt; &lt;span class="keyword"&gt;function&lt;/span&gt;&lt;span class="punctuation"&gt;() {};&lt;/span&gt;
+  <i></i>     &lt;/code&gt;
+  <i></i>&lt;/pre&gt;
+  </code>
+  </pre> Result:
+                <pre class="js">
+  <code>
+  <i></i> <span class="keyword">var</span> <span class="function">x</span> <span class="operator">=</span> <span class="keyword">function</span><span class="punctuation">() {};</span>
+  </code>
+  </pre>
+
+
+                <h4> Result Example: Javascript</h4>
+
+                <pre class="js">
+  <code>
+    <i></i><span class="comment">// Styling javascript keywords, operators, functions, string, punctuations and comments and much more ...    </span>
+    <i></i><span class="keyword">var</span> gulp <span class="operator">=</span> <span class="function">require</span><span class="punctuation">(</span><span class="string">'gulp'</span><span class="punctuation">),</span>
+    <i></i>    sass <span class="operator">=</span> <span class="function">require</span><span class="punctuation">(</span><span class="string">'gulp-ruby-sass'</span><span class="punctuation">);</span>
+    <i></i><span class="comment">// Using number</span>
+    <i></i><span class="keyword">var</span> num <span class="operator">=</span> <span class="number">45</span><span class="punctuation">;</span>
+    <i></i><span class="comment">// Using regex</span>
+    <i></i><span class='keyword'>var</span> re <span class="operator">=</span> <span class="regex">/ab+c/</span><span class="punctuation">;</span>
+    <i></i>
+    <i></i>
+    <i></i><span class="comment">// No spans/style </span>
+    <i></i>$(window).scroll(function () {
+    <i></i>    if ($(this).scrollTop() > height) {
+    <i></i>        buttons.addClass('stickyBtn');
+    <i></i>    } else {
+    <i></i>        buttons.removeClass('stickyBtn');
+    <i></i>    }
+    <i></i>});
+    <i></i>
+  </code>
+    </pre>
+
+                <h4> Result Example: HTML</h4>
+                <p class="explanationParagraph">Add <code class="inline">class='html'</code> to your <code class="inline">pre</code> tag.
+                    <br> Add <code class="inline">&lt;i&gt;&lt;/i&gt;</code> at the start of each line to get line numbers.
+                    <br> Wrap the html vocabulary with span tags and use these words as class names to style them: <code class="inline">comment</code>, <code class="inline">punctuation</code>, <code class="inline">tag</code>, <code class="inline">attr</code>, <code class="inline">value</code>, <code class="inline">doctype</code>.
+                </p>
+
+                <pre class="html">
+  <code>
+    <i></i>
+    <i></i><span class="comment">&lt;!-- HTML --&gt;</span>
+    <i></i><span class="punctuation">&lt;</span><span class="tag">h1</span><span class="punctuation">&gt;</span>Heading<span class="punctuation">&lt;/</span><span class="tag">h1</span><span class="punctuation">&gt;</span>
+    <i></i><span class="comment">&lt;!-- HTML comment --&gt;</span>
+    <i></i>
+    <i></i><span class="punctuation">&lt;</span><span class="tag">div</span> <span class="attr">id</span><span class="punctuation">=</span><span class="value">"photoCollection"</span><span class="punctuation">&gt;</span>
+    <i></i>  <span class="punctuation">&lt;</span><span class="tag">div</span> <span class="attr">data-src</span><span class="punctuation">=</span><span  class="value">"img/img1.jpg"</span><span class="punctuation">&gt;</span>
+    <i></i>      <span class="punctuation">&lt;</span><span class="tag">img</span> <span  class="attr">src</span><span class="punctuation">=</span><span class="value">"img/img1_thumb.jpg"</span> <span class="punctuation">/&gt;</span>
+    <i></i>      <span class="punctuation">&lt;</span><span class="tag">time</span> <span class="attr">datetime</span><span class="punctuation">=</span><span class="value">"2014-04-23"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="tag">time</span><span class="punctuation">&gt;</span>
+    <i></i>  <span class="punctuation">&lt;/</span><span class="tag">div</span><span class="punctuation">&gt;</span>
+    <i></i><span class="punctuation">&lt;/</span><span class="tag">div</span><span class="punctuation">&gt;</span>
+    <i></i><span class="comment">&lt;!-- No spans/style  --&gt;</span>
+    <i></i>&lt;head&gt;
+    <i></i>    &lt;meta charset="utf-8"&gt;
+    <i></i>    &lt;title>Welcome to Vecta Corp.&gt;/title&gt;
+    <i></i>    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+    <i></i>    &lt;link href="comp.css" rel="stylesheet"&gt;
+    <i></i>&lt;/head&gt;
+    <i></i>
+    <i></i>
+  </code>
+    </pre>
+
+
+                <h4> Result Example: CSS</h4>
+                <p class="explanationParagraph">Add <code class="inline">class='css'</code> to your <code class="inline">pre</code> tag.
+                    <br> Add <code class="inline">&lt;i&gt;&lt;/i&gt;</code> at the start of each line to get line numbers.
+                    <br> Wrap the css vocabulary with span tags and use these words as class names to style them: <code class="inline">selector</code>, <code class="inline">property</code>, <code class="inline">punctuation</code>, <code class="inline">number</code>, <code class="inline">comment</code>.
+                </p>
+                <pre class="css">
+  <code>
+    <i></i>
+    <i></i><span class="comment">/*  Styling CSS rules */</span>
+    <i></i><span class="comment">/* CSS comment */</span>
+    <i></i><span class="selector">pre code i::before</span> <span class="punctuation">{</span>
+    <i></i>    <span class="property">counter-increment</span><span class="punctuation">:</span> linenumber<span class="punctuation">;</span>
+    <i></i>    <span class="property">content</span><span class="punctuation">:</span> counter<span class="punctuation">(</span>linenumber<span class="punctuation">);</span>
+    <i></i>    <span class="property">display</span><span class="punctuation">:</span> inline-block<span class="punctuation">;</span>
+    <i></i>    <span class="property">padding-right</span><span class="punctuation">:</span> <span class="number">1</span>em<span class="punctuation">;</span>
+    <i></i>    <span class="property">margin-right</span><span class="punctuation">:</span> <span class="number">1</span>em<span class="punctuation">;</span>
+    <i></i>    <span class="property">color</span><span class="punctuation">:</span> gray<span class="punctuation">;</span>
+    <i></i>    <span class="property">width</span><span class="punctuation">:</span> <span class="number">1</span>em<span class="punctuation">;</span>
+    <i></i>    <span class="property">text-align</span><span class="punctuation">:</span> right<span class="punctuation">;</span>
+    <i></i><span class="punctuation">}</span>
+    <i></i>
+    <i></i><span class="comment">/* CSS rule with no spans/style */</span>
+    <i></i>pre code {
+    <i></i>    line-height: 2;
+    <i></i>    direction: ltr;
+    <i></i>    /*    text-align: left;*/
+    <i></i>    white-space: pre;
+    <i></i>    word-spacing: normal;
+    <i></i>    word-break: normal;
+    <i></i>    word-wrap: normal;
+    <i></i>}
+    <i></i>
+    <i></i>
+  </code>
+    </pre>
+
+            </div>
+
 
             <!-- MESSAGE BOXES -->
 
