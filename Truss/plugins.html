@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Plugins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="glyphicons/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/compiledCSS/truss styles.css">
+    <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section.pre,
+        #pluginHeading {
+            padding: 0px 150px;
+            margin: 0 auto;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        section.pre img {
+            padding: 20px 0;
+        }
+        section.pre article,
+        #pluginHeading article {
+            width: 80%;
+            margin: 40px auto 0;
+            color: #000000;
+        }
+        section.pre pre {
+            width: 80%;
+            margin: 30px auto;
+            background-color: RGB(0, 0, 0);
+            color: RGB(240, 255, 255);
+            border-radius: 10px;
+            counter-reset: linenumber;
+            overflow: auto;
+        }
+        section.pre pre code {
+            line-height: 1.5;
+            direction: ltr;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            background: none;
+        }
+        
+        section.pre pre code i::before {
+            counter-increment: linenumber;
+            content: counter(linenumber);
+            display: inline-block;
+            padding-right: 1em;
+            margin-right: 1em;
+            color: #808080;
+            width: 1em;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="pluginHeading">
+        <article>
+            <h1>JQuery Plugins</h1>
+            <ul>
+                <li><a href="#articleProgress">ArticleProgress</a></li>
+                <li><a href="#photoApp">Photo App</a></li>
+                <li><a href="#piano">Piano</a></li>
+                <li><a href="#back2top">Back2TheTop</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="pre" id="articleProgress">
+        <article>
+            <h2>Article Progress</h2>
+            <a href="plugins/articleProgress/articleProgress.html">View Demo</a>
+            <img src="images/scroll.jpg" alt="article progress" class="responsiveImg">
+            <br/>
+            <br/>
+            <h4>Link with the JS and CSS files:</h4>
+        </article>
+        <pre><code>
+        <i></i>      &lt;head&gt;
+        <i></i>          &lt;!-- Article Progress Stylesheet --&gt;
+        <i></i>          &lt;link rel="stylesheet" href="css/articleProgress.css.css" /&gt;
+        <i></i>          
+        <i></i>          &lt;!-- minified jquery &amp; Article Progress plugin script --&gt;
+        <i></i>          &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+        <i></i>          &lt;script src="js/articleProgress.js"&gt;&lt;/script&gt;
+        <i></i>          
+        <i></i>          &lt;script&gt;
+        <i></i>                $(document).ready(function() {
+        <i></i>                    $('.scroll').articleScroller({
+        <i></i>                        /*backgroundColor: "#000000", dividerColor: "green"*/
+        <i></i>                   }); 
+        <i></i>                });
+        <i></i>          &lt;/script&gt;
+        <i></i>      &lt;/head&gt;
+        </code></pre>
+
+
+        <br>
+        <article>
+            <h4>HTML Markup:</h4>
+        </article>
+        <pre><code>
+    <i></i>&lt;div class="top-scroll-area"&gt;
+    <i></i>    &lt;div class="bar"&gt;&lt;/div&gt;
+    <i></i>    &lt;ul class="markers"&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>    &lt;/ul&gt;
+    <i></i>&lt;/div&gt;
+    <i></i>
+    <i></i>
+    <i></i>&lt;div class="right-scroll-area"&gt;
+    <i></i>    &lt;div class="bar"&gt;&lt;/div&gt;
+    <i></i>    &lt;ul class="markers"&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>        &lt;li&gt;&lt;/li&gt;
+    <i></i>    &lt;/ul&gt;
+    <i></i>&lt;/div&gt;
+    <i></i>&lt;section class="nonscroll"&gt;
+    <i></i>    &lt;p&gt;Short Text&lt;/p&gt;
+    <i></i>&lt;/section&gt;
+    <i></i>&lt;section class="scroll"&gt;
+    <i></i>    &lt;p&gt;Long Text&lt;/p&gt;
+    <i></i>&lt;/section&gt;
+    <i></i>&lt;section class="nonscroll"&gt;
+    <i></i>    &lt;p&gt;Short Text&lt;/p&gt;
+    <i></i>&lt;/section&gt;
+    <i></i>          
+            </code></pre>
+        <br>
+        <hr>
+    </section>
+
+
+    <section class="pre" id="photoApp">
+        <article>
+            <h2>Jquery photoApp Plugin</h2>
+            <a href="plugins/photoApp/photoApp.html">View Demo</a>
+            <img src="images/yearView.jpg" alt="year view" class="responsiveImg">
+            <h3>The photoApp plugin is a jquery plugin that gives you:</h3>
+            <ul>
+                <li>Sort hundreds of photos based on the day, month or year each photo was taken</li>
+                <li>Fullscreen view of each photo when an photo is clicked (tapped on mobile)</li>
+                <li>Date of each photo at the top of the page and a view of all thumbnail photos at the bottom of the page</li>
+                <li>Using swipe or keyboard to go to previous <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> or next <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> photos</li>
+                <li>More coming soon!</li>
+            </ul>
+
+            <p><a href="#use">How to use?</a></p>
+
+
+            <p>
+                The photoApp plugin uses the HTML time tags <code>&lt;time&gt; datetime="2014-04-23" /&gt;&lt;/time&gt;</code> that is the placed as the sibling of each image <code>&lt;img src="img/img1_thumb.jpg" /&gt;</code> and provides sorting feature bases on day, month and year.
+            </p>
+            <p>
+                If you don't want the plugin to sort the photos when the page load, set this option to false: <code>sortOnLoad: false;</code>. If you don't want to have the sorting feature activated at all, set this option to false as well: <code>activateSort: false;</code>. In this case, the buttons related to sorting will be taken out of the page.
+            </p>
+            <br/>
+            <br/>
+            <h4>Link with the JS and CSS files:</h4>
+        </article>
+        <pre><code>
+          <i></i>&lt;head&gt;
+          <i></i>    &lt;!-- photoApp stylesheet --&gt;
+          <i></i>    &lt;link rel="stylesheet" href="css/normalize.css" /&gt;
+          <i></i>    &lt;link rel="stylesheet" href="css/photoApp.css" /&gt;
+          <i></i>    
+          <i></i>    &lt;!-- minified jquery &amp; photoApp plugin script --&gt;
+          <i></i>    &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+          <i></i>    &lt;script src="js/jquery.photoApp.js"&gt;&lt;/script&gt;
+          <i></i>    
+          <i></i>    &lt;script&gt;
+          <i></i>          $(document).ready(function() {
+          <i></i>              $("#photoCollection").photoApp(); 
+          <i></i>          });
+          <i></i>    &lt;/script&gt;
+          <i></i>&lt;/head&gt;
+          </code></pre>
+
+
+        <br>
+        <article>
+            <h4>HTML Markup:</h4>
+        </article>
+        <pre><code>
+              <i></i>&lt;!-- For the demo, each photo's original size is 1680 x 1050 pixels --&gt;
+              <i></i>&lt;!-- For the demo, each thumbnail's original size is 370 x 231 pixels --&gt;
+              <i></i>
+              <i></i>&lt;div id="photoCollection"&gt;
+              <i></i>    &lt;div data-src="img/img1.jpg"&gt;
+              <i></i>        &lt;img src="img/img1_thumb.jpg" /&gt;
+              <i></i>        &lt;time datetime="2014-04-23"&gt;&lt;/time&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    &lt;div data-src="img/img2.jpg"&gt;
+              <i></i>        &lt;img src="img/img2_thumb.jpg" /&gt;
+              <i></i>        &lt;time datetime="2013-04-12"&gt;&lt;/time&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    &lt;div data-src="img/img3.jpg"&gt;
+              <i></i>        &lt;img src="img/img3_thumb.jpg" /&gt;
+              <i></i>        &lt;time datetime="2013-01-26"&gt;&lt;/time&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>&lt;/div&gt;     
+            </code></pre>
+        <br>
+        <hr>
+    </section>
+
+    <section class="pre" id="piano">
+        <article>
+            <h2>Jquery Piano Plugin</h2>
+            <a href="plugins/piano/piano.html">View Demo</a>
+            <img src="images/piano.jpg" alt="piano plugin" class="responsiveImg">
+
+            <br/>
+            <br/>
+            <h4>Link with the JS and CSS files:</h4>
+        </article>
+        <pre><code>
+             <i></i>&lt;head&gt;
+             <i></i>     &lt;!-- Piano stylesheet --&gt;
+             <i></i>     &lt;link rel="stylesheet" href="css/normalize.css" /&gt;
+             <i></i>     &lt;link rel="stylesheet" href="css/piano.css" /&gt;
+             <i></i>     
+             <i></i>     &lt;!-- minified jquery &amp; Piano plugin script --&gt;
+             <i></i>     &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+             <i></i>     &lt;script src="js/jquery.piano.js"&gt;&lt;/script&gt;
+             <i></i>     
+             <i></i>     &lt;script&gt;
+             <i></i>             $(document).ready(function() {
+             <i></i>                 $("#container").piano(); 
+             <i></i>             });
+             <i></i>     &lt;/script&gt;
+             <i></i>&lt;/head&gt;
+          </code></pre>
+
+
+        <br>
+        <article>
+            <h4>HTML Markup:</h4>
+        </article>
+        <pre><code>
+              <i></i>&lt;div id="container"&gt;
+              <i></i>    &lt;div&gt;
+              <i></i>        &lt;h3&gt;some heading&lt;/h3&gt;
+              <i></i>        &lt;div&gt;some text&lt;/div&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    
+              <i></i>     &lt;div&gt;
+              <i></i>        &lt;h3&gt;some heading&lt;/h3&gt;
+              <i></i>        &lt;div&gt;
+              <i></i>            &lt;p&gt;some text&lt;p&gt;
+              <i></i>            &lt;p&gt;some text&lt;p&gt;
+              <i></i>        &lt;/div&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    
+              <i></i>     &lt;div&gt;
+              <i></i>        &lt;h3&gt;some heading&lt;/h3&gt;
+              <i></i>        &lt;div&gt;
+              <i></i>            &lt;ul&gt;
+              <i></i>                &lt;li&gt;some text&lt;/li&gt;
+              <i></i>                &lt;li&gt;some text&lt;/li&gt;
+              <i></i>                &lt;li&gt;some text&lt;/li&gt;
+              <i></i>            &lt;/ul&gt;
+              <i></i>            &lt;p&gt;some text&lt;p&gt;
+              <i></i>        &lt;/div&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    
+              <i></i>     &lt;div&gt;
+              <i></i>        &lt;h3&gt;some heading&lt;/h3&gt;
+              <i></i>        &lt;div&gt;
+              <i></i>            &lt;p&gt;some text&lt;p&gt;
+              <i></i>        &lt;/div&gt;
+              <i></i>    &lt;/div&gt;
+              <i></i>    
+              <i></i>&lt;/div&gt;
+            </code></pre>
+        <br>
+        <hr>
+    </section>
+
+    <section class="pre" id="back2top">
+        <article>
+            <h2>Back2TheTop Plugin</h2>
+            <a href="plugins/Truss-Back2TheTop/Truss-Back2TheTop-demo.html">View Demo</a>
+
+            <br/>
+            <br/>
+            <h4>Link with the JS and CSS files:</h4>
+        </article>
+        <pre><code>
+             <i></i>&lt;head&gt;
+             <i></i>     &lt;!-- Back2TheTop stylesheet --&gt;
+             <i></i>     &lt;style&gt;
+             <i></i>             #back2TheTopId {
+             <i></i>                /* modify below css for your needs */ 
+             <i></i>                /* for example - left: 20px        */ 
+             <i></i>                width: 35px;
+             <i></i>                height: 35px;
+             <i></i>                right: 20px; 
+             <i></i>             }	
+             <i></i>     &lt;/style&gt;
+             <i></i>     &lt;!-- minified jquery &amp; Bact2TheTop plugin script --&gt;
+             <i></i>     &lt;script src="js/jquery.1.11.3.min.js"&gt;&lt;/script&gt;
+             <i></i>     &lt;script src="js/jquery.back2TheTop.js"&gt;&lt;/script&gt;
+             <i></i>     
+             <i></i>     &lt;script&gt;
+             <i></i>             $(document).ready(function() {
+             <i></i>                 $("#back2TheTopId").back2TheTop(); 
+             <i></i>             });
+             <i></i>     &lt;/script&gt;
+             <i></i>     &lt;!-- If desired include and modify the options for back2TheTop Arrow Image --&gt;
+             <i></i>     &lt;script&gt;
+             <i></i>             $(document).ready(function() {
+             <i></i>                 $("#back2TheTopId").back2TheTop({
+             <i></i>                       shownAt: 150,			
+             <i></i>                       fadeSpeed: 2000,
+             <i></i>                       scrollSpeed: 1000,
+             <i></i>                       arrowImage: 'round-grey'
+             <i></i>                       }); 
+             <i></i>             });
+             <i></i>     &lt;/script&gt;
+             <i></i>&lt;/head&gt;
+          </code></pre>
+
+
+        <br>
+        <article>
+            <h4>HTML Markup:</h4>
+        </article>
+        <pre><code>
+        <i></i>&lt;div id="back2TheTopId"&gt;BACK 2 THE TOP&lt;/div&gt;      
+        </code></pre>
+        <br>
+        <hr>
+    </section>
+
+</body>
+
+</html>
