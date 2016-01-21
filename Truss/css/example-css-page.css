@@ -1,4 +1,3 @@
-/*
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -42,82 +41,4 @@ section section {
     font-size: 1.5em;
     line-height: 1.5;
     text-transform: uppercase;
-}
-*/
-/* index page */
-
-#indexParallax {
-    transform-style: preserve-3d;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    color: white;
-}
-.section {
-    margin: 0;
-    position: relative;
-    padding: 25vh 10%;
-    min-height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit;
-    background-size: cover;
-}
-.section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-size: cover;
-}
-#indexIntro h1 {
-    color: #F0FFFF;
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    font-weight: 100;
-}
-#indexIntro {
-    background: url("../images/trusses.jpg") no-repeat fixed;
-    background-size: cover;
-}
-.info {
-    width: 30%;
-    padding: 10px;
-    margin-right: 10px;
-    background: RGBA(255, 255, 255, 0.1);
-    height: 400px;
-    font-size: .9rem;
-    position: relative;
-}
-.info:hover {
-    background: RGBA(255, 255, 255, 0.2);
-}
-#features:before {
-    background-image: url("../images/footer_lodyas.png");
-    background-repeat: repeat;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-#features a {
-    position: absolute;
-    bottom: 20px;
-}
-#grid {
-    background: url("../images/congruent_pentagon.png") repeat fixed;
-    color: #000000;
-}
-#footer {
-    height: 80px;
-    padding-top: 60px;
-    background: RGB(0, 0, 0);
-    font-size: .9rem;
-    position: relative;
-    color: white;
-    text-align: center;
 }
