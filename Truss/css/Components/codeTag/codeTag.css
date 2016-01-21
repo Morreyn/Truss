@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-section#pre {
+section.pre {
     padding: 50px 150px;
     font-family: Roboto;
     margin: 0 auto;
@@ -13,12 +13,11 @@ section#pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-section#code ul li {
+section.pre ul li {
     margin-bottom: 10px;
 }
 
-section#pre ul li pre {
+section.pre ul li pre {
     list-style: none;
     position: relative;
     left: -40px;
@@ -27,13 +26,13 @@ section#pre ul li pre {
     width: 106%;
 }
 
-section#pre article {
+section.pre article {
     width: 80%;
     margin: 40px auto 0;
     color: #000000;
 }
 
-section#pre pre {
+section.pre pre {
     width: 80%;
     margin: 30px auto;
     background-color: RGB(0, 0, 0);
@@ -43,7 +42,7 @@ section#pre pre {
     overflow: auto;
 }
 
-section#pre pre code {
+section.pre pre code {
     line-height: 2;
     direction: ltr;
     white-space: pre;
@@ -52,7 +51,7 @@ section#pre pre code {
     word-wrap: normal;
 }
 
-pre code i::before {
+section.pre pre code i::before {
     counter-increment: linenumber;
     content: counter(linenumber);
     display: inline-block;
@@ -63,7 +62,7 @@ pre code i::before {
     text-align: right;
 }
 
-section#pre code.inline {
+section.pre code.inline {
     color: #FF0000;
     display: inline;
     font-weight: normal;
