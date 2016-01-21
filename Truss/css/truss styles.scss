@@ -942,6 +942,16 @@ input[type="reset"] {
     border-radius: 2px;
 }
 
+.nonwhite > a {
+    text-decoration: none;
+    color: $neutral-background;
+    padding: 10px;
+    &:hover {
+        color: $text-color;
+        font-family: 'Lato-Regular', sans-serif;
+    }
+}
+
 .nonwhite {
     color: $neutral-background;
     border-color: $primary-color;
@@ -960,6 +970,16 @@ input[type="reset"] {
         .5s);
         @include box-shadow(inset 0px 1px 3px 2px $primary-color);
         cursor: pointer;
+    }
+}
+
+.white > a {
+    text-decoration: none;
+    color: $text-color;
+    padding: 10px;
+    &:hover {
+        color: $neutral-background;
+        font-family: 'Lato-Regular', sans-serif;
     }
 }
 
