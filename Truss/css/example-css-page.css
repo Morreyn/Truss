@@ -8,8 +8,8 @@ hr {
 }
 
 section {
-    background-color: #f2f2f2;
-    border: 2px solid rgba(109, 163, 152, .4);
+    /*background-color: #f2f2f2;*/
+    /*border: 2px solid rgba(109, 163, 152, .4);*/
     padding: 10px 20px;
     margin: 20px;
     overflow: hidden;
@@ -35,6 +35,7 @@ section section {
 .explanationParagraph a {
     color: #FFF;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 #buttons h4 {
