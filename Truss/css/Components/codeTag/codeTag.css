@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-
 body {
     margin: 0;
     padding: 0;
 }
+
 section#pre {
     padding: 50px 150px;
     font-family: Roboto;
@@ -13,9 +13,11 @@ section#pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-section#pre ul li {
+
+section#code ul li {
     margin-bottom: 10px;
 }
+
 section#pre ul li pre {
     list-style: none;
     position: relative;
@@ -24,11 +26,13 @@ section#pre ul li pre {
     padding: 0;
     width: 106%;
 }
+
 section#pre article {
     width: 80%;
     margin: 40px auto 0;
     color: #000000;
 }
+
 pre {
     width: 80%;
     margin: 30px auto;
@@ -38,6 +42,7 @@ pre {
     counter-reset: linenumber;
     overflow: auto;
 }
+
 pre code {
     line-height: 2;
     direction: ltr;
@@ -46,6 +51,7 @@ pre code {
     word-break: normal;
     word-wrap: normal;
 }
+
 pre code i::before {
     counter-increment: linenumber;
     content: counter(linenumber);
@@ -56,6 +62,7 @@ pre code i::before {
     width: 1em;
     text-align: right;
 }
+
 code.inline {
     color: #FF0000;
     display: inline;
@@ -65,71 +72,91 @@ code.inline {
     padding: 0 5px;
 }
 
+
 /* Styles for javascript language */
 
 pre.js .comment {
     color: #808080;
 }
+
 pre.js .keyword {
     color: RGB(100, 149, 237);
 }
+
 pre.js .function {
     color: #DC143C;
 }
+
 pre.js .string {
     color: #B8860B;
 }
+
 pre.js .punctuation {
     color: #7FFF00;
 }
+
 pre.js .number {
     color: RGB(0, 255, 255);
 }
+
 pre.js .regex {
     color: #D2691E;
 }
+
 
 /* Styles for HTML markup */
 
 pre.html {
     color: #F0FFFF;
 }
+
 pre.html .comment {
     color: #808080;
 }
+
 pre.html .punctuation {
     color: #D2691E;
 }
+
 pre.html .tag {
     color: RGB(143, 188, 143);
 }
+
 pre.html .attr {
     color: #00CED1;
 }
+
 pre.html .value {
     color: #B8860B;
 }
+
 pre.html .doctype {
     color: #FFFFFF;
 }
+
 
 /* Styles for CSS rules inside <code> and <pre> elements */
 
 pre.css {
     color: #F0FFFF;
 }
+
 pre.css .selector {
     color: #6495ED;
 }
+
 pre.css .property {
     color: #228B22;
 }
+
 pre.css .punctuation {
     color: #7FFF00;
 }
+
 pre.css .number {
     color: #DC143C;
 }
+
 pre.css .comment {
     color: #808080;
 }
