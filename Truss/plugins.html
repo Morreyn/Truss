@@ -10,62 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/example-css-page.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
     <style>
-        /*body {
-            margin: 0;
-            padding: 0;
-        }
-        
-        section.pre,
-        #pluginHeading {
-            padding: 0px 150px;
-            margin: 0 auto;
-            width: 100%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        
-        section.pre img {
-            padding: 20px 0;
-        }
-        
-        section.pre article,
-        #pluginHeading article {
-            width: 100%;
-            margin: 40px auto 0;
-            color: #000000;
-        }
-        
-        section.pre pre {
-            width: 100%;
-            margin: 30px auto;
-            background-color: RGB(0, 0, 0);
-            color: RGB(240, 255, 255);
-            border-radius: 10px;
-            counter-reset: linenumber;
-            overflow: auto;
-        }
-        
-        section.pre pre code {
-            line-height: 1.5;
-            direction: ltr;
-            white-space: pre;
-            word-spacing: normal;
-            word-break: normal;
-            word-wrap: normal;
-            background: none;
-        }
-        
-        section.pre pre code i::before {
-            counter-increment: linenumber;
-            content: counter(linenumber);
-            display: inline-block;
-            padding-right: 1em;
-            margin-right: 1em;
-            color: #808080;
-            width: 1em;
-            text-align: right;
-        }*/
+
     </style>
 </head>
 
@@ -376,7 +321,42 @@
              &lt;/script&gt;
         &lt;/head&gt;
           </code></pre>
-
+        <table class="bordered">
+            <thead>
+                <tr>
+                    <th>Option</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>shownAt</td>
+                    <td>Where scroll image should show based on scrollbar's vertical position. (higher the number, the longer it takes for scroll image to appear) </td>
+                    <td>Integer (px)</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>fadeSpeed</td>
+                    <td>Control 'Fade' effect speed for scroll image.</td>
+                    <td>Integer (ms)</td>
+                    <td> 2000</td>
+                </tr>
+                <tr>
+                    <td>scrollSpeed</td>
+                    <td>Control speed when animation scrolls up.</td>
+                    <td>Integer (ms)</td>
+                    <td> 1000</td>
+                </tr>
+                <tr>
+                    <td>arrowImage</td>
+                    <td>Selects the Arrow Image. Image names: white, black, red, grey, green, round-blue, round-green, round-orange, round-grey, round-corner-grey, round-corner-black, round-broken-line. </td>
+                    <td>String (image) </td>
+                    <td>round-grey</td>
+                </tr>
+            </tbody>
+        </table>
 
         <br>
 
