@@ -25,11 +25,16 @@ body {
     z-index: -1;
     width: 20px; }
   .right-scroll-area .bar + .markers {
+    padding: 0;
+    margin-left: 0;
     height: 100%; }
     .right-scroll-area .bar + .markers li {
       list-style-type: none;
+      list-style: none;
       height: 19.75%;
       width: 100%; }
+      .right-scroll-area .bar + .markers li:before {
+        content: " "; }
 
 .top-scroll-area {
   position: fixed;
@@ -60,12 +65,17 @@ body {
       .top-scroll-area .bar {
         margin-left: -125px; } }
   .top-scroll-area .bar + .markers {
+    padding: 0;
+    margin-left: 0;
     height: 100%; }
     .top-scroll-area .bar + .markers li {
       list-style-type: none;
+      list-style: none;
       float: left;
       width: 19.70%;
       height: 100%; }
+      .top-scroll-area .bar + .markers li:before {
+        content: " "; }
       @media only screen and (max-width: 550px) {
         .top-scroll-area .bar + .markers li {
           width: 19.60%; } }
@@ -77,4 +87,4 @@ section {
   margin: 50px auto;
   width: 70%; }
 
-/*# sourceMappingURL=scroll%20progressbar.css.map */
+/*# sourceMappingURL=articleProgress.css.map */

@@ -30,9 +30,15 @@ body {
         width: 20px;
     }
     .bar + .markers {
+        padding: 0;
+        margin-left: 0;
         height: 100%;
         li {
             list-style-type: none;
+            list-style: none;
+            &:before {
+                content: " ";
+            }
             height: 19.75%;
             width: 100%;
             &:nth-of-type(5) {}
@@ -70,9 +76,15 @@ body {
         }
     }
     .bar + .markers {
+        padding: 0;
+        margin-left: 0;
         height: 100%;
         li {
             list-style-type: none;
+            list-style: none;
+            &:before {
+                content: " ";
+            }
             float: left;
             width: 19.70%;
             height: 100%;
